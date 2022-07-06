@@ -1,8 +1,12 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 
 import App from './App';
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+describe('App', () => {
+  it('should be defined', () => {
+    const container = render(<App />);
+
+    expect(container).toBeDefined();
+  });
 });

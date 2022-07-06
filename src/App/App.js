@@ -1,16 +1,11 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
-const App = () => (
-  <View
-    style={{
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}
-  >
-    <Text>Hello, world!</Text>
-  </View>
+import Navigation from '../navigation';
+
+export default () => (
+  <NavigationContainer>
+    <Navigation />
+  </NavigationContainer>
 );
-
-export default App;
