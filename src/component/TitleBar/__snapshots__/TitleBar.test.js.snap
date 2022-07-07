@@ -11,5 +11,41 @@ exports[`TitleBar should match snapshot 1`] = `
       undefined,
     ]
   }
-/>
+>
+  <View
+    dataSet={Object {}}
+    style={
+      Array [
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "marginBottom": 20,
+        },
+        Array [
+          Object {},
+        ],
+      ]
+    }
+  >
+    <View
+      dataSet={Object {}}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "#FFFFFF",
+            "marginRight": 8,
+            "paddingRight": 8,
+          },
+          Array [
+            Object {},
+          ],
+        ]
+      }
+    />
+    <Text>
+      Test
+    </Text>
+  </View>
+</RNCSafeAreaProvider>
 `;

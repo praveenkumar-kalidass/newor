@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { render } from '@testing-library/react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { NativeBaseProvider } from 'native-base';
 
 const AllTheProviders = ({ children }) => {
@@ -15,9 +16,11 @@ const AllTheProviders = ({ children }) => {
   };
 
   return (
-    <NativeBaseProvider initialWindowMetrics={inset}>
-      {children}
-    </NativeBaseProvider>
+    <NavigationContainer>
+      <NativeBaseProvider initialWindowMetrics={inset}>
+        {children}
+      </NativeBaseProvider>
+    </NavigationContainer>
   );
 };
 

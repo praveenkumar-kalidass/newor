@@ -207,110 +207,153 @@ exports[`Login should match snapshot 1`] = `
         </View>
         <View
           dataSet={Object {}}
-          isFocused={false}
+          isInvalid=""
           style={
             Object {
-              "alignItems": "center",
-              "borderColor": "#d4d4d4",
-              "borderRadius": 4,
-              "borderWidth": 1,
-              "flexDirection": "row",
-              "marginBottom": 20,
-              "overflow": "hidden",
+              "width": "100%",
             }
           }
         >
-          <TextInput
-            accessible={true}
+          <View
             dataSet={Object {}}
-            editable={true}
-            onBlur={[Function]}
-            onFocus={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Email"
-            placeholderTextColor="#a3a3a3"
-            secureTextEntry={false}
-            selectionColor="#1f2937"
+            isFocused={false}
             style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "#171717",
-                  "flex": 1,
-                  "fontFamily": undefined,
-                  "fontSize": 12,
-                  "fontStyle": "normal",
-                  "fontWeight": "400",
-                  "height": "100%",
-                  "paddingBottom": 8,
-                  "paddingLeft": 12,
-                  "paddingRight": 12,
-                  "paddingTop": 8,
-                  "width": "100%",
-                },
+              Object {
+                "alignItems": "center",
+                "borderColor": "#d4d4d4",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "marginBottom": 20,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <TextInput
+              accessibilityDescribedBy="field-react-aria-1-feedback"
+              accessible={true}
+              dataSet={Object {}}
+              disabled={false}
+              editable={true}
+              isInvalid=""
+              isRequired={false}
+              nativeID="field-react-aria-1"
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              onKeyPress={[Function]}
+              placeholder="Email"
+              placeholderTextColor="#a3a3a3"
+              readOnly={false}
+              required={false}
+              secureTextEntry={false}
+              selectionColor="#1f2937"
+              style={
                 Array [
                   Object {
-                    "fontSize": 14,
+                    "backgroundColor": "transparent",
+                    "color": "#171717",
+                    "flex": 1,
+                    "fontFamily": undefined,
+                    "fontSize": 12,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "height": "100%",
+                    "paddingBottom": 8,
+                    "paddingLeft": 12,
+                    "paddingRight": 12,
+                    "paddingTop": 8,
+                    "width": "100%",
                   },
-                ],
-              ]
-            }
-          />
+                  Array [
+                    Object {
+                      "fontSize": 14,
+                    },
+                  ],
+                ]
+              }
+              value=""
+            />
+          </View>
         </View>
         <View
           dataSet={Object {}}
-          isFocused={false}
+          isInvalid=""
           style={
             Object {
-              "alignItems": "center",
-              "borderColor": "#d4d4d4",
-              "borderRadius": 4,
-              "borderWidth": 1,
-              "flexDirection": "row",
-              "marginBottom": 20,
-              "overflow": "hidden",
+              "width": "100%",
             }
           }
         >
-          <TextInput
-            accessible={true}
+          <View
             dataSet={Object {}}
-            editable={true}
-            onBlur={[Function]}
-            onFocus={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Password"
-            placeholderTextColor="#a3a3a3"
-            secureTextEntry={true}
-            selectionColor="#1f2937"
+            isFocused={false}
             style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "#171717",
-                  "flex": 1,
-                  "fontFamily": undefined,
-                  "fontSize": 12,
-                  "fontStyle": "normal",
-                  "fontWeight": "400",
-                  "height": "100%",
-                  "paddingBottom": 8,
-                  "paddingLeft": 12,
-                  "paddingRight": 12,
-                  "paddingTop": 8,
-                  "width": "100%",
-                },
+              Object {
+                "alignItems": "center",
+                "borderColor": "#d4d4d4",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "marginBottom": 20,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <TextInput
+              accessibilityDescribedBy="field-react-aria-2-feedback"
+              accessible={true}
+              dataSet={Object {}}
+              disabled={false}
+              editable={true}
+              isInvalid=""
+              isRequired={false}
+              nativeID="field-react-aria-2"
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              onKeyPress={[Function]}
+              placeholder="Password"
+              placeholderTextColor="#a3a3a3"
+              readOnly={false}
+              required={false}
+              secureTextEntry={true}
+              selectionColor="#1f2937"
+              style={
                 Array [
                   Object {
-                    "fontSize": 14,
+                    "backgroundColor": "transparent",
+                    "color": "#171717",
+                    "flex": 1,
+                    "fontFamily": undefined,
+                    "fontSize": 12,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "height": "100%",
+                    "paddingBottom": 8,
+                    "paddingLeft": 12,
+                    "paddingRight": 12,
+                    "paddingTop": 8,
+                    "width": "100%",
                   },
-                ],
-              ]
-            }
-          />
+                  Array [
+                    Object {
+                      "fontSize": 14,
+                    },
+                  ],
+                ]
+              }
+              value=""
+            />
+          </View>
         </View>
         <View
           accessibilityRole="button"
+          accessibilityState={
+            Object {
+              "disabled": true,
+            }
+          }
           accessible={true}
           collapsable={false}
           colorScheme="primary"
@@ -333,6 +376,7 @@ exports[`Login should match snapshot 1`] = `
                 "borderRadius": 4,
                 "flexDirection": "row",
                 "justifyContent": "center",
+                "opacity": 0.4,
                 "paddingBottom": 10,
                 "paddingLeft": 12,
                 "paddingRight": 12,

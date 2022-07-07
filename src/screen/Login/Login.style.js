@@ -16,18 +16,19 @@ export const FormContainer = styled(Box).attrs(() => ({
   bg: COLOR.LIGHT_100,
 }))``;
 
-export const InputField = styled(Input).attrs(() => ({
+export const InputField = styled(Input).attrs(({ isInvalid }) => ({
   _focus: {
     bg: COLOR.LIGHT_100,
     borderColor: COLOR.LIGHT_SECONDARY_100,
   },
-  mb: 5,
+  mb: isInvalid ? 0 : 5,
 }))`
   font-size: 14px;
 `;
 
 export const SubmitButton = styled(Button).attrs(() => ({
   bg: COLOR.LIGHT_PRIMARY_100,
+  _pressed: { bg: COLOR.LIGHT_PRIMARY_60 },
   _text: { fontWeight: 'bold' },
 }))``;
 
