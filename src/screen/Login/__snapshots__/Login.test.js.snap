@@ -11,5 +11,376 @@ exports[`Login should match snapshot 1`] = `
       undefined,
     ]
   }
-/>
+>
+  <View
+    dataSet={Object {}}
+    style={
+      Object {
+        "display": "flex",
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }
+  >
+    <View
+      dataSet={Object {}}
+      onLayout={[Function]}
+      style={
+        Object {
+          "display": "flex",
+          "flex": 1.5,
+          "flexDirection": "column",
+          "justifyContent": "center",
+        }
+      }
+      testID="login-logo-container"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "position": "absolute",
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          bbHeight={300}
+          bbWidth={300}
+          focusable={false}
+          height={300}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 300,
+                "width": 300,
+              },
+            ]
+          }
+          width={300}
+        >
+          <RNSVGGroup>
+            <RNSVGPath
+              d="M0 0 0 300 300 300 30 270 0 0z"
+              fill={4289527808}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+            <RNSVGPath
+              d="M0 0 300 0 300 300 270 30 0 0z"
+              fill={4278461322}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <View
+        dataSet={Object {}}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Image
+          accessibilityLabel="newor"
+          alt="newor"
+          dataSet={Object {}}
+          onError={[Function]}
+          source={
+            Object {
+              "testUri": "../../../src/asset/newor.png",
+            }
+          }
+          style={
+            Object {
+              "height": 240,
+              "maxWidth": "100%",
+              "width": 240,
+            }
+          }
+          testID="login-logo"
+        />
+      </View>
+    </View>
+    <View
+      dataSet={Object {}}
+      style={
+        Object {
+          "display": "flex",
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        dataSet={Object {}}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderTopLeftRadius": 20,
+              "borderTopRightRadius": 20,
+              "flex": 1,
+              "paddingBottom": 20,
+              "paddingLeft": 20,
+              "paddingRight": 20,
+              "paddingTop": 20,
+            },
+            Array [
+              Object {},
+            ],
+          ]
+        }
+      >
+        <View
+          dataSet={Object {}}
+          style={
+            Array [
+              Object {
+                "display": "flex",
+                "flexDirection": "row",
+                "marginBottom": 20,
+              },
+              Array [
+                Object {},
+              ],
+            ]
+          }
+        >
+          <View
+            dataSet={Object {}}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#04238a",
+                  "color": "#04238a",
+                  "marginRight": 8,
+                  "paddingRight": 8,
+                },
+                Array [
+                  Object {},
+                ],
+              ]
+            }
+          />
+          <Text
+            dataSet={Object {}}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": undefined,
+                  "color": "#171717",
+                  "fontFamily": undefined,
+                  "fontSize": 20,
+                  "fontStyle": "normal",
+                  "fontWeight": "700",
+                  "letterSpacing": 0,
+                  "lineHeight": 30,
+                  "textDecorationLine": undefined,
+                },
+                Array [
+                  Object {
+                    "textTransform": "capitalize",
+                  },
+                ],
+              ]
+            }
+          >
+            newor
+          </Text>
+        </View>
+        <View
+          dataSet={Object {}}
+          isFocused={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "#d4d4d4",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "marginBottom": 20,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <TextInput
+            accessible={true}
+            dataSet={Object {}}
+            editable={true}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Email"
+            placeholderTextColor="#a3a3a3"
+            secureTextEntry={false}
+            selectionColor="#1f2937"
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#171717",
+                  "flex": 1,
+                  "fontFamily": undefined,
+                  "fontSize": 12,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "height": "100%",
+                  "paddingBottom": 8,
+                  "paddingLeft": 12,
+                  "paddingRight": 12,
+                  "paddingTop": 8,
+                  "width": "100%",
+                },
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                ],
+              ]
+            }
+          />
+        </View>
+        <View
+          dataSet={Object {}}
+          isFocused={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "#d4d4d4",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "marginBottom": 20,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <TextInput
+            accessible={true}
+            dataSet={Object {}}
+            editable={true}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Password"
+            placeholderTextColor="#a3a3a3"
+            secureTextEntry={true}
+            selectionColor="#1f2937"
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#171717",
+                  "flex": 1,
+                  "fontFamily": undefined,
+                  "fontSize": 12,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "height": "100%",
+                  "paddingBottom": 8,
+                  "paddingLeft": 12,
+                  "paddingRight": 12,
+                  "paddingTop": 8,
+                  "width": "100%",
+                },
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                ],
+              ]
+            }
+          />
+        </View>
+        <View
+          accessibilityRole="button"
+          accessible={true}
+          collapsable={false}
+          colorScheme="primary"
+          dataSet={Object {}}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#ad0000",
+                "borderRadius": 4,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "paddingBottom": 10,
+                "paddingLeft": 12,
+                "paddingRight": 12,
+                "paddingTop": 10,
+              },
+              Array [
+                Object {},
+              ],
+            ]
+          }
+        >
+          <View
+            dataSet={Object {}}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+            test={true}
+          >
+            <View
+              dataSet={Object {}}
+              style={Object {}}
+            >
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#fafafa",
+                    "fontFamily": undefined,
+                    "fontSize": 14,
+                    "fontStyle": "normal",
+                    "fontWeight": "700",
+                    "letterSpacing": 0,
+                    "lineHeight": 21,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                Login
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RNCSafeAreaProvider>
 `;

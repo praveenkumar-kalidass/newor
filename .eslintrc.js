@@ -3,10 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
     jest: true,
+    'jsx-control-statements/jsx-control-statements': true,
   },
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:jsx-control-statements/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -17,9 +19,11 @@ module.exports = {
   },
   plugins: [
     'react',
+    'jsx-control-statements',
   ],
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/function-component-definition': [0, { namedComponents: 'function-declaration' }],
+    'react/jsx-no-undef': [2, { allowGlobals: true }],
   },
 };
