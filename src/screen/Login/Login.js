@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, {
+  useState, useEffect, useMemo, useCallback,
+} from 'react';
 import {
-  Flex, Image, Center, FormControl,
+  Flex, Image, Center, FormControl, useToast, Box,
 } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 
@@ -11,6 +13,7 @@ import COLOR from '../../constant/color';
 import validator from '../../helper/validator';
 import TRANSLATION from '../../translation/en.json';
 import NEWOR from '../../asset/newor.png';
+import { login } from '../../api/user';
 import {
   INITIAL_STATE,
   FIELDS,
@@ -29,6 +32,7 @@ const Login = () => {
   const [errorMessages, setErrorMessages] = useState(INITIAL_STATE);
   const [isSubmit, setIsSubmit] = useState(false);
   const navigation = useNavigation();
+  const toast = useToast();
 
   const handleFieldChange = (label, value) => {
     setFields({
@@ -46,13 +50,22 @@ const Login = () => {
     setIsSubmit(true);
   };
 
-  useEffect(() => {
-    // eslint-disable-next-line no-empty
-    if (isSubmit && Object.values(errorMessages).every((value) => !value)) {
-    } else {
+  const doLogin = useCallback(async () => {
+    try {
+      await login(fields);
+    } catch (error) {
       setIsSubmit(false);
+      let errorMessage = TRANSLATION.ERROR.NEWOR_INTERNAL_SERVER_ERROR;
+      const errorCode = error?.response?.data?.code;
+      if (errorCode) {
+        errorMessage = TRANSLATION.ERROR[errorCode];
+      }
+      toast.show({
+        render: () => <Box bg={COLOR.LIGHT_ERROR} p={5} rounded={5}>{errorMessage}</Box>,
+        placement: 'bottom',
+      });
     }
-  }, [navigation, isSubmit, errorMessages]);
+  }, []);
 
   const isFormError = useMemo(
     () => Object.keys(errorMessages).some(
@@ -60,6 +73,14 @@ const Login = () => {
     ),
     [errorMessages],
   );
+
+  useEffect(() => {
+    if (isSubmit && !isFormError) {
+      doLogin();
+    } else {
+      setIsSubmit(false);
+    }
+  }, [navigation, isSubmit, isFormError]);
 
   return (
     <Flex flex={1}>
@@ -85,8 +106,9 @@ const Login = () => {
             <Title>{CONSTANT.APP_NAME}</Title>
           </TitleBar>
           <For each="field" index="index" of={FIELDS}>
-            <FormControl key={`login_field_${index}`} isInvalid={errorMessages[field.key]}>
+            <FormControl key={`login-field-${index}`} isInvalid={errorMessages[field.key]}>
               <InputField
+                testID={`login-input-${field.key}`}
                 placeholder={field.placeholder}
                 value={fields[field.key]}
                 onChangeText={(value) => handleFieldChange(field.key, value)}
@@ -99,7 +121,7 @@ const Login = () => {
               </FormControl.ErrorMessage>
             </FormControl>
           </For>
-          <SubmitButton onPress={handleSubmit} isDisabled={isFormError}>
+          <SubmitButton testID="login-submit" onPress={handleSubmit} isDisabled={isFormError}>
             {TRANSLATION.LOGIN}
           </SubmitButton>
         </FormContainer>

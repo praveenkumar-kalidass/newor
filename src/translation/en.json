@@ -1,5 +1,10 @@
 {
   "LOGIN": "Login",
   "EMAIL": "Email",
-  "PASSWORD": "Password"
+  "PASSWORD": "Password",
+  "ERROR": {
+    "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
+    "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",
+    "NEWOR_BAD_REQUEST": "Oops! Something went wrong. Please try again."
+  }
 }

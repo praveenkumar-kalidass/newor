@@ -28,7 +28,7 @@ export const InputField = styled(Input).attrs(({ isInvalid }) => ({
 
 export const SubmitButton = styled(Button).attrs(() => ({
   bg: COLOR.LIGHT_PRIMARY_100,
-  _pressed: { bg: COLOR.LIGHT_PRIMARY_60 },
+  _pressed: { bg: COLOR.LIGHT_PRIMARY_20 },
   _text: { fontWeight: 'bold' },
 }))``;
 

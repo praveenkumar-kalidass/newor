@@ -52,7 +52,7 @@ exports[`Background should match snapshot 1`] = `
         />
         <RNSVGPath
           d="M0 0 undefined 0 undefined undefined NaN 30 0 0z"
-          fill={4278461322}
+          fill={4278199178}
           propList={
             Array [
               "fill",

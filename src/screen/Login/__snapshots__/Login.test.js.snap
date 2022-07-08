@@ -77,7 +77,7 @@ exports[`Login should match snapshot 1`] = `
             />
             <RNSVGPath
               d="M0 0 300 0 300 300 270 30 0 0z"
-              fill={4278461322}
+              fill={4278199178}
               propList={
                 Array [
                   "fill",
@@ -168,8 +168,8 @@ exports[`Login should match snapshot 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": "#04238a",
-                  "color": "#04238a",
+                  "backgroundColor": "#00238a",
+                  "color": "#00238a",
                   "marginRight": 8,
                   "paddingRight": 8,
                 },
@@ -272,6 +272,7 @@ exports[`Login should match snapshot 1`] = `
                   ],
                 ]
               }
+              testID="login-input-email"
               value=""
             />
           </View>
@@ -343,6 +344,7 @@ exports[`Login should match snapshot 1`] = `
                   ],
                 ]
               }
+              testID="login-input-password"
               value=""
             />
           </View>
@@ -387,6 +389,7 @@ exports[`Login should match snapshot 1`] = `
               ],
             ]
           }
+          testID="login-submit"
         >
           <View
             dataSet={Object {}}
