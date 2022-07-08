@@ -19,13 +19,13 @@ exports[`TitleBar should match snapshot 1`] = `
         Object {
           "display": "flex",
           "flexDirection": "row",
-          "marginBottom": 20,
         },
         Array [
           Object {},
         ],
       ]
     }
+    styleProps={Object {}}
   >
     <View
       dataSet={Object {}}

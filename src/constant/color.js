@@ -2,8 +2,8 @@ const color = {
   LIGHT_100: '#ffffff',
   LIGHT_50: '#7f7f7f',
   LIGHT_0: '#000000',
-  LIGHT_SUCCESS: '#27ae60',
-  LIGHT_ERROR: '#e74c3c',
+  LIGHT_SUCCESS: '#2e7d32',
+  LIGHT_ERROR: '#d32f2f',
   LIGHT_PRIMARY_100: '#ad0000',
   LIGHT_PRIMARY_80: '#ad1414',
   LIGHT_PRIMARY_60: '#ad2828',
@@ -14,6 +14,7 @@ const color = {
   LIGHT_SECONDARY_60: '#00238a',
   LIGHT_SECONDARY_40: '#00238a',
   LIGHT_SECONDARY_20: '#00238a',
+  LIGHT_LINK: '#3498db',
 };
 
 export default color;

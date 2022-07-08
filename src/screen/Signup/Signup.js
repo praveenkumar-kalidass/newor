@@ -1,34 +1,34 @@
 import React, {
-  useState, useEffect, useMemo, useCallback,
+  useCallback, useEffect, useMemo, useState,
 } from 'react';
-import {
-  Flex, Image, Center, FormControl, useToast,
-} from 'native-base';
 import { useNavigation } from '@react-navigation/native';
+import {
+  Center, Flex, FormControl, Image, useToast,
+} from 'native-base';
 
 import TitleBar from '../../component/TitleBar/TitleBar';
-import Background from '../../component/Background/Background';
 import CONSTANT from '../../constant';
 import COLOR from '../../constant/color';
-import validator from '../../helper/validator';
 import TRANSLATION from '../../translation/en.json';
+import ROUTE from '../../constant/route';
 import NEWOR from '../../asset/newor.png';
-import { login } from '../../api/user';
+import validator from '../../helper/validator';
+import { signup } from '../../api/user';
 import {
-  INITIAL_STATE,
   FIELDS,
+  INITIAL_STATE,
   SCHEMA,
-} from './Login.schema';
+} from './Signup.schema';
 import {
   FormContainer,
   InputField,
   SubmitButton,
   Title,
   ToastBox,
-} from './Login.style';
+  LoginLink,
+} from './Signup.style';
 
-const Login = () => {
-  const [background, setBackground] = useState({});
+const Signup = () => {
   const [fields, setFields] = useState(INITIAL_STATE);
   const [errorMessages, setErrorMessages] = useState(INITIAL_STATE);
   const [isSubmit, setIsSubmit] = useState(false);
@@ -51,9 +51,21 @@ const Login = () => {
     setIsSubmit(true);
   };
 
-  const doLogin = useCallback(async () => {
+  const isFormError = useMemo(
+    () => Object.keys(errorMessages).some(
+      (field) => !fields[field] || Boolean(errorMessages[field]),
+    ),
+    [errorMessages],
+  );
+
+  const doSignup = useCallback(async () => {
     try {
-      await login(fields);
+      await signup(fields);
+      toast.show({
+        render: () => <ToastBox>{TRANSLATION.SIGNUP_SUCCESS}</ToastBox>,
+        placement: 'bottom',
+        onCloseComplete: () => navigation.navigate(ROUTE.LOGIN),
+      });
       setIsSubmit(false);
     } catch (error) {
       setIsSubmit(false);
@@ -63,22 +75,15 @@ const Login = () => {
         errorMessage = TRANSLATION.ERROR[errorCode];
       }
       toast.show({
-        render: () => <ToastBox>{errorMessage}</ToastBox>,
+        render: () => <ToastBox isError>{errorMessage}</ToastBox>,
         placement: 'bottom',
       });
     }
   }, [fields]);
 
-  const isFormError = useMemo(
-    () => Object.keys(errorMessages).some(
-      (field) => !fields[field] || Boolean(errorMessages[field]),
-    ),
-    [errorMessages],
-  );
-
   useEffect(() => {
     if (isSubmit && !isFormError) {
-      doLogin();
+      doSignup();
     } else {
       setIsSubmit(false);
     }
@@ -86,31 +91,17 @@ const Login = () => {
 
   return (
     <Flex flex={1}>
-      <Flex
-        flex={1.5}
-        onLayout={(event) => {
-          const { width, height } = event.nativeEvent.layout;
-          setBackground({ width, height });
-        }}
-        justifyContent="center"
-        testID="login-logo-container"
-      >
-        <If condition={background.height && background.width}>
-          <Background height={background.height} width={background.width} />
-          <Center>
-            <Image testID="login-logo" alt={CONSTANT.APP_NAME} size={background.width * 0.8} source={NEWOR} />
-          </Center>
-        </If>
-      </Flex>
-      <Flex flex={1}>
+      <Flex flex={1} />
+      <Flex flex={4} direction="row" p="5" justifyContent="center">
         <FormContainer>
-          <TitleBar color={COLOR.LIGHT_SECONDARY_100} styleProps={{ mb: 5 }}>
-            <Title>{CONSTANT.APP_NAME}</Title>
+          <TitleBar color={COLOR.LIGHT_SECONDARY_100}>
+            <Title>{TRANSLATION.WELCOME_TO_NEWOR}</Title>
           </TitleBar>
+          <Center><Image alt={CONSTANT.APP_NAME} source={NEWOR} size="xl" /></Center>
           <For each="field" index="index" of={FIELDS}>
-            <FormControl key={`login-field-${index}`} isInvalid={errorMessages[field.key]}>
+            <FormControl key={`signup-field-${index}`} isInvalid={errorMessages[field.key]}>
               <InputField
-                testID={`login-input-${field.key}`}
+                testID={`signup-input-${field.key}`}
                 placeholder={field.placeholder}
                 value={fields[field.key]}
                 onChangeText={(value) => handleFieldChange(field.key, value)}
@@ -125,13 +116,26 @@ const Login = () => {
               </FormControl.ErrorMessage>
             </FormControl>
           </For>
-          <SubmitButton testID="login-submit" onPress={handleSubmit} isDisabled={isFormError}>
-            {TRANSLATION.LOGIN}
+          <SubmitButton testID="signup-submit" onPress={handleSubmit} isDisabled={isFormError}>
+            {TRANSLATION.SIGNUP}
           </SubmitButton>
+          <Flex direction="row" justifyContent="center">
+            <LoginLink>
+              {TRANSLATION.ALREADY_HAVE_ACCOUNT}
+              &nbsp;
+            </LoginLink>
+            <LoginLink
+              link
+              onPress={() => navigation.navigate(ROUTE.LOGIN)}
+            >
+              {TRANSLATION.LOGIN}
+            </LoginLink>
+          </Flex>
         </FormContainer>
       </Flex>
+      <Flex flex={1} />
     </Flex>
   );
 };
 
-export default Login;
+export default Signup;

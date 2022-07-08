@@ -1,9 +1,9 @@
 import styled from 'styled-components/native';
 import { Flex, Box } from 'native-base';
 
-export const BarContainer = styled(Flex).attrs(() => ({
+export const BarContainer = styled(Flex).attrs(({ styleProps }) => ({
   direction: 'row',
-  mb: '5',
+  ...styleProps,
 }))``;
 
 export const Bar = styled(Box).attrs(({ color }) => ({

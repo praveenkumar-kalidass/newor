@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login should match snapshot 1`] = `
+exports[`Signup should match snapshot 1`] = `
 <RNCSafeAreaProvider
   onInsetsChange={[Function]}
   style={
@@ -24,102 +24,6 @@ exports[`Login should match snapshot 1`] = `
   >
     <View
       dataSet={Object {}}
-      onLayout={[Function]}
-      style={
-        Object {
-          "display": "flex",
-          "flex": 1.5,
-          "flexDirection": "column",
-          "justifyContent": "center",
-        }
-      }
-      testID="login-logo-container"
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "backgroundColor": "#ffffff",
-              "position": "absolute",
-            },
-          ]
-        }
-      >
-        <RNSVGSvgView
-          bbHeight={300}
-          bbWidth={300}
-          focusable={false}
-          height={300}
-          style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              Object {
-                "flex": 0,
-                "height": 300,
-                "width": 300,
-              },
-            ]
-          }
-          width={300}
-        >
-          <RNSVGGroup>
-            <RNSVGPath
-              d="M0 0 0 300 300 300 30 270 0 0z"
-              fill={4289527808}
-              propList={
-                Array [
-                  "fill",
-                ]
-              }
-            />
-            <RNSVGPath
-              d="M0 0 300 0 300 300 270 30 0 0z"
-              fill={4278199178}
-              propList={
-                Array [
-                  "fill",
-                ]
-              }
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
-      </View>
-      <View
-        dataSet={Object {}}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "justifyContent": "center",
-          }
-        }
-      >
-        <Image
-          accessibilityLabel="newor"
-          alt="newor"
-          dataSet={Object {}}
-          onError={[Function]}
-          source={
-            Object {
-              "testUri": "../../../src/asset/newor.png",
-            }
-          }
-          style={
-            Object {
-              "height": 240,
-              "maxWidth": "100%",
-              "width": 240,
-            }
-          }
-          testID="login-logo"
-        />
-      </View>
-    </View>
-    <View
-      dataSet={Object {}}
       style={
         Object {
           "display": "flex",
@@ -127,15 +31,30 @@ exports[`Login should match snapshot 1`] = `
           "flexDirection": "column",
         }
       }
+    />
+    <View
+      dataSet={Object {}}
+      style={
+        Object {
+          "display": "flex",
+          "flex": 4,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingBottom": 20,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+          "paddingTop": 20,
+        }
+      }
     >
       <View
         dataSet={Object {}}
         style={
           Array [
             Object {
+              "alignSelf": "center",
               "backgroundColor": "#ffffff",
-              "borderTopLeftRadius": 20,
-              "borderTopRightRadius": 20,
+              "borderRadius": 20,
               "flex": 1,
               "paddingBottom": 20,
               "paddingLeft": 20,
@@ -155,18 +74,13 @@ exports[`Login should match snapshot 1`] = `
               Object {
                 "display": "flex",
                 "flexDirection": "row",
-                "marginBottom": 20,
               },
               Array [
                 Object {},
               ],
             ]
           }
-          styleProps={
-            Object {
-              "mb": 5,
-            }
-          }
+          styleProps={Object {}}
         >
           <View
             dataSet={Object {}}
@@ -207,8 +121,37 @@ exports[`Login should match snapshot 1`] = `
               ]
             }
           >
-            newor
+            Welcome to Newor!
           </Text>
+        </View>
+        <View
+          dataSet={Object {}}
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Image
+            accessibilityLabel="newor"
+            alt="newor"
+            dataSet={Object {}}
+            onError={[Function]}
+            source={
+              Object {
+                "testUri": "../../../src/asset/newor.png",
+              }
+            }
+            style={
+              Object {
+                "height": 128,
+                "maxWidth": "100%",
+                "width": 128,
+              }
+            }
+          />
         </View>
         <View
           dataSet={Object {}}
@@ -247,7 +190,7 @@ exports[`Login should match snapshot 1`] = `
               onChangeText={[Function]}
               onFocus={[Function]}
               onKeyPress={[Function]}
-              placeholder="Email"
+              placeholder="First name"
               placeholderTextColor="#a3a3a3"
               readOnly={false}
               required={false}
@@ -277,7 +220,7 @@ exports[`Login should match snapshot 1`] = `
                   ],
                 ]
               }
-              testID="login-input-email"
+              testID="signup-input-firstName"
               value=""
             />
           </View>
@@ -319,6 +262,150 @@ exports[`Login should match snapshot 1`] = `
               onChangeText={[Function]}
               onFocus={[Function]}
               onKeyPress={[Function]}
+              placeholder="Last name"
+              placeholderTextColor="#a3a3a3"
+              readOnly={false}
+              required={false}
+              secureTextEntry={false}
+              selectionColor="#1f2937"
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "#171717",
+                    "flex": 1,
+                    "fontFamily": undefined,
+                    "fontSize": 12,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "height": "100%",
+                    "paddingBottom": 8,
+                    "paddingLeft": 12,
+                    "paddingRight": 12,
+                    "paddingTop": 8,
+                    "width": "100%",
+                  },
+                  Array [
+                    Object {
+                      "fontSize": 14,
+                    },
+                  ],
+                ]
+              }
+              testID="signup-input-lastName"
+              value=""
+            />
+          </View>
+        </View>
+        <View
+          dataSet={Object {}}
+          isInvalid=""
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            dataSet={Object {}}
+            isFocused={false}
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "#d4d4d4",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "marginBottom": 20,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <TextInput
+              accessibilityDescribedBy="field-react-aria-3-feedback"
+              accessible={true}
+              dataSet={Object {}}
+              disabled={false}
+              editable={true}
+              isInvalid=""
+              isRequired={false}
+              nativeID="field-react-aria-3"
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              onKeyPress={[Function]}
+              placeholder="Email"
+              placeholderTextColor="#a3a3a3"
+              readOnly={false}
+              required={false}
+              secureTextEntry={false}
+              selectionColor="#1f2937"
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "#171717",
+                    "flex": 1,
+                    "fontFamily": undefined,
+                    "fontSize": 12,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "height": "100%",
+                    "paddingBottom": 8,
+                    "paddingLeft": 12,
+                    "paddingRight": 12,
+                    "paddingTop": 8,
+                    "width": "100%",
+                  },
+                  Array [
+                    Object {
+                      "fontSize": 14,
+                    },
+                  ],
+                ]
+              }
+              testID="signup-input-email"
+              value=""
+            />
+          </View>
+        </View>
+        <View
+          dataSet={Object {}}
+          isInvalid=""
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            dataSet={Object {}}
+            isFocused={false}
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "#d4d4d4",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "marginBottom": 20,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <TextInput
+              accessibilityDescribedBy="field-react-aria-4-feedback"
+              accessible={true}
+              dataSet={Object {}}
+              disabled={false}
+              editable={true}
+              isInvalid=""
+              isRequired={false}
+              nativeID="field-react-aria-4"
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              onKeyPress={[Function]}
               placeholder="Password"
               placeholderTextColor="#a3a3a3"
               readOnly={false}
@@ -349,7 +436,7 @@ exports[`Login should match snapshot 1`] = `
                   ],
                 ]
               }
-              testID="login-input-password"
+              testID="signup-input-password"
               value=""
             />
           </View>
@@ -383,6 +470,7 @@ exports[`Login should match snapshot 1`] = `
                 "borderRadius": 4,
                 "flexDirection": "row",
                 "justifyContent": "center",
+                "marginBottom": 20,
                 "opacity": 0.4,
                 "paddingBottom": 10,
                 "paddingLeft": 12,
@@ -394,7 +482,7 @@ exports[`Login should match snapshot 1`] = `
               ],
             ]
           }
-          testID="login-submit"
+          testID="signup-submit"
         >
           <View
             dataSet={Object {}}
@@ -426,13 +514,83 @@ exports[`Login should match snapshot 1`] = `
                   }
                 }
               >
-                Login
+                Signup
               </Text>
             </View>
           </View>
         </View>
+        <View
+          dataSet={Object {}}
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            dataSet={Object {}}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": undefined,
+                  "color": "#171717",
+                  "fontFamily": undefined,
+                  "fontSize": 16,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 24,
+                  "textDecorationLine": undefined,
+                },
+                Array [
+                  Object {},
+                ],
+              ]
+            }
+          >
+            Already have an account?
+             
+          </Text>
+          <Text
+            dataSet={Object {}}
+            link={true}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": undefined,
+                  "color": "#3498db",
+                  "fontFamily": undefined,
+                  "fontSize": 16,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 24,
+                  "textDecorationLine": "underline",
+                },
+                Array [
+                  Object {},
+                ],
+              ]
+            }
+          >
+            Login
+          </Text>
+        </View>
       </View>
     </View>
+    <View
+      dataSet={Object {}}
+      style={
+        Object {
+          "display": "flex",
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    />
   </View>
 </RNCSafeAreaProvider>
 `;
