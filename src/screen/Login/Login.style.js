@@ -6,29 +6,27 @@ import {
   Text,
 } from 'native-base';
 
-import COLOR from '../../constant/color';
-
-export const FormContainer = styled(Box).attrs(() => ({
+export const FormContainer = styled(Box).attrs(({ theme }) => ({
   borderTopLeftRadius: 20,
   borderTopRightRadius: 20,
   flex: 1,
   p: 5,
-  bg: COLOR.LIGHT_100,
+  bg: theme.color.BACKGROUND_100,
 }))``;
 
-export const InputField = styled(Input).attrs(({ isInvalid }) => ({
+export const InputField = styled(Input).attrs(({ isInvalid, theme }) => ({
   _focus: {
-    bg: COLOR.LIGHT_100,
-    borderColor: COLOR.LIGHT_SECONDARY_100,
+    bg: theme.color.BACKGROUND_100,
+    borderColor: theme.color.SECONDARY_100,
   },
   mb: isInvalid ? 0 : 5,
 }))`
   font-size: 14px;
 `;
 
-export const SubmitButton = styled(Button).attrs(() => ({
-  bg: COLOR.LIGHT_PRIMARY_100,
-  _pressed: { bg: COLOR.LIGHT_PRIMARY_20 },
+export const SubmitButton = styled(Button).attrs(({ theme }) => ({
+  bg: theme.color.PRIMARY_100,
+  _pressed: { bg: theme.color.PRIMARY_20 },
   _text: { fontWeight: 'bold' },
 }))``;
 
@@ -39,9 +37,9 @@ export const Title = styled(Text).attrs(() => ({
   text-transform: capitalize;
 `;
 
-export const ToastBox = styled(Box).attrs(() => ({
-  _text: { color: COLOR.LIGHT_100 },
-  bg: COLOR.LIGHT_ERROR,
+export const ToastBox = styled(Box).attrs(({ theme }) => ({
+  _text: { color: theme.color.BACKGROUND_100 },
+  bg: theme.color.ERROR,
   p: 5,
   rounded: 5,
 }))``;

@@ -8,12 +8,12 @@ import {
 
 import TitleBar from '../../component/TitleBar/TitleBar';
 import CONSTANT from '../../constant';
-import COLOR from '../../constant/color';
 import TRANSLATION from '../../translation/en.json';
 import ROUTE from '../../constant/route';
 import NEWOR from '../../asset/newor.png';
 import validator from '../../helper/validator';
 import { signup } from '../../api/user';
+import useTheme from '../../theme/useTheme';
 import {
   FIELDS,
   INITIAL_STATE,
@@ -34,6 +34,7 @@ const Signup = () => {
   const [isSubmit, setIsSubmit] = useState(false);
   const navigation = useNavigation();
   const toast = useToast();
+  const theme = useTheme();
 
   const handleFieldChange = (label, value) => {
     setFields({
@@ -94,7 +95,7 @@ const Signup = () => {
       <Flex flex={1} />
       <Flex flex={4} direction="row" p="5" justifyContent="center">
         <FormContainer>
-          <TitleBar color={COLOR.LIGHT_SECONDARY_100}>
+          <TitleBar color={theme.color.SECONDARY_100}>
             <Title>{TRANSLATION.WELCOME_TO_NEWOR}</Title>
           </TitleBar>
           <Center><Image alt={CONSTANT.APP_NAME} source={NEWOR} size="xl" /></Center>

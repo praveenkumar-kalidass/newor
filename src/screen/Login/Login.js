@@ -9,11 +9,11 @@ import { useNavigation } from '@react-navigation/native';
 import TitleBar from '../../component/TitleBar/TitleBar';
 import Background from '../../component/Background/Background';
 import CONSTANT from '../../constant';
-import COLOR from '../../constant/color';
 import validator from '../../helper/validator';
 import TRANSLATION from '../../translation/en.json';
 import NEWOR from '../../asset/newor.png';
 import { login } from '../../api/user';
+import useTheme from '../../theme/useTheme';
 import {
   INITIAL_STATE,
   FIELDS,
@@ -34,6 +34,7 @@ const Login = () => {
   const [isSubmit, setIsSubmit] = useState(false);
   const navigation = useNavigation();
   const toast = useToast();
+  const theme = useTheme();
 
   const handleFieldChange = (label, value) => {
     setFields({
@@ -104,7 +105,7 @@ const Login = () => {
       </Flex>
       <Flex flex={1}>
         <FormContainer>
-          <TitleBar color={COLOR.LIGHT_SECONDARY_100} styleProps={{ mb: 5 }}>
+          <TitleBar color={theme.color.SECONDARY_100} styleProps={{ mb: 5 }}>
             <Title>{CONSTANT.APP_NAME}</Title>
           </TitleBar>
           <For each="field" index="index" of={FIELDS}>

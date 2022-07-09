@@ -5,6 +5,8 @@ import { render } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { NativeBaseProvider } from 'native-base';
 
+import ThemeProvider from '../theme/ThemeProvider';
+
 const AllTheProviders = ({ children }) => {
   const inset = {
     frame: {
@@ -18,7 +20,9 @@ const AllTheProviders = ({ children }) => {
   return (
     <NavigationContainer>
       <NativeBaseProvider initialWindowMetrics={inset}>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </NativeBaseProvider>
     </NavigationContainer>
   );

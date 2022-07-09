@@ -2,10 +2,11 @@ import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Polygon, Svg } from 'react-native-svg';
 
-import COLOR from '../../constant/color';
+import useTheme from '../../theme/useTheme';
 import BackgroundContainer from './Background.style';
 
 const Background = ({ height, width }) => {
+  const theme = useTheme();
   const primaryBackground = useMemo(
     () => `0,0 0,${height} ${width},${height} 30,${height - 30} 0,0`,
     [height, width],
@@ -18,8 +19,8 @@ const Background = ({ height, width }) => {
   return (
     <BackgroundContainer>
       <Svg height={height} width={width}>
-        <Polygon fill={COLOR.LIGHT_PRIMARY_100} points={primaryBackground} />
-        <Polygon fill={COLOR.LIGHT_SECONDARY_100} points={secondaryBackground} />
+        <Polygon fill={theme.color.PRIMARY_100} points={primaryBackground} />
+        <Polygon fill={theme.color.SECONDARY_100} points={secondaryBackground} />
       </Svg>
     </BackgroundContainer>
   );
