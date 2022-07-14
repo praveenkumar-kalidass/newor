@@ -53,7 +53,7 @@ exports[`Signup should match snapshot 1`] = `
           Array [
             Object {
               "alignSelf": "center",
-              "backgroundColor": "#ffffff",
+              "backgroundColor": "#eeeeee",
               "borderRadius": 20,
               "flex": 1,
               "paddingBottom": 20,
@@ -141,7 +141,7 @@ exports[`Signup should match snapshot 1`] = `
             onError={[Function]}
             source={
               Object {
-                "testUri": "../../../src/asset/newor.png",
+                "testUri": "../../../src/asset/image/newor-transparent.png",
               }
             }
             style={

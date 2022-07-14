@@ -7,8 +7,7 @@ import {
 } from 'native-base';
 
 export const FormContainer = styled(Box).attrs(({ theme }) => ({
-  borderTopLeftRadius: 20,
-  borderTopRightRadius: 20,
+  borderRadius: 20,
   flex: 1,
   p: 5,
   bg: theme.color.MODAL,

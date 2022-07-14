@@ -104,7 +104,7 @@ exports[`Login should match snapshot 1`] = `
           onError={[Function]}
           source={
             Object {
-              "testUri": "../../../src/asset/newor.png",
+              "testUri": "../../../src/asset/image/newor-transparent.png",
             }
           }
           style={
@@ -125,6 +125,10 @@ exports[`Login should match snapshot 1`] = `
           "display": "flex",
           "flex": 1,
           "flexDirection": "column",
+          "paddingBottom": 20,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+          "paddingTop": 20,
         }
       }
     >
@@ -133,9 +137,8 @@ exports[`Login should match snapshot 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "#ffffff",
-              "borderTopLeftRadius": 20,
-              "borderTopRightRadius": 20,
+              "backgroundColor": "#eeeeee",
+              "borderRadius": 20,
               "flex": 1,
               "paddingBottom": 20,
               "paddingLeft": 20,
@@ -433,6 +436,16 @@ exports[`Login should match snapshot 1`] = `
         </View>
       </View>
     </View>
+    <View
+      dataSet={Object {}}
+      style={
+        Object {
+          "display": "flex",
+          "flex": 0.1,
+          "flexDirection": "column",
+        }
+      }
+    />
   </View>
 </RNCSafeAreaProvider>
 `;

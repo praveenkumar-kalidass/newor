@@ -11,7 +11,7 @@ import Background from '../../component/Background/Background';
 import CONSTANT from '../../constant';
 import validator from '../../helper/validator';
 import TRANSLATION from '../../translation/en.json';
-import NEWOR from '../../asset/newor.png';
+import NEWOR from '../../asset/image/newor-transparent.png';
 import { login } from '../../api/user';
 import useTheme from '../../theme/useTheme';
 import {
@@ -103,7 +103,7 @@ const Login = () => {
           </Center>
         </If>
       </Flex>
-      <Flex flex={1}>
+      <Flex flex={1} p="5">
         <FormContainer>
           <TitleBar color={theme.color.SECONDARY_100} styleProps={{ mb: 5 }}>
             <Title>{CONSTANT.APP_NAME}</Title>
@@ -131,6 +131,7 @@ const Login = () => {
           </SubmitButton>
         </FormContainer>
       </Flex>
+      <Flex flex={0.1} />
     </Flex>
   );
 };
