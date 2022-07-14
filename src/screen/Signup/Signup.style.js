@@ -8,7 +8,7 @@ export const FormContainer = styled(Box).attrs(({ theme }) => ({
   flex: 1,
   alignSelf: 'center',
   p: 5,
-  bg: theme.color.BACKGROUND_100,
+  bg: theme.color.MODAL,
 }))``;
 
 export const InputField = styled(Input).attrs(({ isInvalid, theme }) => ({

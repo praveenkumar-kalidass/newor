@@ -11,7 +11,7 @@ export const FormContainer = styled(Box).attrs(({ theme }) => ({
   borderTopRightRadius: 20,
   flex: 1,
   p: 5,
-  bg: theme.color.BACKGROUND_100,
+  bg: theme.color.MODAL,
 }))``;
 
 export const InputField = styled(Input).attrs(({ isInvalid, theme }) => ({
