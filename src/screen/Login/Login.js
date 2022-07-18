@@ -11,6 +11,7 @@ import Background from '../../component/Background/Background';
 import CONSTANT from '../../constant';
 import validator from '../../helper/validator';
 import TRANSLATION from '../../translation/en.json';
+import ROUTE from '../../constant/route';
 import NEWOR from '../../asset/image/newor-transparent.png';
 import { login } from '../../api/user';
 import useTheme from '../../theme/useTheme';
@@ -25,6 +26,7 @@ import {
   SubmitButton,
   Title,
   ToastBox,
+  SignupLink,
 } from './Login.style';
 
 const Login = () => {
@@ -88,7 +90,7 @@ const Login = () => {
   return (
     <Flex flex={1}>
       <Flex
-        flex={1.5}
+        flex={1.4}
         onLayout={(event) => {
           const { width, height } = event.nativeEvent.layout;
           setBackground({ width, height });
@@ -129,9 +131,21 @@ const Login = () => {
           <SubmitButton testID="login-submit" onPress={handleSubmit} isDisabled={isFormError}>
             {TRANSLATION.LOGIN}
           </SubmitButton>
+          <Flex direction="row" justifyContent="center">
+            <SignupLink>
+              {TRANSLATION.NEW_TO_NEWOR}
+              &nbsp;
+            </SignupLink>
+            <SignupLink
+              link
+              onPress={() => navigation.navigate(ROUTE.SIGNUP)}
+            >
+              {TRANSLATION.SIGNUP}
+            </SignupLink>
+          </Flex>
         </FormContainer>
       </Flex>
-      <Flex flex={0.1} />
+      <Flex flex={0.025} />
     </Flex>
   );
 };

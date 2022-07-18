@@ -27,6 +27,7 @@ export const SubmitButton = styled(Button).attrs(({ theme }) => ({
   bg: theme.color.PRIMARY_100,
   _pressed: { bg: theme.color.PRIMARY_20 },
   _text: { fontWeight: 'bold' },
+  mb: 5,
 }))``;
 
 export const Title = styled(Text).attrs(() => ({
@@ -41,4 +42,10 @@ export const ToastBox = styled(Box).attrs(({ theme }) => ({
   bg: theme.color.ERROR,
   p: 5,
   rounded: 5,
+}))``;
+
+export const SignupLink = styled(Text).attrs(({ link, theme }) => ({
+  fontSize: 'md',
+  underline: link,
+  color: link && theme.color.LINK,
 }))``;

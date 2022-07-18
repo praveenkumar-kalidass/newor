@@ -8,6 +8,7 @@
   "LAST_NAME": "Last name",
   "SIGNUP_SUCCESS": "Hurray! You have successfully signed up!",
   "ALREADY_HAVE_ACCOUNT": "Already have an account?",
+  "NEW_TO_NEWOR": "New to Newor?",
   "ERROR": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",

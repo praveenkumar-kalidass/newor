@@ -28,7 +28,7 @@ exports[`Login should match snapshot 1`] = `
       style={
         Object {
           "display": "flex",
-          "flex": 1.5,
+          "flex": 1.4,
           "flexDirection": "column",
           "justifyContent": "center",
         }
@@ -386,6 +386,7 @@ exports[`Login should match snapshot 1`] = `
                 "borderRadius": 4,
                 "flexDirection": "row",
                 "justifyContent": "center",
+                "marginBottom": 20,
                 "opacity": 0.4,
                 "paddingBottom": 10,
                 "paddingLeft": 12,
@@ -434,6 +435,66 @@ exports[`Login should match snapshot 1`] = `
             </View>
           </View>
         </View>
+        <View
+          dataSet={Object {}}
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            dataSet={Object {}}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": undefined,
+                  "color": "#171717",
+                  "fontFamily": undefined,
+                  "fontSize": 16,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 24,
+                  "textDecorationLine": undefined,
+                },
+                Array [
+                  Object {},
+                ],
+              ]
+            }
+          >
+            New to Newor?
+             
+          </Text>
+          <Text
+            dataSet={Object {}}
+            link={true}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": undefined,
+                  "color": "#3498db",
+                  "fontFamily": undefined,
+                  "fontSize": 16,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 24,
+                  "textDecorationLine": "underline",
+                },
+                Array [
+                  Object {},
+                ],
+              ]
+            }
+          >
+            Signup
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -441,7 +502,7 @@ exports[`Login should match snapshot 1`] = `
       style={
         Object {
           "display": "flex",
-          "flex": 0.1,
+          "flex": 0.025,
           "flexDirection": "column",
         }
       }
