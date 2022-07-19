@@ -5,15 +5,15 @@ import { Polygon, Svg } from 'react-native-svg';
 import useTheme from '../../theme/useTheme';
 import BackgroundContainer from './Background.style';
 
-const Background = ({ height, width }) => {
+const Background1 = ({ height, width }) => {
   const theme = useTheme();
   const primaryBackground = useMemo(
     () => `0,0 0,${height} ${width},${height} 30,${height - 30} 0,0`,
-    [height, width],
+    [],
   );
   const secondaryBackground = useMemo(
     () => `0,0 ${width},0 ${width},${height} ${width - 30},30 0,0`,
-    [height, width],
+    [],
   );
 
   return (
@@ -26,9 +26,9 @@ const Background = ({ height, width }) => {
   );
 };
 
-Background.propTypes = {
+Background1.propTypes = {
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
 };
 
-export default Background;
+export default Background1;

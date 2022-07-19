@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withBackground should wrap with specific pattern, when pattern is specified 1`] = `[Function]`;

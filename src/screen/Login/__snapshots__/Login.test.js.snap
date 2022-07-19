@@ -39,7 +39,6 @@ exports[`Login should match snapshot 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "#ffffff",
               "position": "absolute",
             },
           ]

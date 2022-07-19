@@ -27,6 +27,8 @@ import {
   ToastBox,
   LoginLink,
 } from './Signup.style';
+import withBackground from '../../helper/withBackground';
+import { Background2 } from '../../component/Background';
 
 const Signup = () => {
   const [fields, setFields] = useState(INITIAL_STATE);
@@ -139,4 +141,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default withBackground({ Component: Signup, Background: Background2 });

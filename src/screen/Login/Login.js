@@ -7,7 +7,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 
 import TitleBar from '../../component/TitleBar/TitleBar';
-import Background from '../../component/Background/Background';
+import { Background1 } from '../../component/Background';
 import CONSTANT from '../../constant';
 import validator from '../../helper/validator';
 import TRANSLATION from '../../translation/en.json';
@@ -99,7 +99,7 @@ const Login = () => {
         testID="login-logo-container"
       >
         <If condition={background.height && background.width}>
-          <Background height={background.height} width={background.width} />
+          <Background1 height={background.height} width={background.width} />
           <Center>
             <Image testID="login-logo" alt={CONSTANT.APP_NAME} size={background.width * 0.8} source={NEWOR} />
           </Center>
