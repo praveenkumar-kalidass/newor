@@ -172,7 +172,7 @@ exports[`Signup should match snapshot 1`] = `
               ]
             }
           >
-            Welcome to Newor!
+            WELCOME_TO_NEWOR
           </Text>
         </View>
         <View
@@ -565,7 +565,7 @@ exports[`Signup should match snapshot 1`] = `
                   }
                 }
               >
-                Signup
+                SIGNUP
               </Text>
             </View>
           </View>
@@ -601,7 +601,24 @@ exports[`Signup should match snapshot 1`] = `
               ]
             }
           >
-            Already have an account?
+            ALREADY_HAVE_ACCOUNT
+          </Text>
+          <Text
+            dataSet={Object {}}
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": "#171717",
+                "fontFamily": undefined,
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "letterSpacing": 0,
+                "lineHeight": 21,
+                "textDecorationLine": undefined,
+              }
+            }
+          >
              
           </Text>
           <Text
@@ -627,7 +644,7 @@ exports[`Signup should match snapshot 1`] = `
               ]
             }
           >
-            Login
+            LOGIN
           </Text>
         </View>
       </View>

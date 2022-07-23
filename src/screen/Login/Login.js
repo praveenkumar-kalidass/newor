@@ -10,11 +10,12 @@ import TitleBar from 'component/TitleBar/TitleBar';
 import { Background1 } from 'component/Background';
 import CONSTANT from 'constant';
 import validator from 'helper/validator';
-import TRANSLATION from 'translation/en.json';
 import ROUTE from 'constant/route';
 import NEWOR from 'asset/image/newor-transparent.png';
 import { login } from 'api/user';
 import useTheme from 'theme/useTheme';
+import useTranslation from 'translation/useTranslation';
+import Translation from 'translation/Translation';
 import {
   INITIAL_STATE,
   FIELDS,
@@ -37,6 +38,7 @@ const Login = () => {
   const navigation = useNavigation();
   const toast = useToast();
   const theme = useTheme();
+  const { translate } = useTranslation();
 
   const handleFieldChange = (label, value) => {
     setFields({
@@ -60,10 +62,10 @@ const Login = () => {
       setIsSubmit(false);
     } catch (error) {
       setIsSubmit(false);
-      let errorMessage = TRANSLATION.ERROR.NEWOR_INTERNAL_SERVER_ERROR;
+      let errorMessage = translate('ERROR.NEWOR_INTERNAL_SERVER_ERROR');
       const errorCode = error?.response?.data?.code;
       if (errorCode) {
-        errorMessage = TRANSLATION.ERROR[errorCode];
+        errorMessage = translate(`ERROR.${errorCode}`);
       }
       toast.show({
         render: () => <ToastBox>{errorMessage}</ToastBox>,
@@ -128,20 +130,16 @@ const Login = () => {
               </FormControl.ErrorMessage>
             </FormControl>
           </For>
-          <SubmitButton testID="login-submit" onPress={handleSubmit} isDisabled={isFormError}>
-            {TRANSLATION.LOGIN}
-          </SubmitButton>
+          <Translation tkey="LOGIN" as={SubmitButton} testID="login-submit" onPress={handleSubmit} isDisabled={isFormError} />
           <Flex direction="row" justifyContent="center">
-            <SignupLink>
-              {TRANSLATION.NEW_TO_NEWOR}
-              &nbsp;
-            </SignupLink>
-            <SignupLink
+            <Translation tkey="NEW_TO_NEWOR" as={SignupLink} />
+            &nbsp;
+            <Translation
+              tkey="SIGNUP"
+              as={SignupLink}
               link
               onPress={() => navigation.navigate(ROUTE.SIGNUP)}
-            >
-              {TRANSLATION.SIGNUP}
-            </SignupLink>
+            />
           </Flex>
         </FormContainer>
       </Flex>

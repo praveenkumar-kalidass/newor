@@ -8,7 +8,6 @@ import {
 
 import TitleBar from 'component/TitleBar/TitleBar';
 import CONSTANT from 'constant';
-import TRANSLATION from 'translation/en.json';
 import ROUTE from 'constant/route';
 import NEWOR from 'asset/image/newor-transparent.png';
 import validator from 'helper/validator';
@@ -16,6 +15,8 @@ import { signup } from 'api/user';
 import useTheme from 'theme/useTheme';
 import withBackground from 'helper/withBackground';
 import { Background2 } from 'component/Background';
+import useTranslation from 'translation/useTranslation';
+import Translation from 'translation/Translation';
 import {
   FIELDS,
   INITIAL_STATE,
@@ -37,6 +38,7 @@ const Signup = () => {
   const navigation = useNavigation();
   const toast = useToast();
   const theme = useTheme();
+  const { translate } = useTranslation();
 
   const handleFieldChange = (label, value) => {
     setFields({
@@ -65,17 +67,17 @@ const Signup = () => {
     try {
       await signup(fields);
       toast.show({
-        render: () => <ToastBox>{TRANSLATION.SIGNUP_SUCCESS}</ToastBox>,
+        render: () => <Translation tkey="SIGNUP_SUCCESS" as={ToastBox} />,
         placement: 'bottom',
         onCloseComplete: () => navigation.navigate(ROUTE.LOGIN),
       });
       setIsSubmit(false);
     } catch (error) {
       setIsSubmit(false);
-      let errorMessage = TRANSLATION.ERROR.NEWOR_INTERNAL_SERVER_ERROR;
+      let errorMessage = translate('ERROR.NEWOR_INTERNAL_SERVER_ERROR');
       const errorCode = error?.response?.data?.code;
       if (errorCode) {
-        errorMessage = TRANSLATION.ERROR[errorCode];
+        errorMessage = translate(`ERROR.${errorCode}`);
       }
       toast.show({
         render: () => <ToastBox isError>{errorMessage}</ToastBox>,
@@ -98,7 +100,7 @@ const Signup = () => {
       <Flex flex={4} direction="row" p="5" justifyContent="center">
         <FormContainer>
           <TitleBar color={theme.color.SECONDARY_100}>
-            <Title>{TRANSLATION.WELCOME_TO_NEWOR}</Title>
+            <Translation tkey="WELCOME_TO_NEWOR" as={Title} />
           </TitleBar>
           <Center><Image alt={CONSTANT.APP_NAME} source={NEWOR} size="xl" /></Center>
           <For each="field" index="index" of={FIELDS}>
@@ -119,20 +121,25 @@ const Signup = () => {
               </FormControl.ErrorMessage>
             </FormControl>
           </For>
-          <SubmitButton testID="signup-submit" onPress={handleSubmit} isDisabled={isFormError}>
-            {TRANSLATION.SIGNUP}
-          </SubmitButton>
+          <Translation
+            tkey="SIGNUP"
+            as={SubmitButton}
+            testID="signup-submit"
+            onPress={handleSubmit}
+            isDisabled={isFormError}
+          />
           <Flex direction="row" justifyContent="center">
-            <LoginLink>
-              {TRANSLATION.ALREADY_HAVE_ACCOUNT}
-              &nbsp;
-            </LoginLink>
-            <LoginLink
+            <Translation
+              tkey="ALREADY_HAVE_ACCOUNT"
+              as={LoginLink}
+            />
+            &nbsp;
+            <Translation
+              tkey="LOGIN"
+              as={LoginLink}
               link
               onPress={() => navigation.navigate(ROUTE.LOGIN)}
-            >
-              {TRANSLATION.LOGIN}
-            </LoginLink>
+            />
           </Flex>
         </FormContainer>
       </Flex>
