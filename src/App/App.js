@@ -6,6 +6,7 @@ import { NativeBaseProvider } from 'native-base';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import ThemeProvider from '../theme';
+import TranslationProvider from '../translation';
 import Navigation from '../navigation';
 
 const App = () => (
@@ -13,7 +14,9 @@ const App = () => (
     <NavigationContainer>
       <NativeBaseProvider>
         <ThemeProvider>
-          <Navigation />
+          <TranslationProvider>
+            <Navigation />
+          </TranslationProvider>
         </ThemeProvider>
       </NativeBaseProvider>
     </NavigationContainer>
