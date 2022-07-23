@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { render } from '../../test/util';
 
+import { render } from 'test/util';
 import TitleBar from './TitleBar';
 
 describe('TitleBar', () => {

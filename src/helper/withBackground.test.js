@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { Background1 } from '../component/Background';
+import { Background1 } from 'component/Background';
 import withBackground from './withBackground';
 
 describe('withBackground', () => {

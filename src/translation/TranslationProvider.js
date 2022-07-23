@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import LocalizedStrings from 'react-localization';
 import PropTypes from 'prop-types';
 
+import CONSTANT from 'constant';
 import TranslationContext from './TranslationContext';
 import en from './language/en.json';
 import ta from './language/ta.json';
-import CONSTANT from '../constant';
 
 const TranslationProvider = ({ children }) => {
   const [translations] = useState({ en, ta });

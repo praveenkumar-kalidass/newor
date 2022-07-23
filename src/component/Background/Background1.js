@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Polygon, Svg } from 'react-native-svg';
 
-import useTheme from '../../theme/useTheme';
+import useTheme from 'theme/useTheme';
 import BackgroundContainer from './Background.style';
 
 const Background1 = ({ height, width }) => {

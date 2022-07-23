@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-import TRANSLATION from '../../translation/en.json';
+import TRANSLATION from 'translation/en.json';
 
 export const SCHEMA = Joi.object({
   email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com'] } }).label(TRANSLATION.EMAIL),

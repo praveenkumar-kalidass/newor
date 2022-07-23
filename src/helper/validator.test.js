@@ -1,4 +1,5 @@
 import Joi from 'joi';
+
 import validator from './validator';
 
 describe('validator', () => {

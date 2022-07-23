@@ -26,4 +26,9 @@ module.exports = {
     'react/function-component-definition': [0, { namedComponents: 'function-declaration' }],
     'react/jsx-no-undef': [2, { allowGlobals: true }],
   },
+  settings: {
+    'import/resolver': {
+      'babel-module': {},
+    },
+  },
 };

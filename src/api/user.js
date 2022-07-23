@@ -1,6 +1,6 @@
+import CONSTANT from 'constant';
 import axios from './index';
 import config from '../../config/config';
-import CONSTANT from '../constant';
 
 export const login = ({ email, password }) => axios.post(`${config.baseURL}/api/user/v1/login`, {
   email,

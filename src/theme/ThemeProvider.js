@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components/native';
 import { useColorMode } from 'native-base';
 
-import * as themeColor from '../constant/color';
-import constant from '../constant';
+import * as themeColor from 'constant/color';
+import constant from 'constant';
 import ThemeContext from './ThemeContext';
 
 const ThemeProvider = ({ children }) => {

@@ -6,15 +6,15 @@ import {
 } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 
-import TitleBar from '../../component/TitleBar/TitleBar';
-import { Background1 } from '../../component/Background';
-import CONSTANT from '../../constant';
-import validator from '../../helper/validator';
-import TRANSLATION from '../../translation/en.json';
-import ROUTE from '../../constant/route';
-import NEWOR from '../../asset/image/newor-transparent.png';
-import { login } from '../../api/user';
-import useTheme from '../../theme/useTheme';
+import TitleBar from 'component/TitleBar/TitleBar';
+import { Background1 } from 'component/Background';
+import CONSTANT from 'constant';
+import validator from 'helper/validator';
+import TRANSLATION from 'translation/en.json';
+import ROUTE from 'constant/route';
+import NEWOR from 'asset/image/newor-transparent.png';
+import { login } from 'api/user';
+import useTheme from 'theme/useTheme';
 import {
   INITIAL_STATE,
   FIELDS,

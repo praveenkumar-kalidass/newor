@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { login } from '../../api/user';
-import { act, render, fireEvent } from '../../test/util';
+import { login } from 'api/user';
+import { act, render, fireEvent } from 'test/util';
 import Login from './Login';
 
 const mockToast = { show: jest.fn() };
@@ -12,7 +12,7 @@ jest.mock('native-base', () => {
     useToast: () => mockToast,
   };
 });
-jest.mock('../../api/user', () => ({
+jest.mock('api/user', () => ({
   login: jest.fn(),
 }));
 

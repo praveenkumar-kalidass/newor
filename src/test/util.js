@@ -5,7 +5,7 @@ import { render } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { NativeBaseProvider } from 'native-base';
 
-import ThemeProvider from '../theme/ThemeProvider';
+import ThemeProvider from 'theme/ThemeProvider';
 
 const AllTheProviders = ({ children }) => {
   const inset = {

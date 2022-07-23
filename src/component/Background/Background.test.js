@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render } from '../../test/util';
+import { render } from 'test/util';
 import Background1 from './Background1';
 import Background2 from './Background2';
 

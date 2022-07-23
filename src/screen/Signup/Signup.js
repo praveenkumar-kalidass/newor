@@ -6,14 +6,16 @@ import {
   Center, Flex, FormControl, Image, useToast,
 } from 'native-base';
 
-import TitleBar from '../../component/TitleBar/TitleBar';
-import CONSTANT from '../../constant';
-import TRANSLATION from '../../translation/en.json';
-import ROUTE from '../../constant/route';
-import NEWOR from '../../asset/image/newor-transparent.png';
-import validator from '../../helper/validator';
-import { signup } from '../../api/user';
-import useTheme from '../../theme/useTheme';
+import TitleBar from 'component/TitleBar/TitleBar';
+import CONSTANT from 'constant';
+import TRANSLATION from 'translation/en.json';
+import ROUTE from 'constant/route';
+import NEWOR from 'asset/image/newor-transparent.png';
+import validator from 'helper/validator';
+import { signup } from 'api/user';
+import useTheme from 'theme/useTheme';
+import withBackground from 'helper/withBackground';
+import { Background2 } from 'component/Background';
 import {
   FIELDS,
   INITIAL_STATE,
@@ -27,8 +29,6 @@ import {
   ToastBox,
   LoginLink,
 } from './Signup.style';
-import withBackground from '../../helper/withBackground';
-import { Background2 } from '../../component/Background';
 
 const Signup = () => {
   const [fields, setFields] = useState(INITIAL_STATE);

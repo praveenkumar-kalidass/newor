@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-import TRANSLATION from '../../translation/en.json';
+import TRANSLATION from 'translation/en.json';
 
 export const SCHEMA = Joi.object({
   firstName: Joi.string().alphanum().min(3).max(25)

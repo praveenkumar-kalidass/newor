@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { useWindowDimensions } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
-import COLOR from '../../constant/color';
+import COLOR from 'constant/color';
 import BackgroundContainer from './Background.style';
 
 const Background2 = () => {
