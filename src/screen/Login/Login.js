@@ -11,7 +11,7 @@ import { Background1 } from 'component/Background';
 import CONSTANT from 'constant';
 import validator from 'helper/validator';
 import ROUTE from 'constant/route';
-import NEWOR from 'asset/image/newor-transparent.png';
+import NEWOR from 'asset/image/newor.png';
 import { login } from 'api/user';
 import useTheme from 'theme/useTheme';
 import useTranslation from 'translation/useTranslation';

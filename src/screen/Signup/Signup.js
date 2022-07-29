@@ -9,7 +9,7 @@ import {
 import TitleBar from 'component/TitleBar/TitleBar';
 import CONSTANT from 'constant';
 import ROUTE from 'constant/route';
-import NEWOR from 'asset/image/newor-transparent.png';
+import NEWOR from 'asset/image/newor.png';
 import validator from 'helper/validator';
 import { signup } from 'api/user';
 import useTheme from 'theme/useTheme';
