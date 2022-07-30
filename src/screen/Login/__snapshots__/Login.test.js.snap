@@ -103,7 +103,7 @@ exports[`Login should match snapshot 1`] = `
           onError={[Function]}
           source={
             Object {
-              "testUri": "../../../src/asset/image/newor-transparent.png",
+              "testUri": "../../../src/asset/image/newor.png",
             }
           }
           style={

@@ -3,13 +3,16 @@ import React, {
 } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import {
-  Center, Flex, FormControl, Image, useToast,
+  Center, Flex, FormControl, Image, useToast, AlertDialog,
 } from 'native-base';
 
 import TitleBar from 'component/TitleBar/TitleBar';
+import ToastAlert from 'component/ToastAlert';
+import AppButton from 'component/AppButton';
 import CONSTANT from 'constant';
 import ROUTE from 'constant/route';
 import NEWOR from 'asset/image/newor.png';
+import NEWOR_SUCCESS from 'asset/image/newor-success.png';
 import validator from 'helper/validator';
 import { signup } from 'api/user';
 import useTheme from 'theme/useTheme';
@@ -25,9 +28,7 @@ import {
 import {
   FormContainer,
   InputField,
-  SubmitButton,
   Title,
-  ToastBox,
   LoginLink,
 } from './Signup.style';
 
@@ -35,6 +36,7 @@ const Signup = () => {
   const [fields, setFields] = useState(INITIAL_STATE);
   const [errorMessages, setErrorMessages] = useState(INITIAL_STATE);
   const [isSubmit, setIsSubmit] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const navigation = useNavigation();
   const toast = useToast();
   const theme = useTheme();
@@ -66,12 +68,8 @@ const Signup = () => {
   const doSignup = useCallback(async () => {
     try {
       await signup(fields);
-      toast.show({
-        render: () => <Translation tkey="SIGNUP_SUCCESS" as={ToastBox} />,
-        placement: 'bottom',
-        onCloseComplete: () => navigation.navigate(ROUTE.LOGIN),
-      });
       setIsSubmit(false);
+      setIsSuccess(true);
     } catch (error) {
       setIsSubmit(false);
       let errorMessage = translate('ERROR.NEWOR_INTERNAL_SERVER_ERROR');
@@ -80,8 +78,8 @@ const Signup = () => {
         errorMessage = translate(`ERROR.${errorCode}`);
       }
       toast.show({
-        render: () => <ToastBox isError>{errorMessage}</ToastBox>,
-        placement: 'bottom',
+        render: () => <ToastAlert status="error" message={errorMessage} />,
+        placement: 'top',
       });
     }
   }, [fields]);
@@ -123,10 +121,13 @@ const Signup = () => {
           </For>
           <Translation
             tkey="SIGNUP"
-            as={SubmitButton}
+            as={AppButton}
             testID="signup-submit"
             onPress={handleSubmit}
             isDisabled={isFormError}
+            isLoading={isSubmit}
+            variant="primary"
+            mb={5}
           />
           <Flex direction="row" justifyContent="center">
             <Translation
@@ -144,6 +145,34 @@ const Signup = () => {
         </FormContainer>
       </Flex>
       <Flex flex={1} />
+      <AlertDialog testID="signup-success-modal" avoidKeyboard size="xl" isOpen={isSuccess} onClose={() => setIsSuccess(false)}>
+        <AlertDialog.Content>
+          <AlertDialog.CloseButton />
+          <Translation tkey="SIGNUP_SUCCESS" as={AlertDialog.Header} />
+          <AlertDialog.Body>
+            <Center>
+              <Image alt={translate('SIGNUP_SUCCESS')} source={NEWOR_SUCCESS} size="2xl" />
+              <Translation
+                tkey="PLEASE_VERIFY_EMAIL"
+                as={LoginLink}
+              />
+            </Center>
+          </AlertDialog.Body>
+          <AlertDialog.Footer>
+            <Translation
+              tkey="LOGIN"
+              as={AppButton}
+              variant="primary"
+              flex={1}
+              testID="signup-success-login"
+              onPress={() => {
+                setIsSuccess(false);
+                navigation.navigate(ROUTE.LOGIN);
+              }}
+            />
+          </AlertDialog.Footer>
+        </AlertDialog.Content>
+      </AlertDialog>
     </Flex>
   );
 };

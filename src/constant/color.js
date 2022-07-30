@@ -6,8 +6,10 @@ export const light = {
   BACKGROUND_100: '#ffffff',
   BACKGROUND_50: '#7f7f7f',
   BACKGROUND_0: '#000000',
-  SUCCESS: '#2e7d32',
-  ERROR: '#d32f2f',
+  SUCCESS_100: '#2e7d32',
+  ERROR_100: '#d50f0f',
+  SUCCESS_0: '#BBF7D0',
+  ERROR_0: '#fecaca',
   PRIMARY_100: '#ad0000',
   PRIMARY_80: '#ad1414',
   PRIMARY_60: '#ad2828',
@@ -29,8 +31,10 @@ export const dark = {
   BACKGROUND_100: '#000000',
   BACKGROUND_50: '#7f7f7f',
   BACKGROUND_0: '#ffffff',
-  SUCCESS: '#2e7d32',
-  ERROR: '#d32f2f',
+  SUCCESS_100: '#2e7d32',
+  ERROR_100: '#d50f0f',
+  SUCCESS_0: '#BBF7D0',
+  ERROR_0: '#fecaca',
   PRIMARY_100: '#ad0000',
   PRIMARY_80: '#ad1414',
   PRIMARY_60: '#ad2828',
@@ -45,7 +49,7 @@ export const dark = {
   MODAL: '#111111',
 };
 Object.keys(dark).forEach((code) => {
-  color[`${CONSTANT.THEME.LIGHT.toUpperCase()}_${code}`] = light[code];
+  color[`${CONSTANT.THEME.DARK.toUpperCase()}_${code}`] = dark[code];
 });
 
 export default color;

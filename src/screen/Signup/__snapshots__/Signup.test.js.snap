@@ -100,6 +100,8 @@ exports[`Signup should match snapshot 1`] = `
     >
       <View
         dataSet={Object {}}
+        elevation={1}
+        shadowColor="#000000"
         style={
           Array [
             Object {
@@ -192,7 +194,7 @@ exports[`Signup should match snapshot 1`] = `
             onError={[Function]}
             source={
               Object {
-                "testUri": "../../../src/asset/image/newor-transparent.png",
+                "testUri": "../../../src/asset/image/newor.png",
               }
             }
             style={
@@ -514,24 +516,19 @@ exports[`Signup should match snapshot 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#ad0000",
-                "borderRadius": 4,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "marginBottom": 20,
-                "opacity": 0.4,
-                "paddingBottom": 10,
-                "paddingLeft": 12,
-                "paddingRight": 12,
-                "paddingTop": 10,
-              },
-              Array [
-                Object {},
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ad0000",
+              "borderRadius": 4,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "marginBottom": 20,
+              "opacity": 0.4,
+              "paddingBottom": 10,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 10,
+            }
           }
           testID="signup-submit"
         >
