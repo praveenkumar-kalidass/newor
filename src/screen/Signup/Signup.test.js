@@ -49,6 +49,8 @@ describe('Signup', () => {
       await fireEvent(getByTestId('signup-input-lastName'), 'onBlur');
       await fireEvent.changeText(getByTestId('signup-input-email'), 'test@newor.com');
       await fireEvent(getByTestId('signup-input-email'), 'onBlur');
+      await fireEvent.changeText(getByTestId('signup-input-mobileNumber'), '9876543210');
+      await fireEvent(getByTestId('signup-input-mobileNumber'), 'onBlur');
       await fireEvent.changeText(getByTestId('signup-input-password'), '123456');
       await fireEvent(getByTestId('signup-input-password'), 'onBlur');
     });
@@ -72,6 +74,8 @@ describe('Signup', () => {
       await fireEvent(getByTestId('signup-input-lastName'), 'onBlur');
       await fireEvent.changeText(getByTestId('signup-input-email'), 'test@newor.com');
       await fireEvent(getByTestId('signup-input-email'), 'onBlur');
+      await fireEvent.changeText(getByTestId('signup-input-mobileNumber'), '9876543210');
+      await fireEvent(getByTestId('signup-input-mobileNumber'), 'onBlur');
       await fireEvent.changeText(getByTestId('signup-input-password'), '123456');
       await fireEvent(getByTestId('signup-input-password'), 'onBlur');
     });

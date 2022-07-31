@@ -446,6 +446,29 @@ exports[`Signup should match snapshot 1`] = `
               }
             }
           >
+            <Text
+              dataSet={Object {}}
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "color": "#171717",
+                  "fontFamily": undefined,
+                  "fontSize": 14,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 21,
+                  "paddingLeft": 12,
+                  "textDecorationLine": undefined,
+                }
+              }
+            >
+              +91
+            </Text>
+            <View
+              dataSet={Object {}}
+              style={Object {}}
+            />
             <TextInput
               accessibilityDescribedBy="field-react-aria-4-feedback"
               accessible={true}
@@ -455,6 +478,78 @@ exports[`Signup should match snapshot 1`] = `
               isInvalid=""
               isRequired={false}
               nativeID="field-react-aria-4"
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              onKeyPress={[Function]}
+              placeholder="MOBILE_NUMBER"
+              placeholderTextColor="#a3a3a3"
+              readOnly={false}
+              required={false}
+              secureTextEntry={false}
+              selectionColor="#1f2937"
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "#171717",
+                    "flex": 1,
+                    "fontFamily": undefined,
+                    "fontSize": 12,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "height": "100%",
+                    "paddingBottom": 8,
+                    "paddingLeft": 12,
+                    "paddingRight": 12,
+                    "paddingTop": 8,
+                    "width": "100%",
+                  },
+                  Array [
+                    Object {
+                      "fontSize": 14,
+                    },
+                  ],
+                ]
+              }
+              testID="signup-input-mobileNumber"
+              value=""
+            />
+          </View>
+        </View>
+        <View
+          dataSet={Object {}}
+          isInvalid=""
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            dataSet={Object {}}
+            isFocused={false}
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "#d4d4d4",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "marginBottom": 20,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <TextInput
+              accessibilityDescribedBy="field-react-aria-5-feedback"
+              accessible={true}
+              dataSet={Object {}}
+              disabled={false}
+              editable={true}
+              isInvalid=""
+              isRequired={false}
+              nativeID="field-react-aria-5"
               onBlur={[Function]}
               onChangeText={[Function]}
               onFocus={[Function]}

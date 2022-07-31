@@ -68,7 +68,7 @@ const Login = () => {
         errorMessage = translate(`ERROR.${errorCode}`);
       }
       toast.show({
-        render: () => <ToastAlert status="error" message={errorMessage} description={errorMessage} />,
+        render: () => <ToastAlert status="error" message={errorMessage} />,
         placement: 'bottom',
       });
     }

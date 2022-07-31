@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import {
-  Center, Flex, FormControl, Image, useToast, AlertDialog,
+  Center, Flex, FormControl, Image, useToast, AlertDialog, Text,
 } from 'native-base';
 
 import TitleBar from 'component/TitleBar/TitleBar';
@@ -113,6 +113,9 @@ const Signup = () => {
                   field.key === CONSTANT.AUTH_LITERAL.PASSWORD && CONSTANT.AUTH_LITERAL.PASSWORD
                 }
                 isInvalid={errorMessages[field.key]}
+                InputLeftElement={
+                  field.key === 'mobileNumber' && <Text pl={3}>+91</Text>
+                }
               />
               <FormControl.ErrorMessage>
                 {errorMessages[field.key]}
