@@ -1,7 +1,6 @@
 import styled from 'styled-components/native';
 import {
   Box,
-  Button,
   Input,
   Text,
 } from 'native-base';
@@ -11,6 +10,8 @@ export const FormContainer = styled(Box).attrs(({ theme }) => ({
   flex: 1,
   p: 5,
   bg: theme.color.MODAL,
+  elevation: 1,
+  shadowColor: theme.color.BACKGROUND_0,
 }))``;
 
 export const InputField = styled(Input).attrs(({ isInvalid, theme }) => ({
@@ -23,26 +24,12 @@ export const InputField = styled(Input).attrs(({ isInvalid, theme }) => ({
   font-size: 14px;
 `;
 
-export const SubmitButton = styled(Button).attrs(({ theme }) => ({
-  bg: theme.color.PRIMARY_100,
-  _pressed: { bg: theme.color.PRIMARY_20 },
-  _text: { fontWeight: 'bold' },
-  mb: 5,
-}))``;
-
 export const Title = styled(Text).attrs(() => ({
   bold: true,
   fontSize: 20,
 }))`
   text-transform: capitalize;
 `;
-
-export const ToastBox = styled(Box).attrs(({ theme }) => ({
-  _text: { color: theme.color.BACKGROUND_100 },
-  bg: theme.color.ERROR,
-  p: 5,
-  rounded: 5,
-}))``;
 
 export const SignupLink = styled(Text).attrs(({ link, theme }) => ({
   fontSize: 'md',

@@ -105,7 +105,7 @@ const Signup = () => {
             <FormControl key={`signup-field-${index}`} isInvalid={errorMessages[field.key]}>
               <InputField
                 testID={`signup-input-${field.key}`}
-                placeholder={field.placeholder}
+                placeholder={translate(field.placeholder)}
                 value={fields[field.key]}
                 onChangeText={(value) => handleFieldChange(field.key, value)}
                 onBlur={() => handleValidation()}

@@ -133,6 +133,8 @@ exports[`Login should match snapshot 1`] = `
     >
       <View
         dataSet={Object {}}
+        elevation={1}
+        shadowColor="#000000"
         style={
           Array [
             Object {
@@ -249,7 +251,7 @@ exports[`Login should match snapshot 1`] = `
               onChangeText={[Function]}
               onFocus={[Function]}
               onKeyPress={[Function]}
-              placeholder="Email"
+              placeholder="EMAIL"
               placeholderTextColor="#a3a3a3"
               readOnly={false}
               required={false}
@@ -321,7 +323,7 @@ exports[`Login should match snapshot 1`] = `
               onChangeText={[Function]}
               onFocus={[Function]}
               onKeyPress={[Function]}
-              placeholder="Password"
+              placeholder="PASSWORD"
               placeholderTextColor="#a3a3a3"
               readOnly={false}
               required={false}
@@ -378,24 +380,19 @@ exports[`Login should match snapshot 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#ad0000",
-                "borderRadius": 4,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "marginBottom": 20,
-                "opacity": 0.4,
-                "paddingBottom": 10,
-                "paddingLeft": 12,
-                "paddingRight": 12,
-                "paddingTop": 10,
-              },
-              Array [
-                Object {},
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ad0000",
+              "borderRadius": 4,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "marginBottom": 20,
+              "opacity": 0.4,
+              "paddingBottom": 10,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 10,
+            }
           }
           testID="login-submit"
         >

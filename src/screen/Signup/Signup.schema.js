@@ -1,7 +1,5 @@
 import Joi from 'joi';
 
-import TRANSLATION from 'translation/en.json';
-
 export const SCHEMA = Joi.object({
   firstName: Joi.string().alphanum().min(3).max(25)
     .required(),
@@ -22,18 +20,18 @@ export const INITIAL_STATE = {
 export const FIELDS = [
   {
     key: 'firstName',
-    placeholder: TRANSLATION.FIRST_NAME,
+    placeholder: 'FIRST_NAME',
   },
   {
     key: 'lastName',
-    placeholder: TRANSLATION.LAST_NAME,
+    placeholder: 'LAST_NAME',
   },
   {
     key: 'email',
-    placeholder: TRANSLATION.EMAIL,
+    placeholder: 'EMAIL',
   },
   {
     key: 'password',
-    placeholder: TRANSLATION.PASSWORD,
+    placeholder: 'PASSWORD',
   },
 ];

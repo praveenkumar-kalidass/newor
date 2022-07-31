@@ -7,6 +7,8 @@ import {
 import { useNavigation } from '@react-navigation/native';
 
 import TitleBar from 'component/TitleBar/TitleBar';
+import ToastAlert from 'component/ToastAlert';
+import AppButton from 'component/AppButton';
 import { Background1 } from 'component/Background';
 import CONSTANT from 'constant';
 import validator from 'helper/validator';
@@ -24,9 +26,7 @@ import {
 import {
   FormContainer,
   InputField,
-  SubmitButton,
   Title,
-  ToastBox,
   SignupLink,
 } from './Login.style';
 
@@ -68,7 +68,7 @@ const Login = () => {
         errorMessage = translate(`ERROR.${errorCode}`);
       }
       toast.show({
-        render: () => <ToastBox>{errorMessage}</ToastBox>,
+        render: () => <ToastAlert status="error" message={errorMessage} description={errorMessage} />,
         placement: 'bottom',
       });
     }
@@ -116,7 +116,7 @@ const Login = () => {
             <FormControl key={`login-field-${index}`} isInvalid={errorMessages[field.key]}>
               <InputField
                 testID={`login-input-${field.key}`}
-                placeholder={field.placeholder}
+                placeholder={translate(field.placeholder)}
                 value={fields[field.key]}
                 onChangeText={(value) => handleFieldChange(field.key, value)}
                 onBlur={() => handleValidation()}
@@ -130,7 +130,16 @@ const Login = () => {
               </FormControl.ErrorMessage>
             </FormControl>
           </For>
-          <Translation tkey="LOGIN" as={SubmitButton} testID="login-submit" onPress={handleSubmit} isDisabled={isFormError} />
+          <Translation
+            tkey="LOGIN"
+            as={AppButton}
+            variant="primary"
+            mb={5}
+            testID="login-submit"
+            onPress={handleSubmit}
+            isDisabled={isFormError}
+            isLoading={isSubmit}
+          />
           <Flex direction="row" justifyContent="center">
             <Translation tkey="NEW_TO_NEWOR" as={SignupLink} />
             &nbsp;

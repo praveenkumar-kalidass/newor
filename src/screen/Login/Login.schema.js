@@ -1,12 +1,9 @@
 import Joi from 'joi';
 
-import TRANSLATION from 'translation/en.json';
-
 export const SCHEMA = Joi.object({
-  email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com'] } }).label(TRANSLATION.EMAIL),
+  email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com'] } }),
   password: Joi.string().alphanum().min(6).max(15)
-    .required()
-    .label(TRANSLATION.PASSWORD),
+    .required(),
 });
 
 export const INITIAL_STATE = {
@@ -17,10 +14,10 @@ export const INITIAL_STATE = {
 export const FIELDS = [
   {
     key: 'email',
-    placeholder: TRANSLATION.EMAIL,
+    placeholder: 'EMAIL',
   },
   {
     key: 'password',
-    placeholder: TRANSLATION.PASSWORD,
+    placeholder: 'PASSWORD',
   },
 ];

@@ -13,6 +13,9 @@
   "ERROR": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",
-    "NEWOR_BAD_REQUEST": "Oops! Something went wrong. Please try again."
+    "NEWOR_CLIENT_NOT_FOUND": "Oops! Please try using authorized application.",
+    "NEWOR_BAD_REQUEST": "Oops! Something went wrong. Please try again.",
+    "NEWOR_INVALID_CREDENTIALS": "Uh Oh! Incorrect login credentials. Please try again.",
+    "NEWOR_EMAIL_NOT_VERIFIED": "Oops! You haven't verified your email yet. Please complete your email verification to continue."
   }
 }
