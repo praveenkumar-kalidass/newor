@@ -64,12 +64,11 @@ exports[`Signup should match snapshot 1`] = `
     </RNSVGSvgView>
   </View>
   <View
-    dataSet={Object {}}
+    flex={1}
+    onLayout={[Function]}
     style={
       Object {
-        "display": "flex",
-        "flex": 1,
-        "flexDirection": "column",
+        "paddingBottom": 0,
       }
     }
   >

@@ -1,6 +1,7 @@
 import React, {
   useState, useEffect, useMemo, useCallback,
 } from 'react';
+import { KeyboardAvoidingView, Platform } from 'react-native';
 import {
   Flex, Image, Center, FormControl, useToast,
 } from 'native-base';
@@ -90,7 +91,7 @@ const Login = () => {
   }, [navigation, isSubmit, isFormError]);
 
   return (
-    <Flex flex={1}>
+    <KeyboardAvoidingView flex={1} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <Flex
         flex={1.4}
         onLayout={(event) => {
@@ -153,7 +154,7 @@ const Login = () => {
         </FormContainer>
       </Flex>
       <Flex flex={0.025} />
-    </Flex>
+    </KeyboardAvoidingView>
   );
 };
 

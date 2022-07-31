@@ -1,6 +1,7 @@
 import React, {
   useCallback, useEffect, useMemo, useState,
 } from 'react';
+import { KeyboardAvoidingView, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
   Center, Flex, FormControl, Image, useToast, AlertDialog, Text,
@@ -93,7 +94,7 @@ const Signup = () => {
   }, [navigation, isSubmit, isFormError]);
 
   return (
-    <Flex flex={1}>
+    <KeyboardAvoidingView flex={1} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <Flex flex={1} />
       <Flex flex={4} direction="row" p="5" justifyContent="center">
         <FormContainer>
@@ -176,7 +177,7 @@ const Signup = () => {
           </AlertDialog.Footer>
         </AlertDialog.Content>
       </AlertDialog>
-    </Flex>
+    </KeyboardAvoidingView>
   );
 };
 
