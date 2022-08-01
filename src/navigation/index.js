@@ -5,6 +5,7 @@ import ROUTE from 'constant/route';
 import useTheme from 'theme/useTheme';
 import Login from 'screen/Login';
 import Signup from 'screen/Signup';
+import ResetPassword from 'screen/ResetPassword';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,11 @@ export default () => {
     >
       <Stack.Screen name={ROUTE.LOGIN} component={Login} options={{ headerShown: false }} />
       <Stack.Screen name={ROUTE.SIGNUP} component={Signup} options={{ headerShown: false }} />
+      <Stack.Screen
+        name={ROUTE.RESET_PASSWORD}
+        component={ResetPassword}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };
