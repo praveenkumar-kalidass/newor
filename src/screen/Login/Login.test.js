@@ -19,17 +19,6 @@ jest.mock('api/user', () => ({
 describe('Login', () => {
   it('should match snapshot', async () => {
     const container = await render(<Login />);
-    const { getByTestId } = container;
-    await act(async () => {
-      fireEvent(getByTestId('login-logo-container'), 'onLayout', {
-        nativeEvent: {
-          layout: {
-            height: 300,
-            width: 300,
-          },
-        },
-      });
-    });
 
     expect(container).toMatchSnapshot();
   });

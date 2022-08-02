@@ -8,6 +8,7 @@ import {
 export const FormContainer = styled(Box).attrs(({ theme }) => ({
   borderRadius: 20,
   flex: 1,
+  alignSelf: 'center',
   p: 5,
   bg: theme.color.MODAL,
   elevation: 1,

@@ -3,18 +3,19 @@ import React, {
 } from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import {
-  Flex, Image, Center, FormControl, useToast,
+  Flex, FormControl, useToast, Center, Image, Divider,
 } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 
 import TitleBar from 'component/TitleBar/TitleBar';
 import ToastAlert from 'component/ToastAlert';
 import AppButton from 'component/AppButton';
+import withBackground from 'helper/withBackground';
 import { Background1 } from 'component/Background';
+import NEWOR from 'asset/image/newor.png';
 import CONSTANT from 'constant';
 import validator from 'helper/validator';
 import ROUTE from 'constant/route';
-import NEWOR from 'asset/image/newor.png';
 import { login } from 'api/user';
 import useTheme from 'theme/useTheme';
 import useTranslation from 'translation/useTranslation';
@@ -32,7 +33,6 @@ import {
 } from './Login.style';
 
 const Login = () => {
-  const [background, setBackground] = useState({});
   const [fields, setFields] = useState(INITIAL_STATE);
   const [errorMessages, setErrorMessages] = useState(INITIAL_STATE);
   const [isSubmit, setIsSubmit] = useState(false);
@@ -92,27 +92,13 @@ const Login = () => {
 
   return (
     <KeyboardAvoidingView flex={1} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-      <Flex
-        flex={1.4}
-        onLayout={(event) => {
-          const { width, height } = event.nativeEvent.layout;
-          setBackground({ width, height });
-        }}
-        justifyContent="center"
-        testID="login-logo-container"
-      >
-        <If condition={background.height && background.width}>
-          <Background1 height={background.height} width={background.width} />
-          <Center>
-            <Image testID="login-logo" alt={CONSTANT.APP_NAME} size={background.width * 0.8} source={NEWOR} />
-          </Center>
-        </If>
-      </Flex>
-      <Flex flex={1} p="5">
+      <Flex flex={1} />
+      <Flex flex={4} direction="row" p="5" justifyContent="center">
         <FormContainer>
           <TitleBar color={theme.color.SECONDARY_100} styleProps={{ mb: 5 }}>
             <Title>{CONSTANT.APP_NAME}</Title>
           </TitleBar>
+          <Center><Image alt={CONSTANT.APP_NAME} source={NEWOR} size="xl" /></Center>
           <For each="field" index="index" of={FIELDS}>
             <FormControl key={`login-field-${index}`} isInvalid={errorMessages[field.key]}>
               <InputField
@@ -141,6 +127,15 @@ const Login = () => {
             isDisabled={isFormError}
             isLoading={isSubmit}
           />
+          <Flex direction="row">
+            <Translation
+              tkey="FORGOT_PASSWORD"
+              as={SignupLink}
+              link
+              onPress={() => navigation.navigate(ROUTE.FORGOT_PASSWORD)}
+            />
+          </Flex>
+          <Divider mt={5} mb={4} />
           <Flex direction="row" justifyContent="center">
             <Translation tkey="NEW_TO_NEWOR" as={SignupLink} />
             &nbsp;
@@ -153,9 +148,9 @@ const Login = () => {
           </Flex>
         </FormContainer>
       </Flex>
-      <Flex flex={0.025} />
+      <Flex flex={1} />
     </KeyboardAvoidingView>
   );
 };
 
-export default Login;
+export default withBackground({ Component: Login, Background: Background1 });
