@@ -12,6 +12,9 @@
   "NEW_TO_NEWOR": "New to Newor?",
   "PLEASE_VERIFY_EMAIL": "We have sent a link to your email for verification. Please complete the verification process to login.",
   "FORGOT_PASSWORD": "Forgot Password?",
+  "SUBMIT": "Submit",
+  "REMEMBER_CREDENTIALS": "Remember your credentials?",
+  "ENTER_EMAIL_WITH_NEWOR": "Please enter your email registered with Newor",
   "ERROR": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",
