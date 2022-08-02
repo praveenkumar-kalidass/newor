@@ -22,10 +22,10 @@ exports[`Background1 should match snapshot 1`] = `
     }
   >
     <RNSVGSvgView
-      bbHeight={100}
-      bbWidth={100}
+      bbHeight={1334}
+      bbWidth={750}
       focusable={false}
-      height={100}
+      height={1334}
       style={
         Array [
           Object {
@@ -34,16 +34,16 @@ exports[`Background1 should match snapshot 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 100,
-            "width": 100,
+            "height": 1334,
+            "width": 750,
           },
         ]
       }
-      width={100}
+      width={750}
     >
       <RNSVGGroup>
         <RNSVGPath
-          d="M0 0 0 100 100 100 30 70 0 0z"
+          d="M0 200 L0 300 L750 200 L750 100 L0 200 Z"
           fill={4289527808}
           propList={
             Array [
@@ -52,7 +52,25 @@ exports[`Background1 should match snapshot 1`] = `
           }
         />
         <RNSVGPath
-          d="M0 0 100 0 100 100 70 30 0 0z"
+          d="M0 350 L0 370 L750 270 L750 250 L0 350 Z"
+          fill={4289527808}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+        />
+        <RNSVGPath
+          d="M0 1084 L0 1104 L750 1004 L750 984 L0 1084 Z"
+          fill={4278199178}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+        />
+        <RNSVGPath
+          d="M0 1154 L0 1254 L750 1154 L750 1054 L0 1154 Z"
           fill={4278199178}
           propList={
             Array [

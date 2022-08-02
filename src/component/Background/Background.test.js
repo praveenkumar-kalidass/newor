@@ -6,7 +6,7 @@ import Background2 from './Background2';
 
 describe('Background1', () => {
   it('should match snapshot', () => {
-    const container = render(<Background1 height={100} width={100} />);
+    const container = render(<Background1 />);
 
     expect(container).toMatchSnapshot();
   });
