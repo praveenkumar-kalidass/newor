@@ -150,7 +150,7 @@ const Signup = () => {
         </FormContainer>
       </Flex>
       <Flex flex={1} />
-      <AppModal testID="signup-success-modal" isOpen={isSuccess}>
+      <AppModal testID="signup-success-modal" visible={isSuccess}>
         <AppModal.Header showClose={false}>
           <Translation tkey="SIGNUP_SUCCESS" as={LoginLink} />
         </AppModal.Header>

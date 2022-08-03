@@ -5,6 +5,7 @@ const linking = {
   config: {
     screens: {
       [ROUTE.RESET_PASSWORD]: 'reset-password/:token',
+      [ROUTE.EMAIL_VERIFICATION]: 'email-verification/:token',
     },
   },
 };
