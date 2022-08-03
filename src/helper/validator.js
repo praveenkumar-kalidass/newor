@@ -14,7 +14,9 @@ const validator = (schema, state, initialState, isSubmit = false) => {
       };
     }, initialState);
   }
-  return initialState;
+  return {
+    ...initialState,
+  };
 };
 
 export default validator;

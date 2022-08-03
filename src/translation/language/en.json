@@ -15,6 +15,8 @@
   "SUBMIT": "Submit",
   "REMEMBER_CREDENTIALS": "Remember your credentials?",
   "ENTER_EMAIL_WITH_NEWOR": "Please enter your email registered with Newor",
+  "FORGOT_PASSWORD_SUCCESS": "Password reset initiated!",
+  "PLEASE_RESET_PASSWORD_EMAIL": "We have sent a mail to you to reset your password. Please update your password to login.",
   "ERROR": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",

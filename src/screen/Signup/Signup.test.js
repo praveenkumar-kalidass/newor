@@ -65,7 +65,7 @@ describe('Signup', () => {
   it('should show modal and navigate when signup is success', async () => {
     signup.mockResolvedValueOnce();
 
-    const { getByTestId } = await render(<Signup />);
+    const { getByTestId, queryByTestId } = await render(<Signup />);
 
     await act(async () => {
       await fireEvent.changeText(getByTestId('signup-input-firstName'), 'Test');
@@ -84,9 +84,13 @@ describe('Signup', () => {
       await fireEvent.press(getByTestId('signup-submit'));
     });
 
-    // expect(queryByTestId('signup-submit')).not.toBeNull();
+    expect(queryByTestId('signup-success-modal')).not.toBeNull();
 
-    // expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
-    // expect(mockNavigation.navigate).toHaveBeenCalledWith('LOGIN');
+    await act(async () => {
+      await fireEvent.press(getByTestId('signup-success-login'));
+    });
+
+    expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
+    expect(mockNavigation.navigate).toHaveBeenCalledWith('LOGIN');
   });
 });

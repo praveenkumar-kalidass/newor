@@ -3,13 +3,14 @@ import React, {
 } from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import {
-  Flex, FormControl, useToast,
+  Flex, FormControl, useToast, Center, Image,
 } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 
 import TitleBar from 'component/TitleBar/TitleBar';
 import ToastAlert from 'component/ToastAlert';
 import AppButton from 'component/AppButton';
+import AppModal from 'component/AppModal';
 import withBackground from 'helper/withBackground';
 import { Background2 } from 'component/Background';
 import validator from 'helper/validator';
@@ -17,6 +18,8 @@ import ROUTE from 'constant/route';
 import useTheme from 'theme/useTheme';
 import useTranslation from 'translation/useTranslation';
 import Translation from 'translation/Translation';
+import { forgotPassword } from 'api/user';
+import NEWOR_SUCCESS from 'asset/image/newor-success.png';
 import {
   INITIAL_STATE,
   FIELDS,
@@ -33,6 +36,7 @@ const ForgotPassword = () => {
   const [fields, setFields] = useState(INITIAL_STATE);
   const [errorMessages, setErrorMessages] = useState(INITIAL_STATE);
   const [isSubmit, setIsSubmit] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
   const navigation = useNavigation();
   const toast = useToast();
   const theme = useTheme();
@@ -56,8 +60,9 @@ const ForgotPassword = () => {
 
   const submitForgotPassword = useCallback(async () => {
     try {
-      // await signup(fields);
+      await forgotPassword(fields);
       setIsSubmit(false);
+      setIsSuccess(true);
     } catch (error) {
       setIsSubmit(false);
       let errorMessage = translate('ERROR.NEWOR_INTERNAL_SERVER_ERROR');
@@ -134,6 +139,33 @@ const ForgotPassword = () => {
         </FormContainer>
       </Flex>
       <Flex flex={1} />
+      <AppModal testID="forgot-password-success-modal" visible={isSuccess}>
+        <AppModal.Header showClose={false}>
+          <Translation tkey="FORGOT_PASSWORD_SUCCESS" as={Title} />
+        </AppModal.Header>
+        <AppModal.Body>
+          <Center>
+            <Image alt={translate('FORGOT_PASSWORD_SUCCESS')} source={NEWOR_SUCCESS} size="2xl" />
+            <Translation
+              tkey="PLEASE_RESET_PASSWORD_EMAIL"
+              as={LoginLink}
+            />
+          </Center>
+        </AppModal.Body>
+        <AppModal.Footer>
+          <Translation
+            tkey="LOGIN"
+            as={AppButton}
+            variant="primary"
+            flex={1}
+            testID="forgot-password-success-login"
+            onPress={() => {
+              setIsSuccess(false);
+              navigation.navigate(ROUTE.LOGIN);
+            }}
+          />
+        </AppModal.Footer>
+      </AppModal>
     </KeyboardAvoidingView>
   );
 };

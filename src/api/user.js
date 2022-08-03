@@ -12,3 +12,5 @@ export const login = ({ email, password }) => axios.post(`${config.baseURL}/api/
 });
 
 export const signup = (request) => axios.post(`${config.baseURL}/api/user/v1/signup`, request);
+
+export const forgotPassword = (request) => axios.post(`${config.baseURL}/api/user/v1/forgot-password`, request);

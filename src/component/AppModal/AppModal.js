@@ -7,11 +7,14 @@ import { ModalContainer, ModalOverlay } from './AppModal.style';
 const AppModal = ({
   visible,
   children,
+  ...others
 }) => (
   <Modal
     animationType="slide"
     transparent
     visible={visible}
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    {...others}
   >
     <ModalOverlay>
       <ModalContainer>

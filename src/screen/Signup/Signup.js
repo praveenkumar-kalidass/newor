@@ -4,12 +4,13 @@ import React, {
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
-  Center, Flex, FormControl, Image, useToast, AlertDialog, Text,
+  Center, Flex, FormControl, Image, useToast, Text,
 } from 'native-base';
 
 import TitleBar from 'component/TitleBar/TitleBar';
 import ToastAlert from 'component/ToastAlert';
 import AppButton from 'component/AppButton';
+import AppModal from 'component/AppModal';
 import CONSTANT from 'constant';
 import ROUTE from 'constant/route';
 import NEWOR from 'asset/image/newor.png';
@@ -149,34 +150,33 @@ const Signup = () => {
         </FormContainer>
       </Flex>
       <Flex flex={1} />
-      <AlertDialog testID="signup-success-modal" avoidKeyboard size="xl" isOpen={isSuccess} onClose={() => setIsSuccess(false)}>
-        <AlertDialog.Content>
-          <AlertDialog.CloseButton />
-          <Translation tkey="SIGNUP_SUCCESS" as={AlertDialog.Header} />
-          <AlertDialog.Body>
-            <Center>
-              <Image alt={translate('SIGNUP_SUCCESS')} source={NEWOR_SUCCESS} size="2xl" />
-              <Translation
-                tkey="PLEASE_VERIFY_EMAIL"
-                as={LoginLink}
-              />
-            </Center>
-          </AlertDialog.Body>
-          <AlertDialog.Footer>
+      <AppModal testID="signup-success-modal" isOpen={isSuccess}>
+        <AppModal.Header showClose={false}>
+          <Translation tkey="SIGNUP_SUCCESS" as={LoginLink} />
+        </AppModal.Header>
+        <AppModal.Body>
+          <Center>
+            <Image alt={translate('SIGNUP_SUCCESS')} source={NEWOR_SUCCESS} size="2xl" />
             <Translation
-              tkey="LOGIN"
-              as={AppButton}
-              variant="primary"
-              flex={1}
-              testID="signup-success-login"
-              onPress={() => {
-                setIsSuccess(false);
-                navigation.navigate(ROUTE.LOGIN);
-              }}
+              tkey="PLEASE_VERIFY_EMAIL"
+              as={LoginLink}
             />
-          </AlertDialog.Footer>
-        </AlertDialog.Content>
-      </AlertDialog>
+          </Center>
+        </AppModal.Body>
+        <AppModal.Footer>
+          <Translation
+            tkey="LOGIN"
+            as={AppButton}
+            variant="primary"
+            flex={1}
+            testID="signup-success-login"
+            onPress={() => {
+              setIsSuccess(false);
+              navigation.navigate(ROUTE.LOGIN);
+            }}
+          />
+        </AppModal.Footer>
+      </AppModal>
     </KeyboardAvoidingView>
   );
 };
