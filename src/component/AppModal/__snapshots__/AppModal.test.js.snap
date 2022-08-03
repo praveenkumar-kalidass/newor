@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppModal should match snapshot 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      dataSet={Object {}}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(0, 0, 0, 0.5)",
+            "display": "flex",
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "paddingBottom": 20,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+            "paddingTop": 20,
+          },
+          Array [
+            Object {},
+          ],
+        ]
+      }
+    >
+      <View
+        dataSet={Object {}}
+        elevation={1}
+        shadowColor="#000000"
+        style={
+          Array [
+            Object {
+              "alignSelf": "center",
+              "backgroundColor": "#eeeeee",
+              "borderRadius": 20,
+              "flex": 1,
+              "paddingBottom": 20,
+              "paddingLeft": 20,
+              "paddingRight": 20,
+              "paddingTop": 20,
+            },
+            Array [
+              Object {},
+            ],
+          ]
+        }
+      >
+        <View
+          dataSet={Object {}}
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            dataSet={Object {}}
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": "#171717",
+                "fontFamily": undefined,
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "letterSpacing": 0,
+                "lineHeight": 21,
+                "textDecorationLine": undefined,
+              }
+            }
+          >
+            Header
+          </Text>
+          <View
+            accessibilityRole="button"
+            accessible={true}
+            collapsable={false}
+            colorScheme="primary"
+            dataSet={Object {}}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderRadius": 4,
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "paddingBottom": 10,
+                  "paddingLeft": 10,
+                  "paddingRight": 10,
+                  "paddingTop": 10,
+                },
+                Array [
+                  Object {},
+                ],
+              ]
+            }
+          >
+            <RNSVGSvgView
+              accessibilityRole="image"
+              align="xMidYMid"
+              bbHeight={20}
+              bbWidth={20}
+              color={4278199178}
+              dataSet={Object {}}
+              focusable={false}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              stroke=""
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Object {
+                    "color": "#00238a",
+                    "height": 20,
+                    "width": 20,
+                  },
+                  Object {
+                    "flex": 0,
+                    "height": 20,
+                    "width": 20,
+                  },
+                ]
+              }
+              tintColor={4278199178}
+              vbHeight={24}
+              vbWidth={24}
+            >
+              <RNSVGGroup
+                propList={
+                  Array [
+                    "stroke",
+                  ]
+                }
+                stroke={null}
+              >
+                <RNSVGGroup>
+                  <RNSVGPath
+                    d="M12 9.77778L4.22222 2L2 4.22222L9.77778 12L2 19.7778L4.22222 22L12 14.2222L19.7778 22L22 19.7778L14.2222 12L22 4.22222L19.7778 2L12 9.77778Z"
+                    fill={
+                      Array [
+                        2,
+                      ]
+                    }
+                    propList={
+                      Array [
+                        "fill",
+                        "stroke",
+                      ]
+                    }
+                    stroke={null}
+                  />
+                </RNSVGGroup>
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
+        </View>
+        <View
+          aria-orientation="horizontal"
+          dataSet={Object {}}
+          style={
+            Object {
+              "backgroundColor": "#d4d4d4",
+              "height": 1,
+              "marginBottom": 8,
+              "marginTop": 8,
+              "width": "100%",
+            }
+          }
+          thickness="1"
+        />
+        <View
+          dataSet={Object {}}
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            dataSet={Object {}}
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": "#171717",
+                "fontFamily": undefined,
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "letterSpacing": 0,
+                "lineHeight": 21,
+                "textDecorationLine": undefined,
+              }
+            }
+          >
+            Body
+          </Text>
+        </View>
+        <View
+          aria-orientation="horizontal"
+          dataSet={Object {}}
+          style={
+            Object {
+              "backgroundColor": "#d4d4d4",
+              "height": 1,
+              "marginBottom": 20,
+              "marginTop": 20,
+              "width": "100%",
+            }
+          }
+          thickness="1"
+        />
+        <View
+          dataSet={Object {}}
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "flex-end",
+            }
+          }
+        >
+          <Text
+            dataSet={Object {}}
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": "#171717",
+                "fontFamily": undefined,
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "letterSpacing": 0,
+                "lineHeight": 21,
+                "textDecorationLine": undefined,
+              }
+            }
+          >
+            Footer
+          </Text>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</RNCSafeAreaProvider>
+`;
