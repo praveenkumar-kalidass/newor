@@ -3,11 +3,11 @@ import { useContext, useCallback } from 'react';
 import LoaderContext from './LoaderContext';
 
 const useLoader = () => {
-  const { loading, count, setCount } = useContext(LoaderContext);
+  const { loading, setCount } = useContext(LoaderContext);
 
-  const addLoader = useCallback(() => setCount(count + 1), [count, setCount]);
+  const addLoader = useCallback(() => setCount((c) => c + 1), [setCount]);
 
-  const removeLoader = useCallback(() => setCount(count - 1), [count, setCount]);
+  const removeLoader = useCallback(() => setCount((c) => c - 1), [setCount]);
 
   return {
     loading,
