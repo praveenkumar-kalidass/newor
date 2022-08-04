@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppLoader should match snapshot 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <RNSVGSvgView
+    bbHeight={1334}
+    bbWidth={750}
+    focusable={false}
+    height={1334}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        Object {
+          "flex": 0,
+          "height": 1334,
+          "width": 750,
+        },
+      ]
+    }
+    width={750}
+  >
+    <RNSVGGroup>
+      <RNSVGImage
+        align="xMidYMid"
+        height={100}
+        meetOrSlice={0}
+        src={
+          Object {
+            "testUri": "../../../src/asset/image/newor-logo.png",
+          }
+        }
+        width={100}
+        x={325}
+        y={617}
+      />
+      <RNSVGPath
+        d="M 415 632 A 25 40 0 0 1 415 702 A 25 40 0 0 0 415 632 Z"
+        matrix={
+          Array [
+            1,
+            0,
+            -0,
+            1,
+            0,
+            0,
+          ]
+        }
+        propList={
+          Array [
+            "stroke",
+            "strokeWidth",
+          ]
+        }
+        stroke={4289527808}
+        strokeWidth={10}
+      />
+      <RNSVGPath
+        d="M 335 632 A 25 40 0 0 0 335 702 A 25 40 0 0 1 335 632 Z"
+        matrix={
+          Array [
+            1,
+            0,
+            -0,
+            1,
+            0,
+            0,
+          ]
+        }
+        propList={
+          Array [
+            "stroke",
+            "strokeWidth",
+          ]
+        }
+        stroke={4278199178}
+        strokeWidth={10}
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</RNCSafeAreaProvider>
+`;
