@@ -9,6 +9,7 @@ import linking from 'navigation/linking';
 import ThemeProvider from 'theme';
 import TranslationProvider from 'translation';
 import Navigation from 'navigation';
+import Provider from 'provider';
 
 const App = () => (
   <SafeAreaView style={{ flex: 1 }}>
@@ -16,7 +17,9 @@ const App = () => (
       <NativeBaseProvider>
         <ThemeProvider>
           <TranslationProvider>
-            <Navigation />
+            <Provider>
+              <Navigation />
+            </Provider>
           </TranslationProvider>
         </ThemeProvider>
       </NativeBaseProvider>
