@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { signup } from 'api/user';
 import { act, render, fireEvent } from 'test/util';
 import Signup from './Signup';
 
@@ -22,9 +21,10 @@ jest.mock('native-base', () => {
     useToast: () => mockToast,
   };
 });
-jest.mock('api/user', () => ({
+const mockUseUser = {
   signup: jest.fn(),
-}));
+};
+jest.mock('api/useUser', () => () => mockUseUser);
 
 describe('Signup', () => {
   afterEach(() => {
@@ -38,7 +38,7 @@ describe('Signup', () => {
   });
 
   it('should show toast when signup fails', async () => {
-    signup.mockRejectedValueOnce({ response: { data: { code: 'NEWOR_INTERNAL_SERVER_ERROR' } } });
+    mockUseUser.signup.mockRejectedValueOnce({ response: { data: { code: 'NEWOR_INTERNAL_SERVER_ERROR' } } });
 
     const { getByTestId } = await render(<Signup />);
 
@@ -63,7 +63,7 @@ describe('Signup', () => {
   });
 
   it('should show modal and navigate when signup is success', async () => {
-    signup.mockResolvedValueOnce();
+    mockUseUser.signup.mockResolvedValueOnce();
 
     const { getByTestId, queryByTestId } = await render(<Signup />);
 

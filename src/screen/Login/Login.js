@@ -16,7 +16,7 @@ import NEWOR from 'asset/image/newor.png';
 import CONSTANT from 'constant';
 import validator from 'helper/validator';
 import ROUTE from 'constant/route';
-import { login } from 'api/user';
+import useUser from 'api/useUser';
 import useTheme from 'theme/useTheme';
 import useTranslation from 'translation/useTranslation';
 import Translation from 'translation/Translation';
@@ -40,6 +40,7 @@ const Login = () => {
   const toast = useToast();
   const theme = useTheme();
   const { translate } = useTranslation();
+  const { login } = useUser();
 
   const handleFieldChange = (label, value) => {
     setFields({

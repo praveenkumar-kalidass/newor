@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { act, render, fireEvent } from 'test/util';
-import { forgotPassword } from 'api/user';
 import ForgotPassword from './ForgotPassword';
 
 const mockNavigation = {
@@ -22,9 +21,10 @@ jest.mock('native-base', () => {
     useToast: () => mockToast,
   };
 });
-jest.mock('api/user', () => ({
+const mockUseUser = {
   forgotPassword: jest.fn(),
-}));
+};
+jest.mock('api/useUser', () => () => mockUseUser);
 
 describe('ForgotPassword', () => {
   afterEach(() => {
@@ -38,7 +38,7 @@ describe('ForgotPassword', () => {
   });
 
   it('should show toast when forgot password api fails', async () => {
-    forgotPassword.mockRejectedValueOnce({ response: { data: { code: 'NEWOR_INTERNAL_SERVER_ERROR' } } });
+    mockUseUser.forgotPassword.mockRejectedValueOnce({ response: { data: { code: 'NEWOR_INTERNAL_SERVER_ERROR' } } });
 
     const { getByTestId } = await render(<ForgotPassword />);
 
@@ -55,7 +55,7 @@ describe('ForgotPassword', () => {
   });
 
   it('should show modal and navigate when forgot password is success', async () => {
-    forgotPassword.mockResolvedValueOnce();
+    mockUseUser.forgotPassword.mockResolvedValueOnce();
 
     const { getByTestId, queryByTestId } = await render(<ForgotPassword />);
 

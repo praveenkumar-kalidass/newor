@@ -17,6 +17,7 @@ exports[`AppLoader should match snapshot 1`] = `
       Array [
         Object {
           "position": "absolute",
+          "zIndex": 10,
         },
       ]
     }

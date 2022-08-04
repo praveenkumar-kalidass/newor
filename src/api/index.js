@@ -1,8 +1,3 @@
-import axios from 'axios';
+import useAxios from './useAxios';
 
-import config from '../../config/config';
-
-export default axios.create({
-  baseURL: config.baseURL,
-  timeout: 1000,
-});
+export default useAxios;

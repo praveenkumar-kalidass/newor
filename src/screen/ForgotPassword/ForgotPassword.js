@@ -18,7 +18,7 @@ import ROUTE from 'constant/route';
 import useTheme from 'theme/useTheme';
 import useTranslation from 'translation/useTranslation';
 import Translation from 'translation/Translation';
-import { forgotPassword } from 'api/user';
+import useUser from 'api/useUser';
 import NEWOR_SUCCESS from 'asset/image/newor-success.png';
 import {
   INITIAL_STATE,
@@ -41,6 +41,7 @@ const ForgotPassword = () => {
   const toast = useToast();
   const theme = useTheme();
   const { translate } = useTranslation();
+  const { forgotPassword } = useUser();
 
   const handleFieldChange = (label, value) => {
     setFields({

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { login } from 'api/user';
 import { act, render, fireEvent } from 'test/util';
 import Login from './Login';
 
@@ -12,9 +11,10 @@ jest.mock('native-base', () => {
     useToast: () => mockToast,
   };
 });
-jest.mock('api/user', () => ({
+const mockUseUser = {
   login: jest.fn(),
-}));
+};
+jest.mock('api/useUser', () => () => mockUseUser);
 
 describe('Login', () => {
   it('should match snapshot', async () => {
@@ -24,7 +24,7 @@ describe('Login', () => {
   });
 
   it('should show toast when login fails', async () => {
-    login.mockRejectedValueOnce({ response: { data: { code: 'NEWOR_INTERNAL_SERVER_ERROR' } } });
+    mockUseUser.login.mockRejectedValueOnce({ response: { data: { code: 'NEWOR_INTERNAL_SERVER_ERROR' } } });
 
     const { getByTestId } = await render(<Login />);
 
