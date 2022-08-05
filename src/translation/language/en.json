@@ -21,6 +21,9 @@
   "ERROR": "Error",
   "EMAIL_VERIFICATION_SUCCESS": "You have successfully verified your email with Newor. Please proceed with login.",
   "EMAIL_VERIFICATION_FAILURE": "Your email verification has failed. Please try again.",
+  "RESET_PASSWORD": "Reset Password",
+  "CONFIRM_PASSWORD": "Confirm Password",
+  "RESET_PASSWORD_SUCCESS": "You have successfully reset your password for your email. Please proceed with login",
   "ERROR_CODE": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",

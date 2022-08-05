@@ -20,11 +20,14 @@ const useUser = () => {
 
   const verify = (request) => axios.put(`${config.baseURL}/api/user/v1/verify`, request, { loader: true });
 
+  const resetPassword = (request) => axios.put(`${config.baseURL}/api/user/v1/reset-password`, request);
+
   return {
     login,
     signup,
     forgotPassword,
     verify,
+    resetPassword,
   };
 };
 
