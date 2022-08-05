@@ -17,7 +17,11 @@
   "ENTER_EMAIL_WITH_NEWOR": "Please enter your email registered with Newor",
   "FORGOT_PASSWORD_SUCCESS": "Password reset initiated!",
   "PLEASE_RESET_PASSWORD_EMAIL": "We have sent a mail to you to reset your password. Please update your password to login.",
-  "ERROR": {
+  "SUCCESS": "Success",
+  "ERROR": "Error",
+  "EMAIL_VERIFICATION_SUCCESS": "You have successfully verified your email with Newor. Please proceed with login.",
+  "EMAIL_VERIFICATION_FAILURE": "Your email verification has failed. Please try again.",
+  "ERROR_CODE": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",
     "NEWOR_CLIENT_NOT_FOUND": "Oops! Please try using authorized application.",

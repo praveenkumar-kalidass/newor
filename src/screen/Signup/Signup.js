@@ -75,10 +75,10 @@ const Signup = () => {
       setIsSuccess(true);
     } catch (error) {
       setIsSubmit(false);
-      let errorMessage = translate('ERROR.NEWOR_INTERNAL_SERVER_ERROR');
+      let errorMessage = translate('ERROR_CODE.NEWOR_INTERNAL_SERVER_ERROR');
       const errorCode = error?.response?.data?.code;
       if (errorCode) {
-        errorMessage = translate(`ERROR.${errorCode}`);
+        errorMessage = translate(`ERROR_CODE.${errorCode}`);
       }
       toast.show({
         render: () => <ToastAlert status="error" message={errorMessage} />,

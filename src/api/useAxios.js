@@ -19,10 +19,14 @@ const useAxios = () => {
     Promise.reject(error)
   ));
   instance.interceptors.response.use((response) => {
-    removeLoader();
+    if (response.config.loader) {
+      removeLoader();
+    }
     return response;
   }, (error) => {
-    removeLoader();
+    if (error.config.loader) {
+      removeLoader();
+    }
     return Promise.reject(error);
   });
 

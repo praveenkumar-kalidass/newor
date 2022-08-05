@@ -36,7 +36,7 @@ const ForgotPassword = () => {
   const [fields, setFields] = useState(INITIAL_STATE);
   const [errorMessages, setErrorMessages] = useState(INITIAL_STATE);
   const [isSubmit, setIsSubmit] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(true);
+  const [isSuccess, setIsSuccess] = useState(false);
   const navigation = useNavigation();
   const toast = useToast();
   const theme = useTheme();
@@ -66,10 +66,10 @@ const ForgotPassword = () => {
       setIsSuccess(true);
     } catch (error) {
       setIsSubmit(false);
-      let errorMessage = translate('ERROR.NEWOR_INTERNAL_SERVER_ERROR');
+      let errorMessage = translate('ERROR_CODE.NEWOR_INTERNAL_SERVER_ERROR');
       const errorCode = error?.response?.data?.code;
       if (errorCode) {
-        errorMessage = translate(`ERROR.${errorCode}`);
+        errorMessage = translate(`ERROR_CODE.${errorCode}`);
       }
       toast.show({
         render: () => <ToastAlert status="error" message={errorMessage} />,
