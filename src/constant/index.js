@@ -13,11 +13,16 @@ const LANGUAGE = {
   TAMIL: 'ta',
 };
 
+const STORAGE_KEY = {
+  TOKEN: 'NEWOR_AUTH_TOKEN',
+};
+
 const constant = {
   APP_NAME: 'newor',
   AUTH_LITERAL,
   THEME,
   LANGUAGE,
+  STORAGE_KEY,
 };
 
 export default constant;

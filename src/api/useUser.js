@@ -5,14 +5,22 @@ import config from '../../config/config';
 const useUser = () => {
   const axios = useAxios();
 
-  const login = ({ email, password }) => axios.post(`${config.baseURL}/api/user/v1/login`, {
-    email,
-    password,
-    clientId: config.clientId,
-    clientSecret: config.clientSecret,
-    grantType: CONSTANT.AUTH_LITERAL.PASSWORD,
-    responseType: CONSTANT.AUTH_LITERAL.CODE,
-  });
+  const login = ({ email, password }) => {
+    const data = {
+      email,
+      password,
+      clientId: config.clientId,
+      clientSecret: config.clientSecret,
+      grantType: CONSTANT.AUTH_LITERAL.PASSWORD,
+      responseType: CONSTANT.AUTH_LITERAL.CODE,
+    };
+    const request = Object.keys(data).map((key) => (
+      `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+    )).join('&');
+    return axios.post(`${config.baseURL}/api/user/v1/login`, request, {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    });
+  };
 
   const signup = (request) => axios.post(`${config.baseURL}/api/user/v1/signup`, request);
 

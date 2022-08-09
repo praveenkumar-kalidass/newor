@@ -8,6 +8,7 @@ import Signup from 'screen/Signup';
 import ResetPassword from 'screen/ResetPassword';
 import ForgotPassword from 'screen/ForgotPassword';
 import EmailVerification from 'screen/EmailVerification';
+import DashboardTabNavigator from 'screen/DashboardTabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -38,6 +39,11 @@ export default () => {
       <Stack.Screen
         name={ROUTE.EMAIL_VERIFICATION}
         component={EmailVerification}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ROUTE.DASHBOARD_TAB}
+        component={DashboardTabNavigator}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

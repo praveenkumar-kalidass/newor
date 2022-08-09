@@ -6,6 +6,7 @@ import {
   Flex, FormControl, useToast, Center, Image, Divider,
 } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import TitleBar from 'component/TitleBar/TitleBar';
 import ToastAlert from 'component/ToastAlert';
@@ -60,10 +61,14 @@ const Login = () => {
 
   const doLogin = useCallback(async () => {
     try {
-      await login(fields);
+      const { data } = await login(fields);
       setIsSubmit(false);
+      await AsyncStorage.setItem(CONSTANT.STORAGE_KEY.TOKEN, JSON.stringify({
+        accessToken: data.accessToken,
+        refreshToken: data.refreshToken,
+      }));
+      navigation.navigate(ROUTE.DASHBOARD_TAB);
     } catch (error) {
-      setIsSubmit(false);
       let errorMessage = translate('ERROR_CODE.NEWOR_INTERNAL_SERVER_ERROR');
       const errorCode = error?.response?.data?.code;
       if (errorCode) {
