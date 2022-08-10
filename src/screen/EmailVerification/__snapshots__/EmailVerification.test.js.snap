@@ -110,6 +110,14 @@ exports[`EmailVerification should match error snapshot 1`] = `
         dataSet={Object {}}
         elevation={1}
         shadowColor="#000000"
+        shadowOffset={
+          Object {
+            "height": 1,
+            "width": 0,
+          }
+        }
+        shadowOpacity={0.8}
+        shadowRadius={1}
         style={
           Array [
             Object {
@@ -354,6 +362,14 @@ exports[`EmailVerification should match success snapshot 1`] = `
         dataSet={Object {}}
         elevation={1}
         shadowColor="#000000"
+        shadowOffset={
+          Object {
+            "height": 1,
+            "width": 0,
+          }
+        }
+        shadowOpacity={0.8}
+        shadowRadius={1}
         style={
           Array [
             Object {
