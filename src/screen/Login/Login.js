@@ -17,7 +17,8 @@ import NEWOR from 'asset/image/newor.png';
 import CONSTANT from 'constant';
 import validator from 'helper/validator';
 import ROUTE from 'constant/route';
-import useUser from 'api/useUser';
+import useUserApi from 'api/useUser';
+import useUser from 'provider/User/useUser';
 import useTheme from 'theme/useTheme';
 import useTranslation from 'translation/useTranslation';
 import Translation from 'translation/Translation';
@@ -41,7 +42,8 @@ const Login = () => {
   const toast = useToast();
   const theme = useTheme();
   const { translate } = useTranslation();
-  const { login } = useUser();
+  const { login } = useUserApi();
+  const { setUser } = useUser();
 
   const handleFieldChange = (label, value) => {
     setFields({
@@ -63,6 +65,7 @@ const Login = () => {
     try {
       const { data } = await login(fields);
       setIsSubmit(false);
+      setUser(data.user);
       await AsyncStorage.setItem(CONSTANT.STORAGE_KEY.TOKEN, JSON.stringify({
         accessToken: data.accessToken,
         refreshToken: data.refreshToken,

@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { NativeBaseProvider } from 'native-base';
 
 import ThemeProvider from 'theme/ThemeProvider';
+import Provider from 'provider';
 
 const AllTheProviders = ({ children }) => {
   const inset = {
@@ -21,7 +22,9 @@ const AllTheProviders = ({ children }) => {
     <NavigationContainer>
       <NativeBaseProvider initialWindowMetrics={inset}>
         <ThemeProvider>
-          {children}
+          <Provider>
+            {children}
+          </Provider>
         </ThemeProvider>
       </NativeBaseProvider>
     </NavigationContainer>

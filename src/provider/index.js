@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import LoaderProvider from './Loader';
+import UserProvider from './User';
 
 const Provider = ({ children }) => (
   <LoaderProvider>
-    {children}
+    <UserProvider>
+      {children}
+    </UserProvider>
   </LoaderProvider>
 );
 
