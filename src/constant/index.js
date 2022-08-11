@@ -1,6 +1,7 @@
 const AUTH_LITERAL = {
   PASSWORD: 'password',
   CODE: 'code',
+  REFRESH_TOKEN: 'refresh_token',
 };
 
 const THEME = {

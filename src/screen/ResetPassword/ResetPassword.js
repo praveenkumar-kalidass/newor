@@ -32,7 +32,7 @@ const ResetPassword = () => {
   const [fields, setFields] = useState(INITIAL_STATE);
   const [errorMessages, setErrorMessages] = useState(INITIAL_STATE);
   const [isSubmit, setIsSubmit] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(true);
+  const [isSuccess, setIsSuccess] = useState(false);
   const navigation = useNavigation();
   const { params } = useRoute();
   const toast = useToast();

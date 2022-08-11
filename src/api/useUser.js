@@ -22,6 +22,22 @@ const useUser = () => {
     });
   };
 
+  const authorize = (refreshToken) => {
+    const data = {
+      refreshToken,
+      clientId: config.clientId,
+      clientSecret: config.clientSecret,
+      grantType: CONSTANT.AUTH_LITERAL.REFRESH_TOKEN,
+    };
+    const request = Object.keys(data).map((key) => (
+      `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+    )).join('&');
+    return axios.post(`${config.baseURL}/api/user/v1/authorize`, request, {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      loader: true,
+    });
+  };
+
   const signup = (request) => axios.post(`${config.baseURL}/api/user/v1/signup`, request);
 
   const forgotPassword = (request) => axios.post(`${config.baseURL}/api/user/v1/forgot-password`, request);
@@ -32,6 +48,7 @@ const useUser = () => {
 
   return {
     login,
+    authorize,
     signup,
     forgotPassword,
     verify,

@@ -8,7 +8,7 @@ const useAxios = () => {
 
   const instance = axios.create({
     baseURL: config.baseURL,
-    timeout: 1000,
+    timeout: 10000,
   });
   instance.interceptors.request.use((options) => {
     if (options.loader) {

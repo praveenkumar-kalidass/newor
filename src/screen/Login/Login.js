@@ -44,7 +44,7 @@ const Login = () => {
   const theme = useTheme();
   const { translate } = useTranslation();
   const { login } = useUserApi();
-  const { setUser } = useUser();
+  const { setUser, isAuthorized } = useUser();
   usePreventBack();
 
   const handleFieldChange = (label, value) => {
@@ -74,6 +74,7 @@ const Login = () => {
       }));
       navigation.navigate(ROUTE.DASHBOARD_TAB);
     } catch (error) {
+      setIsSubmit(false);
       let errorMessage = translate('ERROR_CODE.NEWOR_INTERNAL_SERVER_ERROR');
       const errorCode = error?.response?.data?.code;
       if (errorCode) {
@@ -101,7 +102,7 @@ const Login = () => {
     }
   }, [navigation, isSubmit, isFormError]);
 
-  return (
+  return isAuthorized && (
     <KeyboardAvoidingView flex={1} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <Flex flex={1} />
       <Flex flex={4} direction="row" p="5" justifyContent="center">
