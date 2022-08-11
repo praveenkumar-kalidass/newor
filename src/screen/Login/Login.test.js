@@ -29,6 +29,7 @@ jest.mock('api/useUser', () => () => mockUseUser);
 jest.mock('@react-native-async-storage/async-storage', () => ({
   setItem: jest.fn(),
 }));
+jest.mock('hook/usePreventBack');
 
 describe('Login', () => {
   it('should match snapshot', async () => {

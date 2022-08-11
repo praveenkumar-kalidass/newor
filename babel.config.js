@@ -12,6 +12,7 @@ module.exports = {
           component: './src/component',
           constant: './src/constant',
           helper: './src/helper',
+          hook: './src/hook',
           navigation: './src/navigation',
           provider: './src/provider',
           screen: './src/screen',

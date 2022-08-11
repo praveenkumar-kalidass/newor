@@ -22,6 +22,7 @@ import useUser from 'provider/User/useUser';
 import useTheme from 'theme/useTheme';
 import useTranslation from 'translation/useTranslation';
 import Translation from 'translation/Translation';
+import usePreventBack from 'hook/usePreventBack';
 import {
   INITIAL_STATE,
   FIELDS,
@@ -44,6 +45,7 @@ const Login = () => {
   const { translate } = useTranslation();
   const { login } = useUserApi();
   const { setUser } = useUser();
+  usePreventBack();
 
   const handleFieldChange = (label, value) => {
     setFields({
