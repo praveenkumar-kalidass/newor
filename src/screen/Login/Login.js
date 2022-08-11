@@ -102,7 +102,7 @@ const Login = () => {
     }
   }, [navigation, isSubmit, isFormError]);
 
-  return isAuthorized && (
+  return isAuthorized === false && (
     <KeyboardAvoidingView flex={1} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <Flex flex={1} />
       <Flex flex={4} direction="row" p="5" justifyContent="center">

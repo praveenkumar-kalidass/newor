@@ -8,7 +8,7 @@ import Signup from 'screen/Signup';
 import ResetPassword from 'screen/ResetPassword';
 import ForgotPassword from 'screen/ForgotPassword';
 import EmailVerification from 'screen/EmailVerification';
-import DashboardTabNavigator from 'screen/DashboardTabNavigator';
+import DashboardTabNavigator from 'navigation/DashboardTabNavigator';
 
 const Stack = createStackNavigator();
 

@@ -1,6 +1,12 @@
 import React from 'react';
 import { Text } from 'native-base';
 
-const Dashboard = () => <Text>Dashboard</Text>;
+import usePreventBack from 'hook/usePreventBack';
+
+const Dashboard = () => {
+  usePreventBack();
+
+  return <Text>Dashboard</Text>;
+};
 
 export default Dashboard;

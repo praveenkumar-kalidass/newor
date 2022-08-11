@@ -6,6 +6,7 @@ const route = {
   EMAIL_VERIFICATION: 'EMAIL_VERIFICATION',
   DASHBOARD_TAB: 'DASHBOARD_TAB',
   DASHBOARD: 'DASHBOARD',
+  USER_STACK: 'USER_STACK',
 };
 
 export default route;

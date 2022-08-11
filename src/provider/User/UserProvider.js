@@ -28,7 +28,9 @@ const UserProvider = ({ children }) => {
         }));
         setIsAuthorized(true);
         navigation.navigate(ROUTE.DASHBOARD_TAB);
+        return;
       }
+      setIsAuthorized(false);
     // eslint-disable-next-line no-empty
     } catch (error) {
       setIsAuthorized(false);
