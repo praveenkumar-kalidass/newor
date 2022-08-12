@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import { Box, HStack } from 'native-base';
 
 export const TabContainer = styled(Box).attrs(({ theme }) => ({
-  bg: theme.color.BACKGROUND_100,
+  bg: theme.color.PRIMARY_100,
   p: 6,
 }))``;
 
