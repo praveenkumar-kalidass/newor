@@ -1,0 +1,6 @@
+{
+  "env": "dev",
+  "baseURL": "http://localhost:3000",
+  "clientId": "qwerty-1234567890",
+  "clientSecret": "test123"
+}

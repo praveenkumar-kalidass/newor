@@ -1,6 +1,6 @@
 import CONSTANT from 'constant';
 import useAxios from '.';
-import config from '../../config/config';
+import config from '../../config';
 
 const useUser = () => {
   const axios = useAxios();

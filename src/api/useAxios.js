@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import useLoader from 'provider/Loader/useLoader';
-import config from '../../config/config';
+import config from '../../config';
 
 const useAxios = () => {
   const { addLoader, removeLoader } = useLoader();
