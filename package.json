@@ -49,6 +49,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "jest": "^27.5.1",
+    "jest-mock-axios": "^4.6.1",
     "metro-react-native-babel-preset": "^0.70.3",
     "react-test-renderer": "18.0.0"
   }
