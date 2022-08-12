@@ -12,6 +12,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1CFA102928A538960028A100 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFA102528A538960028A100 /* FontAwesome.ttf */; };
+		1CFA102A28A538960028A100 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFA102628A538960028A100 /* FontAwesome5_Brands.ttf */; };
+		1CFA102B28A538960028A100 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFA102728A538960028A100 /* FontAwesome5_Solid.ttf */; };
+		1CFA102C28A538960028A100 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFA102828A538960028A100 /* FontAwesome5_Regular.ttf */; };
 		4AD327F1084EB26B76256865 /* libPods-newor-neworTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C5D8BD07F75C6F62C2A4FC /* libPods-newor-neworTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -37,6 +41,10 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = newor/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = newor/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = newor/main.m; sourceTree = "<group>"; };
+		1CFA102528A538960028A100 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		1CFA102628A538960028A100 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		1CFA102728A538960028A100 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		1CFA102828A538960028A100 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		34C5D8BD07F75C6F62C2A4FC /* libPods-newor-neworTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-newor-neworTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA5F6D34C6882B51ED68730 /* Pods-newor-neworTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newor-neworTests.release.xcconfig"; path = "Target Support Files/Pods-newor-neworTests/Pods-newor-neworTests.release.xcconfig"; sourceTree = "<group>"; };
 		448D1BBCCD48B33CE3318C75 /* libPods-newor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-newor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +94,7 @@
 		13B07FAE1A68108700A75B9A /* newor */ = {
 			isa = PBXGroup;
 			children = (
+				1CFA102428A5379B0028A100 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -94,6 +103,17 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = newor;
+			sourceTree = "<group>";
+		};
+		1CFA102428A5379B0028A100 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1CFA102528A538960028A100 /* FontAwesome.ttf */,
+				1CFA102628A538960028A100 /* FontAwesome5_Brands.ttf */,
+				1CFA102828A538960028A100 /* FontAwesome5_Regular.ttf */,
+				1CFA102728A538960028A100 /* FontAwesome5_Solid.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -242,8 +262,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CFA102C28A538960028A100 /* FontAwesome5_Regular.ttf in Resources */,
+				1CFA102B28A538960028A100 /* FontAwesome5_Solid.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				1CFA102A28A538960028A100 /* FontAwesome5_Brands.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				1CFA102928A538960028A100 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
