@@ -1,5 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Backgroun3 should match snapshot 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+      ]
+    }
+  >
+    <RNSVGSvgView
+      bbHeight={1334}
+      bbWidth={750}
+      focusable={false}
+      height={1334}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 1334,
+            "width": 750,
+          },
+        ]
+      }
+      width={750}
+    >
+      <RNSVGGroup>
+        <RNSVGPath
+          d="M 0,0
+      L 0,266.8
+      C 50 316.8, 700 316.8, 750 266.8
+      L 750,0
+      Z"
+          fill={4278199178}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</RNCSafeAreaProvider>
+`;
+
 exports[`Background1 should match snapshot 1`] = `
 <RNCSafeAreaProvider
   onInsetsChange={[Function]}

@@ -3,6 +3,7 @@ import React from 'react';
 import { render } from 'test/util';
 import Background1 from './Background1';
 import Background2 from './Background2';
+import Background3 from './Background3';
 
 describe('Background1', () => {
   it('should match snapshot', () => {
@@ -15,6 +16,14 @@ describe('Background1', () => {
 describe('Background2', () => {
   it('should match snapshot', () => {
     const container = render(<Background2 />);
+
+    expect(container).toMatchSnapshot();
+  });
+});
+
+describe('Backgroun3', () => {
+  it('should match snapshot', () => {
+    const container = render(<Background3 />);
 
     expect(container).toMatchSnapshot();
   });
