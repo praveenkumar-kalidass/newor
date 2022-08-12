@@ -12,111 +12,86 @@ exports[`AppModal should match snapshot 1`] = `
     ]
   }
 >
-  <Modal
-    animationType="slide"
-    hardwareAccelerated={false}
-    transparent={true}
-    visible={true}
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
   >
     <View
-      dataSet={Object {}}
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
       style={
         Array [
           Object {
-            "backgroundColor": "rgba(0, 0, 0, 0.5)",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "center",
-            "paddingBottom": 20,
-            "paddingLeft": 20,
-            "paddingRight": 20,
-            "paddingTop": 20,
+            "borderWidth": 0,
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
           },
-          Array [
-            Object {},
-          ],
+          Object {
+            "height": 1334,
+            "width": 750,
+          },
         ]
       }
     >
-      <View
-        dataSet={Object {}}
-        elevation={1}
-        shadowColor="#000000"
-        style={
-          Array [
-            Object {
-              "alignSelf": "center",
-              "backgroundColor": "#eeeeee",
-              "borderRadius": 20,
-              "flex": 1,
-              "paddingBottom": 20,
-              "paddingLeft": 20,
-              "paddingRight": 20,
-              "paddingTop": 20,
-            },
-            Array [
-              Object {},
-            ],
-          ]
-        }
+      <Modal
+        animationType="slide"
+        hardwareAccelerated={false}
+        transparent={true}
+        visible={true}
       >
         <View
           dataSet={Object {}}
           style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-            }
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.5)",
+                "display": "flex",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "paddingBottom": 20,
+                "paddingLeft": 20,
+                "paddingRight": 20,
+                "paddingTop": 20,
+              },
+              Array [
+                Object {},
+              ],
+            ]
           }
         >
-          <Text
-            dataSet={Object {}}
-            style={
-              Object {
-                "backgroundColor": undefined,
-                "color": "#171717",
-                "fontFamily": undefined,
-                "fontSize": 14,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "letterSpacing": 0,
-                "lineHeight": 21,
-                "textDecorationLine": undefined,
-              }
-            }
-          >
-            Header
-          </Text>
           <View
-            accessibilityRole="button"
-            accessible={true}
-            collapsable={false}
-            colorScheme="primary"
             dataSet={Object {}}
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
+            elevation={1}
+            shadowColor="#000000"
             style={
               Array [
                 Object {
-                  "alignItems": "center",
-                  "borderRadius": 4,
-                  "flexDirection": "row",
-                  "justifyContent": "center",
-                  "paddingBottom": 10,
-                  "paddingLeft": 10,
-                  "paddingRight": 10,
-                  "paddingTop": 10,
+                  "alignSelf": "center",
+                  "backgroundColor": "#eeeeee",
+                  "borderRadius": 20,
+                  "flex": 1,
+                  "paddingBottom": 20,
+                  "paddingLeft": 20,
+                  "paddingRight": 20,
+                  "paddingTop": 20,
                 },
                 Array [
                   Object {},
@@ -124,159 +99,456 @@ exports[`AppModal should match snapshot 1`] = `
               ]
             }
           >
-            <RNSVGSvgView
-              accessibilityRole="image"
-              align="xMidYMid"
-              bbHeight={20}
-              bbWidth={20}
-              color={4278199178}
+            <View
               dataSet={Object {}}
-              focusable={false}
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              stroke=""
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  Object {
-                    "color": "#00238a",
-                    "height": 20,
-                    "width": 20,
-                  },
-                  Object {
-                    "flex": 0,
-                    "height": 20,
-                    "width": 20,
-                  },
-                ]
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                }
               }
-              tintColor={4278199178}
-              vbHeight={24}
-              vbWidth={24}
             >
-              <RNSVGGroup
-                propList={
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#171717",
+                    "fontFamily": undefined,
+                    "fontSize": 14,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 21,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                Header
+              </Text>
+              <View
+                accessibilityRole="button"
+                accessible={true}
+                collapsable={false}
+                colorScheme="primary"
+                dataSet={Object {}}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
                   Array [
-                    "stroke",
+                    Object {
+                      "alignItems": "center",
+                      "borderRadius": 4,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                      "paddingBottom": 10,
+                      "paddingLeft": 10,
+                      "paddingRight": 10,
+                      "paddingTop": 10,
+                    },
+                    Array [
+                      Object {},
+                    ],
                   ]
                 }
-                stroke={null}
               >
-                <RNSVGGroup>
-                  <RNSVGPath
-                    d="M12 9.77778L4.22222 2L2 4.22222L9.77778 12L2 19.7778L4.22222 22L12 14.2222L19.7778 22L22 19.7778L14.2222 12L22 4.22222L19.7778 2L12 9.77778Z"
-                    fill={
-                      Array [
-                        2,
-                      ]
-                    }
+                <RNSVGSvgView
+                  accessibilityRole="image"
+                  align="xMidYMid"
+                  bbHeight={20}
+                  bbWidth={20}
+                  color={4278199178}
+                  dataSet={Object {}}
+                  focusable={false}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  stroke=""
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      Object {
+                        "color": "#00238a",
+                        "height": 20,
+                        "width": 20,
+                      },
+                      Object {
+                        "flex": 0,
+                        "height": 20,
+                        "width": 20,
+                      },
+                    ]
+                  }
+                  tintColor={4278199178}
+                  vbHeight={24}
+                  vbWidth={24}
+                >
+                  <RNSVGGroup
                     propList={
                       Array [
-                        "fill",
                         "stroke",
                       ]
                     }
                     stroke={null}
-                  />
-                </RNSVGGroup>
-              </RNSVGGroup>
-            </RNSVGSvgView>
+                  >
+                    <RNSVGGroup>
+                      <RNSVGPath
+                        d="M12 9.77778L4.22222 2L2 4.22222L9.77778 12L2 19.7778L4.22222 22L12 14.2222L19.7778 22L22 19.7778L14.2222 12L22 4.22222L19.7778 2L12 9.77778Z"
+                        fill={
+                          Array [
+                            2,
+                          ]
+                        }
+                        propList={
+                          Array [
+                            "fill",
+                            "stroke",
+                          ]
+                        }
+                        stroke={null}
+                      />
+                    </RNSVGGroup>
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+            </View>
+            <View
+              aria-orientation="horizontal"
+              dataSet={Object {}}
+              style={
+                Object {
+                  "backgroundColor": "#d4d4d4",
+                  "height": 1,
+                  "marginBottom": 8,
+                  "marginTop": 8,
+                  "width": "100%",
+                }
+              }
+              thickness="1"
+            />
+            <View
+              dataSet={Object {}}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#171717",
+                    "fontFamily": undefined,
+                    "fontSize": 14,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 21,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                Body
+              </Text>
+            </View>
+            <View
+              aria-orientation="horizontal"
+              dataSet={Object {}}
+              style={
+                Object {
+                  "backgroundColor": "#d4d4d4",
+                  "height": 1,
+                  "marginBottom": 20,
+                  "marginTop": 20,
+                  "width": "100%",
+                }
+              }
+              thickness="1"
+            />
+            <View
+              dataSet={Object {}}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-end",
+                }
+              }
+            >
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#171717",
+                    "fontFamily": undefined,
+                    "fontSize": 14,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 21,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                Footer
+              </Text>
+            </View>
           </View>
         </View>
-        <View
-          aria-orientation="horizontal"
-          dataSet={Object {}}
-          style={
+      </Modal>
+      <View
+        pointerEvents="none"
+        style={
+          Array [
             Object {
-              "backgroundColor": "#d4d4d4",
-              "height": 1,
-              "marginBottom": 8,
-              "marginTop": 8,
-              "width": "100%",
-            }
-          }
-          thickness="1"
-        />
-        <View
-          dataSet={Object {}}
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "column",
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text
-            dataSet={Object {}}
-            style={
-              Object {
-                "backgroundColor": undefined,
-                "color": "#171717",
-                "fontFamily": undefined,
-                "fontSize": 14,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "letterSpacing": 0,
-                "lineHeight": 21,
-                "textDecorationLine": undefined,
-              }
-            }
-          >
-            Body
-          </Text>
-        </View>
-        <View
-          aria-orientation="horizontal"
-          dataSet={Object {}}
-          style={
-            Object {
-              "backgroundColor": "#d4d4d4",
-              "height": 1,
-              "marginBottom": 20,
-              "marginTop": 20,
-              "width": "100%",
-            }
-          }
-          thickness="1"
-        />
-        <View
-          dataSet={Object {}}
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            dataSet={Object {}}
-            style={
-              Object {
-                "backgroundColor": undefined,
-                "color": "#171717",
-                "fontFamily": undefined,
-                "fontSize": 14,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "letterSpacing": 0,
-                "lineHeight": 21,
-                "textDecorationLine": undefined,
-              }
-            }
-          >
-            Footer
-          </Text>
-        </View>
-      </View>
+              "backgroundColor": "transparent",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
-  </Modal>
+    <View
+      elevation={0}
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderWidth": 0,
+            "left": -600,
+            "position": "absolute",
+            "top": 0,
+          },
+          Object {
+            "height": 1334,
+            "width": 600,
+          },
+        ]
+      }
+    >
+      <View
+        dataSet={Object {}}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#eeeeee",
+              "flex": 1,
+              "justifyContent": "space-between",
+              "paddingBottom": 80,
+              "paddingTop": 80,
+            },
+            Array [
+              Object {},
+            ],
+          ]
+        }
+      >
+        <RCTScrollView
+          contentContainerStyle={
+            Array [
+              Object {},
+              Object {
+                "dataSet": Object {},
+              },
+            ]
+          }
+          data={
+            Array [
+              Object {
+                "action": "press",
+                "icon": <Icon
+                  allowFontScaling={false}
+                  color="#000000"
+                  name="power-off"
+                  size={24}
+                />,
+                "id": "LOGOUT",
+                "label": "LOGOUT",
+              },
+            ]
+          }
+          dataSet={Object {}}
+          getItem={[Function]}
+          getItemCount={[Function]}
+          keyExtractor={[Function]}
+          onContentSizeChange={[Function]}
+          onLayout={[Function]}
+          onMomentumScrollBegin={[Function]}
+          onMomentumScrollEnd={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onScrollEndDrag={[Function]}
+          removeClippedSubviews={false}
+          renderItem={[Function]}
+          scrollEventThrottle={50}
+          stickyHeaderIndices={Array []}
+          style={Object {}}
+          viewabilityConfigCallbackPairs={Array []}
+        >
+          <View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={false}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  dataSet={Object {}}
+                  style={
+                    Array [
+                      Object {
+                        "borderBottomWidth": 1,
+                        "borderColor": "#7f7f7f",
+                        "paddingBottom": 8,
+                        "paddingLeft": 16,
+                        "paddingRight": 20,
+                        "paddingTop": 8,
+                      },
+                      Array [
+                        Object {},
+                      ],
+                    ]
+                  }
+                >
+                  <View
+                    dataSet={Object {}}
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                      }
+                    }
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      selectable={false}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#000000",
+                            "fontSize": 24,
+                          },
+                          undefined,
+                          Object {
+                            "fontFamily": "FontAwesome",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                    <View
+                      dataSet={Object {}}
+                      style={
+                        Object {
+                          "width": 12,
+                        }
+                      }
+                    />
+                    <View
+                      dataSet={Object {}}
+                      style={
+                        Object {
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <Text
+                        dataSet={Object {}}
+                        style={
+                          Object {
+                            "backgroundColor": undefined,
+                            "color": "#171717",
+                            "fontFamily": undefined,
+                            "fontSize": 14,
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "letterSpacing": 0,
+                            "lineHeight": 21,
+                            "textDecorationLine": undefined,
+                          }
+                        }
+                      >
+                        LOGOUT
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </RCTScrollView>
+      </View>
+      <View
+        pointerEvents="none"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
 </RNCSafeAreaProvider>
 `;
