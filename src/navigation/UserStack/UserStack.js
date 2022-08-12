@@ -37,7 +37,7 @@ const UserStack = () => {
           headerLeft: () => (
             <IconButton
               variant="ghost"
-              ml={2}
+              ml={4}
               icon={<FontAwesome size={24} name="align-justify" />}
               _icon={{ color: COLOR.LIGHT_BACKGROUND_100 }}
               onPress={drawer.open}
