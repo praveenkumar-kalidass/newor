@@ -171,7 +171,6 @@ exports[`Backgroun3 should match snapshot 1`] = `
           data={
             Array [
               Object {
-                "action": "press",
                 "icon": <Icon
                   allowFontScaling={false}
                   color="#000000"
@@ -180,6 +179,7 @@ exports[`Backgroun3 should match snapshot 1`] = `
                 />,
                 "id": "LOGOUT",
                 "label": "LOGOUT",
+                "onPress": [Function],
               },
             ]
           }
@@ -209,7 +209,7 @@ exports[`Backgroun3 should match snapshot 1`] = `
               <View
                 accessible={true}
                 collapsable={false}
-                focusable={false}
+                focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -527,7 +527,6 @@ exports[`Background1 should match snapshot 1`] = `
           data={
             Array [
               Object {
-                "action": "press",
                 "icon": <Icon
                   allowFontScaling={false}
                   color="#000000"
@@ -536,6 +535,7 @@ exports[`Background1 should match snapshot 1`] = `
                 />,
                 "id": "LOGOUT",
                 "label": "LOGOUT",
+                "onPress": [Function],
               },
             ]
           }
@@ -565,7 +565,7 @@ exports[`Background1 should match snapshot 1`] = `
               <View
                 accessible={true}
                 collapsable={false}
-                focusable={false}
+                focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -865,7 +865,6 @@ exports[`Background2 should match snapshot 1`] = `
           data={
             Array [
               Object {
-                "action": "press",
                 "icon": <Icon
                   allowFontScaling={false}
                   color="#000000"
@@ -874,6 +873,7 @@ exports[`Background2 should match snapshot 1`] = `
                 />,
                 "id": "LOGOUT",
                 "label": "LOGOUT",
+                "onPress": [Function],
               },
             ]
           }
@@ -903,7 +903,7 @@ exports[`Background2 should match snapshot 1`] = `
               <View
                 accessible={true}
                 collapsable={false}
-                focusable={false}
+                focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}

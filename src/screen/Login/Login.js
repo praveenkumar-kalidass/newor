@@ -5,7 +5,7 @@ import { KeyboardAvoidingView, Platform } from 'react-native';
 import {
   Flex, FormControl, useToast, Center, Image, Divider,
 } from 'native-base';
-import { useNavigation } from '@react-navigation/native';
+import { useIsFocused, useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import TitleBar from 'component/TitleBar/TitleBar';
@@ -45,6 +45,7 @@ const Login = () => {
   const { translate } = useTranslation();
   const { login } = useUserApi();
   const { setUser, isAuthorized } = useUser();
+  const isFocused = useIsFocused();
   usePreventBack();
 
   const handleFieldChange = (label, value) => {
@@ -71,6 +72,7 @@ const Login = () => {
       await AsyncStorage.setItem(CONSTANT.STORAGE_KEY.TOKEN, JSON.stringify({
         accessToken: data.accessToken,
         refreshToken: data.refreshToken,
+        idToken: data.user.idToken,
       }));
       navigation.navigate(ROUTE.DASHBOARD_TAB);
     } catch (error) {
@@ -101,6 +103,16 @@ const Login = () => {
       setIsSubmit(false);
     }
   }, [navigation, isSubmit, isFormError]);
+
+  useEffect(() => {
+    if (isFocused) {
+      const reset = {};
+      Object.keys(fields).forEach((field) => {
+        reset[field] = '';
+      });
+      setFields(reset);
+    }
+  }, [isFocused]);
 
   return isAuthorized === false && (
     <KeyboardAvoidingView flex={1} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>

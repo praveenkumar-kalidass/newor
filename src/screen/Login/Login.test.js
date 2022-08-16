@@ -63,7 +63,13 @@ describe('Login', () => {
 
   it('should set auth token and navigation to Dashboard on login', async () => {
     mockUseUser.login.mockResolvedValueOnce({
-      data: { accessToken: 'testaccesstoken123', refreshToken: 'testrefreshtoken123' },
+      data: {
+        accessToken: 'testaccesstoken123',
+        refreshToken: 'testrefreshtoken123',
+        user: {
+          idToken: 'testidtoken123',
+        },
+      },
     });
 
     const { getByTestId } = await render(<Login />);
@@ -82,6 +88,7 @@ describe('Login', () => {
     expect(AsyncStorage.setItem).toHaveBeenCalledWith('NEWOR_AUTH_TOKEN', JSON.stringify({
       accessToken: 'testaccesstoken123',
       refreshToken: 'testrefreshtoken123',
+      idToken: 'testidtoken123',
     }));
     expect(mockNavigation.navigate).toHaveBeenCalledWith('DASHBOARD_TAB');
   });

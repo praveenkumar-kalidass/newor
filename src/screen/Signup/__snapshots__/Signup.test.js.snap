@@ -879,7 +879,6 @@ exports[`Signup should match snapshot 1`] = `
           data={
             Array [
               Object {
-                "action": "press",
                 "icon": <Icon
                   allowFontScaling={false}
                   color="#000000"
@@ -888,6 +887,7 @@ exports[`Signup should match snapshot 1`] = `
                 />,
                 "id": "LOGOUT",
                 "label": "LOGOUT",
+                "onPress": [Function],
               },
             ]
           }
@@ -917,7 +917,7 @@ exports[`Signup should match snapshot 1`] = `
               <View
                 accessible={true}
                 collapsable={false}
-                focusable={false}
+                focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
