@@ -21,7 +21,7 @@ const DrawerProvider = ({ children }) => {
         type="overlay"
         tapToClose
         openDrawerOffset={0.2}
-        content={<Menu />}
+        content={<Menu handleClose={() => setIsOpen(false)} />}
         onClose={() => setIsOpen(false)}
       >
         {children}

@@ -8,6 +8,7 @@ import Signup from 'screen/Signup';
 import ResetPassword from 'screen/ResetPassword';
 import ForgotPassword from 'screen/ForgotPassword';
 import EmailVerification from 'screen/EmailVerification';
+import Logout from 'screen/Logout';
 import DashboardTabNavigator from 'navigation/DashboardTabNavigator';
 
 const Stack = createStackNavigator();
@@ -44,6 +45,12 @@ export default () => {
       <Stack.Screen
         name={ROUTE.DASHBOARD_TAB}
         component={DashboardTabNavigator}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ROUTE.LOGOUT}
+        component={Logout}
+        screenOptions={{ presentation: 'modal' }}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

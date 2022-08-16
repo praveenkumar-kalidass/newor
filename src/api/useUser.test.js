@@ -26,6 +26,7 @@ describe('useUser', () => {
       'email=hello_world%40test.com&password=123456&clientId=qwerty-1234567890&clientSecret=test123&grantType=password&responseType=code',
       {
         'Content-Type': 'application/x-www-form-urlencoded',
+        authorization: false,
       },
     );
   });
@@ -41,6 +42,7 @@ describe('useUser', () => {
       {
         'Content-Type': 'application/x-www-form-urlencoded',
         loader: true,
+        authorization: false,
       },
     );
   });
@@ -53,6 +55,7 @@ describe('useUser', () => {
     expect(mockAxios.post).toHaveBeenCalledWith(
       'http://localhost:3000/api/user/v1/signup',
       { test: 'hello world' },
+      { authorization: false },
     );
   });
 
@@ -64,6 +67,7 @@ describe('useUser', () => {
     expect(mockAxios.post).toHaveBeenCalledWith(
       'http://localhost:3000/api/user/v1/forgot-password',
       { test: 'hello world' },
+      { authorization: false },
     );
   });
 
@@ -75,7 +79,10 @@ describe('useUser', () => {
     expect(mockAxios.put).toHaveBeenCalledWith(
       'http://localhost:3000/api/user/v1/verify',
       { test: 'hello world' },
-      { loader: true },
+      {
+        loader: true,
+        authorization: false,
+      },
     );
   });
 
@@ -87,6 +94,7 @@ describe('useUser', () => {
     expect(mockAxios.put).toHaveBeenCalledWith(
       'http://localhost:3000/api/user/v1/reset-password',
       { test: 'hello world' },
+      { authorization: false },
     );
   });
 });

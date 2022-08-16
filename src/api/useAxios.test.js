@@ -24,7 +24,7 @@ describe('useAxios', () => {
       result.current.interceptors.request.handlers[0].fulfilled({
         test: 'Hello World',
       }),
-    ).toStrictEqual({
+    ).resolves.toStrictEqual({
       test: 'Hello World',
     });
     expect(mockUseLoader.addLoader).toHaveBeenCalledTimes(1);

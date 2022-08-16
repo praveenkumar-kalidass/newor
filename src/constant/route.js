@@ -7,6 +7,7 @@ const route = {
   DASHBOARD_TAB: 'DASHBOARD_TAB',
   DASHBOARD: 'DASHBOARD',
   USER_STACK: 'USER_STACK',
+  LOGOUT: 'LOGOUT',
 };
 
 export default route;

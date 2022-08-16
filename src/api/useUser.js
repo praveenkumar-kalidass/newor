@@ -19,6 +19,7 @@ const useUser = () => {
     )).join('&');
     return axios.post(`${config.baseURL}/api/user/v1/login`, request, {
       'Content-Type': 'application/x-www-form-urlencoded',
+      authorization: false,
     });
   };
 
@@ -35,16 +36,28 @@ const useUser = () => {
     return axios.post(`${config.baseURL}/api/user/v1/authorize`, request, {
       'Content-Type': 'application/x-www-form-urlencoded',
       loader: true,
+      authorization: false,
     });
   };
 
-  const signup = (request) => axios.post(`${config.baseURL}/api/user/v1/signup`, request);
+  const signup = (request) => axios.post(`${config.baseURL}/api/user/v1/signup`, request, {
+    authorization: false,
+  });
 
-  const forgotPassword = (request) => axios.post(`${config.baseURL}/api/user/v1/forgot-password`, request);
+  const forgotPassword = (request) => axios.post(`${config.baseURL}/api/user/v1/forgot-password`, request, {
+    authorization: false,
+  });
 
-  const verify = (request) => axios.put(`${config.baseURL}/api/user/v1/verify`, request, { loader: true });
+  const verify = (request) => axios.put(`${config.baseURL}/api/user/v1/verify`, request, {
+    loader: true,
+    authorization: false,
+  });
 
-  const resetPassword = (request) => axios.put(`${config.baseURL}/api/user/v1/reset-password`, request);
+  const resetPassword = (request) => axios.put(`${config.baseURL}/api/user/v1/reset-password`, request, {
+    authorization: false,
+  });
+
+  const logout = () => axios.delete(`${config.baseURL}/api/user/v1/logout`);
 
   return {
     login,
@@ -53,6 +66,7 @@ const useUser = () => {
     forgotPassword,
     verify,
     resetPassword,
+    logout,
   };
 };
 

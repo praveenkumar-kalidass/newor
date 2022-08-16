@@ -5,7 +5,9 @@ const usePreventBack = () => {
   const navigation = useNavigation();
 
   const handleSwipe = useCallback((event) => {
-    event.preventDefault();
+    if (event.data.action.type === 'POP') {
+      event.preventDefault();
+    }
   }, []);
 
   useEffect(() => {

@@ -25,6 +25,7 @@ const UserProvider = ({ children }) => {
         await AsyncStorage.setItem(CONSTANT.STORAGE_KEY.TOKEN, JSON.stringify({
           accessToken: data.accessToken,
           refreshToken: data.refreshToken,
+          idToken: data.user.idToken,
         }));
         setIsAuthorized(true);
         navigation.navigate(ROUTE.DASHBOARD_TAB);
@@ -48,6 +49,7 @@ const UserProvider = ({ children }) => {
         user,
         setUser,
         isAuthorized,
+        setIsAuthorized,
       }}
     >
       {children}
