@@ -59,6 +59,16 @@ const useUser = () => {
 
   const logout = () => axios.delete(`${config.baseURL}/api/user/v1/logout`);
 
+  const updatePicture = (picture) => {
+    const request = new FormData();
+    request.append('picture', {
+      name: picture.fileName,
+      type: picture.type,
+      uri: picture.uri,
+    });
+    return axios.put(`${config.baseURL}/api/user/v1/picture`, request);
+  };
+
   return {
     login,
     authorize,
@@ -67,6 +77,7 @@ const useUser = () => {
     verify,
     resetPassword,
     logout,
+    updatePicture,
   };
 };
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Box } from 'native-base';
+import { Badge, Box, Button } from 'native-base';
 
 export const Container = styled(Box).attrs(({ theme }) => ({
   borderRadius: 20,
@@ -12,4 +12,14 @@ export const Container = styled(Box).attrs(({ theme }) => ({
   shadowOffset: { width: 0, height: 1 },
   shadowOpacity: 0.8,
   shadowRadius: 1,
+}))``;
+
+export const EditBadge = styled(Badge).attrs(({ theme }) => ({
+  bg: theme.color.PRIMARY_100,
+  rounded: 'full',
+  mb: '-5',
+  mr: '-5',
+  zIndex: 1,
+  variant: 'solid',
+  alignSelf: 'flex-end',
 }))``;

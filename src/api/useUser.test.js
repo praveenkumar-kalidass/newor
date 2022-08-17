@@ -97,4 +97,24 @@ describe('useUser', () => {
       { authorization: false },
     );
   });
+
+  it('updatePicture', () => {
+    function FormDataMock() {
+      this.append = jest.fn();
+    }
+    global.FormData = FormDataMock;
+
+    const { result } = renderHook(() => useUser());
+
+    result.current.updatePicture({
+      fileName: 'test.png',
+      uri: 'file://test.png',
+      type: 'image/png',
+    });
+
+    expect(mockAxios.put).toHaveBeenCalledWith(
+      'http://localhost:3000/api/user/v1/picture',
+      expect.any(FormDataMock),
+    );
+  });
 });

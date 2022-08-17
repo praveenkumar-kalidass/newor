@@ -27,6 +27,7 @@
   "SURE_TO_LOGOUT": "Are you sure you want to logout of Newor?",
   "YES": "Yes",
   "NO": "No",
+  "PICTURE_UPDATED": "Picture updated successfully",
   "ERROR_CODE": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",
