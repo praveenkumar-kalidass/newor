@@ -12,10 +12,6 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1CFA102928A538960028A100 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFA102528A538960028A100 /* FontAwesome.ttf */; };
-		1CFA102A28A538960028A100 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFA102628A538960028A100 /* FontAwesome5_Brands.ttf */; };
-		1CFA102B28A538960028A100 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFA102728A538960028A100 /* FontAwesome5_Solid.ttf */; };
-		1CFA102C28A538960028A100 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFA102828A538960028A100 /* FontAwesome5_Regular.ttf */; };
 		4AD327F1084EB26B76256865 /* libPods-newor-neworTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C5D8BD07F75C6F62C2A4FC /* libPods-newor-neworTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -262,12 +258,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CFA102C28A538960028A100 /* FontAwesome5_Regular.ttf in Resources */,
-				1CFA102B28A538960028A100 /* FontAwesome5_Solid.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				1CFA102A28A538960028A100 /* FontAwesome5_Brands.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				1CFA102928A538960028A100 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
