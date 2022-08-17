@@ -51,6 +51,99 @@ exports[`Profile should match snapshot 1`] = `
       }
     >
       <View
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          bbHeight={1334}
+          bbWidth={750}
+          focusable={false}
+          height={1334}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 1334,
+                "width": 750,
+              },
+            ]
+          }
+          width={750}
+        >
+          <RNSVGGroup>
+            <RNSVGCircle
+              cx={0}
+              cy={1334}
+              fill={4294967295}
+              propList={
+                Array [
+                  "fill",
+                  "stroke",
+                  "strokeWidth",
+                ]
+              }
+              r={250}
+              stroke={4278199178}
+              strokeWidth={25}
+            />
+            <RNSVGCircle
+              cx={0}
+              cy={1334}
+              fill={4294967295}
+              propList={
+                Array [
+                  "fill",
+                  "stroke",
+                  "strokeWidth",
+                ]
+              }
+              r={150}
+              stroke={4278199178}
+              strokeWidth={25}
+            />
+            <RNSVGCircle
+              cx={750}
+              cy={0}
+              fill={4294967295}
+              propList={
+                Array [
+                  "fill",
+                  "stroke",
+                  "strokeWidth",
+                ]
+              }
+              r={250}
+              stroke={4289527808}
+              strokeWidth={25}
+            />
+            <RNSVGCircle
+              cx={750}
+              cy={0}
+              fill={4294967295}
+              propList={
+                Array [
+                  "fill",
+                  "stroke",
+                  "strokeWidth",
+                ]
+              }
+              r={150}
+              stroke={4289527808}
+              strokeWidth={25}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <View
         flex={1}
         onLayout={[Function]}
         style={
@@ -104,6 +197,108 @@ exports[`Profile should match snapshot 1`] = `
               ]
             }
           >
+            <View
+              dataSet={Object {}}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "marginBottom": 40,
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                dataSet={Object {}}
+                style={
+                  Array [
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                    },
+                    Array [
+                      Object {},
+                    ],
+                  ]
+                }
+                styleProps={Object {}}
+              >
+                <View
+                  dataSet={Object {}}
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "#00238a",
+                        "color": "#00238a",
+                        "marginRight": 8,
+                        "paddingRight": 8,
+                      },
+                      Array [
+                        Object {},
+                      ],
+                    ]
+                  }
+                />
+                <Text
+                  dataSet={Object {}}
+                  style={
+                    Object {
+                      "backgroundColor": undefined,
+                      "color": "#171717",
+                      "fontFamily": undefined,
+                      "fontSize": 20,
+                      "fontStyle": "normal",
+                      "fontWeight": "700",
+                      "letterSpacing": 0,
+                      "lineHeight": 30,
+                      "textDecorationLine": undefined,
+                    }
+                  }
+                >
+                  PROFILE
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  selectable={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontSize": 24,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
             <View
               dataSet={Object {}}
               style={
@@ -170,7 +365,7 @@ exports[`Profile should match snapshot 1`] = `
                       style={
                         Array [
                           Object {
-                            "color": undefined,
+                            "color": "#ffffff",
                             "fontSize": 20,
                           },
                           undefined,

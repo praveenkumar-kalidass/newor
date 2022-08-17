@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { KeyboardAvoidingView, Platform, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import {
   Center, Avatar, Flex, VStack, FlatList, Text, Box, Divider, useToast, Spinner,
 } from 'native-base';
@@ -8,9 +9,14 @@ import { launchImageLibrary } from 'react-native-image-picker';
 
 import COLOR from 'constant/color';
 import useTranslation from 'translation/useTranslation';
+import Translation from 'translation/Translation';
+import useTheme from 'theme/useTheme';
 import useUserApi from 'api/useUser';
 import useUser from 'provider/User/useUser';
 import ToastAlert from 'component/ToastAlert';
+import TitleBar from 'component/TitleBar/TitleBar';
+import withBackground from 'helper/withBackground';
+import { Background4 } from 'component/Background';
 import { Container, EditBadge } from './Profile.style';
 
 const Profile = () => {
@@ -18,6 +24,7 @@ const Profile = () => {
   const { user, setUser } = useUser();
   const { updatePicture } = useUserApi();
   const { translate } = useTranslation();
+  const theme = useTheme();
   const list = useMemo(() => [
     {
       label: translate('FIRST_NAME'),
@@ -37,6 +44,7 @@ const Profile = () => {
     },
   ], []);
   const toast = useToast();
+  const navigation = useNavigation();
 
   const changePicture = async () => {
     try {
@@ -71,10 +79,18 @@ const Profile = () => {
     <KeyboardAvoidingView flex={1} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <Flex flex={1} direction="row" p="5" justify="center">
         <Container>
+          <Box flexDirection="row" alignItems="center" mb={10} w="100%" justifyContent="space-between">
+            <TitleBar color={theme.color.SECONDARY_100}>
+              <Translation tkey="PROFILE" as={Text} bold fontSize={20} />
+            </TitleBar>
+            <TouchableOpacity onPress={navigation.goBack}>
+              <Fontawesome color={theme.color.BACKGROUND_0} size={24} name="close" />
+            </TouchableOpacity>
+          </Box>
           <Center>
             <TouchableOpacity onPress={changePicture} testID="profile-update-picture">
               <EditBadge>
-                <Fontawesome size={20} name="pencil" />
+                <Fontawesome color={COLOR.LIGHT_BACKGROUND_100} size={20} name="pencil" />
               </EditBadge>
               <If condition={isSubmit}>
                 <Avatar bg={COLOR.LIGHT_BACKGROUND_100} size="xl">
@@ -107,4 +123,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default withBackground({ Component: Profile, Background: Background4 });

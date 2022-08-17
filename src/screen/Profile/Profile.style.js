@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Badge, Box, Button } from 'native-base';
+import { Badge, Box } from 'native-base';
 
 export const Container = styled(Box).attrs(({ theme }) => ({
   borderRadius: 20,
