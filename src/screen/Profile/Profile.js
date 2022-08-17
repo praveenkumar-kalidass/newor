@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { KeyboardAvoidingView, Platform, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
-  Center, Avatar, Flex, VStack, FlatList, Text, Box, Divider, useToast, Spinner,
+  Center, Avatar, Flex, VStack, FlatList, Text, Box, Divider, Spinner,
 } from 'native-base';
 import Fontawesome from 'react-native-vector-icons/FontAwesome';
 import { launchImageLibrary } from 'react-native-image-picker';
@@ -17,6 +17,7 @@ import ToastAlert from 'component/ToastAlert';
 import TitleBar from 'component/TitleBar/TitleBar';
 import withBackground from 'helper/withBackground';
 import { Background4 } from 'component/Background';
+import useError from 'hook/useError';
 import { Container, EditBadge } from './Profile.style';
 
 const Profile = () => {
@@ -43,7 +44,7 @@ const Profile = () => {
       key: 'mobileNumber',
     },
   ], []);
-  const toast = useToast();
+  const { toast } = useError();
   const navigation = useNavigation();
 
   const changePicture = async () => {
@@ -63,15 +64,7 @@ const Profile = () => {
       });
     } catch (error) {
       setIsSubmit(false);
-      let errorMessage = translate('ERROR_CODE.NEWOR_INTERNAL_SERVER_ERROR');
-      const errorCode = error?.response?.data?.code;
-      if (errorCode) {
-        errorMessage = translate(`ERROR_CODE.${errorCode}`);
-      }
-      toast.show({
-        render: () => <ToastAlert status="error" message={errorMessage} />,
-        placement: 'top',
-      });
+      toast(error);
     }
   };
 

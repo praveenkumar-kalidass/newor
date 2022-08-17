@@ -4,11 +4,10 @@ import React, {
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
-  Center, Flex, FormControl, Image, useToast, Text,
+  Center, Flex, FormControl, Image, Text,
 } from 'native-base';
 
 import TitleBar from 'component/TitleBar/TitleBar';
-import ToastAlert from 'component/ToastAlert';
 import AppButton from 'component/AppButton';
 import AppModal from 'component/AppModal';
 import CONSTANT from 'constant';
@@ -22,6 +21,7 @@ import withBackground from 'helper/withBackground';
 import { Background2 } from 'component/Background';
 import useTranslation from 'translation/useTranslation';
 import Translation from 'translation/Translation';
+import useError from 'hook/useError';
 import {
   FIELDS,
   INITIAL_STATE,
@@ -40,7 +40,7 @@ const Signup = () => {
   const [isSubmit, setIsSubmit] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const navigation = useNavigation();
-  const toast = useToast();
+  const { toast } = useError();
   const theme = useTheme();
   const { translate } = useTranslation();
   const { signup } = useUser();
@@ -75,15 +75,7 @@ const Signup = () => {
       setIsSuccess(true);
     } catch (error) {
       setIsSubmit(false);
-      let errorMessage = translate('ERROR_CODE.NEWOR_INTERNAL_SERVER_ERROR');
-      const errorCode = error?.response?.data?.code;
-      if (errorCode) {
-        errorMessage = translate(`ERROR_CODE.${errorCode}`);
-      }
-      toast.show({
-        render: () => <ToastAlert status="error" message={errorMessage} />,
-        placement: 'top',
-      });
+      toast(error);
     }
   }, [fields]);
 

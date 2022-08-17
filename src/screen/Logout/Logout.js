@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import {
-  Flex, Text, Center, Image, useToast,
+  Flex, Text, Center, Image,
 } from 'native-base';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -10,10 +10,9 @@ import ROUTE from 'constant/route';
 import NEWOR_VERIFY from 'asset/image/newor.png';
 import Translation from 'translation/Translation';
 import AppButton from 'component/AppButton';
-import ToastAlert from 'component/ToastAlert';
 import useUserApi from 'api/useUser';
 import useUser from 'provider/User/useUser';
-import useTranslation from 'translation/useTranslation';
+import useError from 'hook/useError';
 import { Container } from './Logout.style';
 
 const Logout = () => {
@@ -21,8 +20,7 @@ const Logout = () => {
   const navigation = useNavigation();
   const { logout } = useUserApi();
   const { setUser, setIsAuthorized } = useUser();
-  const { translate } = useTranslation();
-  const toast = useToast();
+  const { toast } = useError();
 
   const doLogout = useCallback(async () => {
     try {
@@ -35,15 +33,7 @@ const Logout = () => {
       setIsSubmit(false);
     } catch (error) {
       setIsSubmit(false);
-      let errorMessage = translate('ERROR_CODE.NEWOR_INTERNAL_SERVER_ERROR');
-      const errorCode = error?.response?.data?.code;
-      if (errorCode) {
-        errorMessage = translate(`ERROR_CODE.${errorCode}`);
-      }
-      toast.show({
-        render: () => <ToastAlert status="error" message={errorMessage} />,
-        placement: 'bottom',
-      });
+      toast(error);
     }
   }, [navigation]);
 

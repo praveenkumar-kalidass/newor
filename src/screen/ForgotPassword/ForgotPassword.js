@@ -3,12 +3,11 @@ import React, {
 } from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import {
-  Flex, FormControl, useToast, Center, Image,
+  Flex, FormControl, Center, Image,
 } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 
 import TitleBar from 'component/TitleBar/TitleBar';
-import ToastAlert from 'component/ToastAlert';
 import AppButton from 'component/AppButton';
 import AppModal from 'component/AppModal';
 import withBackground from 'helper/withBackground';
@@ -20,6 +19,7 @@ import useTranslation from 'translation/useTranslation';
 import Translation from 'translation/Translation';
 import useUser from 'api/useUser';
 import NEWOR_SUCCESS from 'asset/image/newor-success.png';
+import useError from 'hook/useError';
 import {
   INITIAL_STATE,
   FIELDS,
@@ -38,7 +38,7 @@ const ForgotPassword = () => {
   const [isSubmit, setIsSubmit] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const navigation = useNavigation();
-  const toast = useToast();
+  const { toast } = useError();
   const theme = useTheme();
   const { translate } = useTranslation();
   const { forgotPassword } = useUser();
@@ -66,15 +66,7 @@ const ForgotPassword = () => {
       setIsSuccess(true);
     } catch (error) {
       setIsSubmit(false);
-      let errorMessage = translate('ERROR_CODE.NEWOR_INTERNAL_SERVER_ERROR');
-      const errorCode = error?.response?.data?.code;
-      if (errorCode) {
-        errorMessage = translate(`ERROR_CODE.${errorCode}`);
-      }
-      toast.show({
-        render: () => <ToastAlert status="error" message={errorMessage} />,
-        placement: 'top',
-      });
+      toast(error);
     }
   }, [fields]);
 
