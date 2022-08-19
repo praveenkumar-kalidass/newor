@@ -3,6 +3,7 @@
 exports[`useTranslation should match snapshot for default translation 1`] = `
 LocalizedStrings {
   "ALREADY_HAVE_ACCOUNT": "Already have an account?",
+  "ASSETS": "Assets",
   "CONFIRM_PASSWORD": "Confirm Password",
   "EMAIL": "Email",
   "EMAIL_VERIFICATION_FAILURE": "Your email verification has failed. Please try again.",
@@ -72,6 +73,7 @@ LocalizedStrings {
     "NO",
     "PICTURE_UPDATED",
     "PROFILE",
+    "ASSETS",
   ],
   "_interfaceLanguage": "en-US",
   "_language": "en",
@@ -84,6 +86,7 @@ LocalizedStrings {
   "_props": Object {
     "en": Object {
       "ALREADY_HAVE_ACCOUNT": "Already have an account?",
+      "ASSETS": "Assets",
       "CONFIRM_PASSWORD": "Confirm Password",
       "EMAIL": "Email",
       "EMAIL_VERIFICATION_FAILURE": "Your email verification has failed. Please try again.",

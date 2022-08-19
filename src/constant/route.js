@@ -8,6 +8,7 @@ const route = {
   DASHBOARD: 'DASHBOARD',
   LOGOUT: 'LOGOUT',
   PROFILE: 'PROFILE',
+  ASSET: 'ASSET',
 };
 
 export default route;
