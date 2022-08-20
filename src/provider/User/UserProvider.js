@@ -6,11 +6,17 @@ import { useNavigation } from '@react-navigation/native';
 import CONSTANT from 'constant';
 import ROUTE from 'constant/route';
 import useUser from 'api/useUser';
+import { formatCurrency } from 'helper/util';
 import UserContext from './UserContext';
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState({});
   const [isAuthorized, setIsAuthorized] = useState(null);
+  const [asset, setAsset] = useState({
+    id: '',
+    label: formatCurrency(0),
+    value: 0,
+  });
   const navigation = useNavigation();
   const { authorize } = useUser();
 
@@ -50,6 +56,8 @@ const UserProvider = ({ children }) => {
         setUser,
         isAuthorized,
         setIsAuthorized,
+        asset,
+        setAsset,
       }}
     >
       {children}

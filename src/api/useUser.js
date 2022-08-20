@@ -69,6 +69,10 @@ const useUser = () => {
     return axios.put(`${config.baseURL}/api/user/v1/picture`, request);
   };
 
+  const getWorth = () => axios.get(`${config.baseURL}/api/user/v1/worth`, {
+    loader: true,
+  });
+
   return {
     login,
     authorize,
@@ -78,6 +82,7 @@ const useUser = () => {
     resetPassword,
     logout,
     updatePicture,
+    getWorth,
   };
 };
 

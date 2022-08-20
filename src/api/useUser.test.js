@@ -5,6 +5,7 @@ import useUser from './useUser';
 const mockAxios = {
   post: jest.fn(),
   put: jest.fn(),
+  get: jest.fn(),
 };
 jest.mock('./useAxios', () => () => mockAxios);
 
@@ -115,6 +116,17 @@ describe('useUser', () => {
     expect(mockAxios.put).toHaveBeenCalledWith(
       'http://localhost:3000/api/user/v1/picture',
       expect.any(FormDataMock),
+    );
+  });
+
+  it('getWorth', () => {
+    const { result } = renderHook(() => useUser());
+
+    result.current.getWorth();
+
+    expect(mockAxios.get).toHaveBeenCalledWith(
+      'http://localhost:3000/api/user/v1/worth',
+      { loader: true },
     );
   });
 });

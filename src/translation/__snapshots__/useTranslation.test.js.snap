@@ -2,6 +2,7 @@
 
 exports[`useTranslation should match snapshot for default translation 1`] = `
 LocalizedStrings {
+  "ADD_ASSET": "Add an Asset",
   "ALREADY_HAVE_ACCOUNT": "Already have an account?",
   "ASSETS": "Assets",
   "CONFIRM_PASSWORD": "Confirm Password",
@@ -39,6 +40,7 @@ LocalizedStrings {
   "SUBMIT": "Submit",
   "SUCCESS": "Success",
   "SURE_TO_LOGOUT": "Are you sure you want to logout of Newor?",
+  "TOTAL_ASSET_VALUE": "Total Asset value",
   "WELCOME_TO_NEWOR": "Welcome to Newor!",
   "YES": "Yes",
   "_defaultLanguage": "en",
@@ -74,6 +76,8 @@ LocalizedStrings {
     "PICTURE_UPDATED",
     "PROFILE",
     "ASSETS",
+    "TOTAL_ASSET_VALUE",
+    "ADD_ASSET",
   ],
   "_interfaceLanguage": "en-US",
   "_language": "en",
@@ -85,6 +89,7 @@ LocalizedStrings {
   },
   "_props": Object {
     "en": Object {
+      "ADD_ASSET": "Add an Asset",
       "ALREADY_HAVE_ACCOUNT": "Already have an account?",
       "ASSETS": "Assets",
       "CONFIRM_PASSWORD": "Confirm Password",
@@ -122,6 +127,7 @@ LocalizedStrings {
       "SUBMIT": "Submit",
       "SUCCESS": "Success",
       "SURE_TO_LOGOUT": "Are you sure you want to logout of Newor?",
+      "TOTAL_ASSET_VALUE": "Total Asset value",
       "WELCOME_TO_NEWOR": "Welcome to Newor!",
       "YES": "Yes",
     },

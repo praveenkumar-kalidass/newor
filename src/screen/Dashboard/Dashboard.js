@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useIsFocused, useNavigation } from '@react-navigation/native';
 import {
   Box, Avatar, HStack, Text, VStack,
 } from 'native-base';
@@ -12,11 +12,31 @@ import usePreventBack from 'hook/usePreventBack';
 import withBackground from 'helper/withBackground';
 import { Background3 } from 'component/Background';
 import useUser from 'provider/User/useUser';
+import useUserApi from 'api/useUser';
+import useError from 'hook/useError';
 
 const Dashboard = () => {
-  const { user } = useUser();
+  const { user, initialiseWorth } = useUser();
   const navigation = useNavigation();
+  const { getWorth } = useUserApi();
+  const isFocused = useIsFocused();
+  const { toast } = useError();
   usePreventBack();
+
+  const doGetWorth = useCallback(async () => {
+    try {
+      const { data } = await getWorth();
+      initialiseWorth(data);
+    } catch (error) {
+      toast(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isFocused) {
+      doGetWorth();
+    }
+  }, [isFocused]);
 
   return (
     <Box>

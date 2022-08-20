@@ -1,4 +1,4 @@
-import { renderHook, waitFor } from '@testing-library/react-native';
+import { renderHook, waitFor, act } from '@testing-library/react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import UserProvider from './UserProvider';
@@ -59,5 +59,24 @@ describe('useUser', () => {
     await waitFor(() => expect(AsyncStorage.setItem).toHaveBeenCalledTimes(1));
 
     expect(result.current.isAuthorized).toStrictEqual(false);
+  });
+
+  it('should initialise worth', async () => {
+    const { result } = await renderHook(() => useUser(), {
+      wrapper: UserProvider,
+    });
+
+    act(() => result.current.initialiseWorth({
+      asset: {
+        id: 'test_asset_id',
+        value: 12345.12,
+      },
+    }));
+
+    expect(result.current.asset).toStrictEqual({
+      id: 'test_asset_id',
+      value: 12345.12,
+      label: '₹12,345.12',
+    });
   });
 });

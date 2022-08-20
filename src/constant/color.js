@@ -52,4 +52,6 @@ Object.keys(dark).forEach((code) => {
   color[`${CONSTANT.THEME.DARK.toUpperCase()}_${code}`] = dark[code];
 });
 
+color.PURPLE = '#8E44AD';
+
 export default color;
