@@ -25,8 +25,12 @@ const APP_LITERAL = {
   RUPEE_SYMBOL: '₹',
 };
 
-const ASSET_TYPE = {
-  DEPOSIT: 'DEPOSIT',
+const DEPOSIT_TYPE = {
+  SAVINGS: 'SAVINGS',
+  CURRENT: 'CURRENT',
+  FIXED_DEPOSIT: 'FIXED_DEPOSIT',
+  RECURRING_DEPOSIT: 'RECURRING_DEPOSIT',
+  PUBLIC_PROVIDENT_FUND: 'PUBLIC_PROVIDENT_FUND',
 };
 
 const constant = {
@@ -36,7 +40,7 @@ const constant = {
   LANGUAGE,
   STORAGE_KEY,
   APP_LITERAL,
-  ASSET_TYPE,
+  DEPOSIT_TYPE,
 };
 
 export default constant;

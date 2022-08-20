@@ -53,5 +53,8 @@ Object.keys(dark).forEach((code) => {
 });
 
 color.PURPLE = '#8E44AD';
+color.RANDOM = [
+  '#EC7063', '#AF7AC5', '#5DADE2', '#48C9B0', '#58D68D', '#F4D03F', '#EB984E', '#CACFD2',
+];
 
 export default color;

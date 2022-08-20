@@ -10,6 +10,7 @@ const route = {
   PROFILE: 'PROFILE',
   ASSET: 'ASSET',
   ASSET_TYPE: 'ASSET_TYPE',
+  ADD_DEPOSIT: 'ADD_DEPOSIT',
 };
 
 export default route;
