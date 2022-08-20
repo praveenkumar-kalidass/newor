@@ -1,11 +1,13 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {
   Divider, HStack, VStack, Avatar, Text, Box,
 } from 'native-base';
 
 import COLOR from 'constant/color';
+import ROUTE from 'constant/route';
 import withBackground from 'helper/withBackground';
 import useTranslation from 'translation/useTranslation';
 import Translation from 'translation/Translation';
@@ -16,6 +18,7 @@ import { Container, AssetCard, AssetValue } from './Asset.style';
 const Asset = () => {
   const { asset } = useUser();
   const { translate } = useTranslation();
+  const navigation = useNavigation();
 
   return (
     <Container>
@@ -38,9 +41,9 @@ const Asset = () => {
               <Text mt={1} fontSize={36} color={COLOR.LIGHT_SUCCESS_100}>2.50%</Text>
               <Text color={COLOR.LIGHT_BACKGROUND_0}>Secured Growth Rate</Text>
             </VStack>
-            <TouchableOpacity>
+            <TouchableOpacity testID="asset-add" onPress={() => navigation.navigate(ROUTE.ASSET_TYPE)}>
               <VStack space={1} alignItems="center">
-                <Box borderWidth={1} p={1} rounded="full" borderColor={COLOR.PURPLE}>
+                <Box borderWidth={1} p={1} rounded="full" borderColoROr={COLOR.PURPLE}>
                   <Avatar bg={COLOR.PURPLE}>
                     <FontAwesome5 color={COLOR.LIGHT_BACKGROUND_100} size={20} name="file-invoice-dollar" />
                   </Avatar>

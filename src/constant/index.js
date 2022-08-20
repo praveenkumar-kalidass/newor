@@ -25,6 +25,10 @@ const APP_LITERAL = {
   RUPEE_SYMBOL: '₹',
 };
 
+const ASSET_TYPE = {
+  DEPOSIT: 'DEPOSIT',
+};
+
 const constant = {
   APP_NAME: 'newor',
   AUTH_LITERAL,
@@ -32,6 +36,7 @@ const constant = {
   LANGUAGE,
   STORAGE_KEY,
   APP_LITERAL,
+  ASSET_TYPE,
 };
 
 export default constant;

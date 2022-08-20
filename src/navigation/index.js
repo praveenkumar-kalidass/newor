@@ -11,6 +11,7 @@ import EmailVerification from 'screen/EmailVerification';
 import Logout from 'screen/Logout';
 import Profile from 'screen/Profile';
 import DashboardTabNavigator from 'navigation/DashboardTabNavigator';
+import AssetStack from './AssetStack';
 
 const Stack = createStackNavigator();
 
@@ -24,17 +25,50 @@ export default () => {
         cardStyle: {
           backgroundColor: theme.color.BACKGROUND_100,
         },
-        headerShown: false,
       }}
     >
-      <Stack.Screen name={ROUTE.LOGIN} component={Login} />
-      <Stack.Screen name={ROUTE.SIGNUP} component={Signup} />
-      <Stack.Screen name={ROUTE.RESET_PASSWORD} component={ResetPassword} />
-      <Stack.Screen name={ROUTE.FORGOT_PASSWORD} component={ForgotPassword} />
-      <Stack.Screen name={ROUTE.EMAIL_VERIFICATION} component={EmailVerification} />
-      <Stack.Screen name={ROUTE.DASHBOARD_TAB} component={DashboardTabNavigator} />
-      <Stack.Screen name={ROUTE.LOGOUT} component={Logout} screenOptions={{ presentation: 'modal' }} />
-      <Stack.Screen name={ROUTE.PROFILE} component={Profile} />
+      <Stack.Screen
+        name={ROUTE.LOGIN}
+        component={Login}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ROUTE.SIGNUP}
+        component={Signup}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ROUTE.RESET_PASSWORD}
+        component={ResetPassword}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ROUTE.FORGOT_PASSWORD}
+        component={ForgotPassword}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ROUTE.EMAIL_VERIFICATION}
+        component={EmailVerification}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ROUTE.DASHBOARD_TAB}
+        component={DashboardTabNavigator}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ROUTE.LOGOUT}
+        component={Logout}
+        screenOptions={{ presentation: 'modal' }}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={ROUTE.PROFILE}
+        component={Profile}
+        options={{ headerShown: false }}
+      />
+      {AssetStack(Stack)}
     </Stack.Navigator>
   );
 };

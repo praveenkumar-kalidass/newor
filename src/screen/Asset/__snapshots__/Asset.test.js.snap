@@ -319,7 +319,7 @@ exports[`Asset should match snapshot 1`] = `
               <View
                 accessible={true}
                 collapsable={false}
-                focusable={false}
+                focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -332,6 +332,7 @@ exports[`Asset should match snapshot 1`] = `
                     "opacity": 1,
                   }
                 }
+                testID="asset-add"
               >
                 <View
                   dataSet={Object {}}
@@ -342,10 +343,10 @@ exports[`Asset should match snapshot 1`] = `
                   }
                 >
                   <View
+                    borderColoROr="#8E44AD"
                     dataSet={Object {}}
                     style={
                       Object {
-                        "borderColor": "#8E44AD",
                         "borderRadius": 9999,
                         "borderWidth": 1,
                         "paddingBottom": 4,

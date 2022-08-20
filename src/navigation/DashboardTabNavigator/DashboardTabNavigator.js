@@ -41,7 +41,7 @@ const DashboardTabNavigator = () => {
           headerLeft: () => (
             <IconButton
               variant="ghost"
-              ml={4}
+              ml={3}
               icon={<FontAwesome color={COLOR.LIGHT_BACKGROUND_100} size={24} name="align-justify" />}
               onPress={drawer.open}
             />
@@ -61,7 +61,7 @@ const DashboardTabNavigator = () => {
           headerLeft: () => (
             <IconButton
               variant="ghost"
-              ml={4}
+              ml={3}
               icon={<FontAwesome color={COLOR.LIGHT_BACKGROUND_100} size={24} name="align-justify" />}
               onPress={drawer.open}
             />

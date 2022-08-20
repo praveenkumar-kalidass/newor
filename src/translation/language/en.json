@@ -32,6 +32,8 @@
   "ASSETS": "Assets",
   "TOTAL_ASSET_VALUE": "Total Asset value",
   "ADD_ASSET": "Add an Asset",
+  "SELECT_ASSET": "Select your Asset",
+  "DEPOSIT": "Deposit",
   "ERROR_CODE": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",
