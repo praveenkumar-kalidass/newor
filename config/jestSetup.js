@@ -1,4 +1,5 @@
 import 'react-native-gesture-handler/jestSetup';
+import '@react-native-community/datetimepicker/jest/setup';
 
 import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/async-storage-mock';
 

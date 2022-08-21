@@ -1,5 +1,7 @@
 import 'react-native-gesture-handler';
 import 'text-encoding-polyfill';
+import 'intl';
+import 'intl/locale-data/jsonp/en';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { NativeBaseProvider } from 'native-base';
