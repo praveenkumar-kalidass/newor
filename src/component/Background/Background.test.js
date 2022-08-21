@@ -5,6 +5,7 @@ import Background1 from './Background1';
 import Background2 from './Background2';
 import Background3 from './Background3';
 import Background4 from './Background4';
+import Background5 from './Background5';
 
 describe('Background1', () => {
   it('should match snapshot', () => {
@@ -33,6 +34,14 @@ describe('Backgroun3', () => {
 describe('Backgroun4', () => {
   it('should match snapshot', () => {
     const container = render(<Background4 />);
+
+    expect(container).toMatchSnapshot();
+  });
+});
+
+describe('Backgroun5', () => {
+  it('should match snapshot', () => {
+    const container = render(<Background5 />);
 
     expect(container).toMatchSnapshot();
   });

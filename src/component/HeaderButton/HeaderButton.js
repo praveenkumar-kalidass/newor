@@ -6,7 +6,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import COLOR from 'constant/color';
 
-const HeaderButton = ({ type, target }) => {
+const HeaderButton = ({ type, target, targetParams }) => {
   const navigation = useNavigation();
 
   const icon = {
@@ -29,7 +29,7 @@ const HeaderButton = ({ type, target }) => {
       testID="header-button"
       variant="ghost"
       icon={icon[type]}
-      onPress={() => action[type](target)}
+      onPress={() => action[type](target, targetParams)}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...margin[type]}
     />
@@ -39,10 +39,12 @@ const HeaderButton = ({ type, target }) => {
 HeaderButton.propTypes = {
   type: PropTypes.string.isRequired,
   target: PropTypes.string,
+  targetParams: PropTypes.shape({}),
 };
 
 HeaderButton.defaultProps = {
   target: '',
+  targetParams: {},
 };
 
 export default HeaderButton;

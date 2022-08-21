@@ -50,6 +50,89 @@ exports[`AddDeposit should match snapshot 1`] = `
         ]
       }
     >
+      <View
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          bbHeight={1334}
+          bbWidth={750}
+          focusable={false}
+          height={1334}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 1334,
+                "width": 750,
+              },
+            ]
+          }
+          width={750}
+        >
+          <RNSVGGroup>
+            <RNSVGForeignObject
+              height="100%"
+              width="100%"
+              x={0}
+              y={984}
+            >
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#ad0000",
+                    "fontFamily": undefined,
+                    "fontSize": 200,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 300,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                ₹
+              </Text>
+            </RNSVGForeignObject>
+            <RNSVGForeignObject
+              height="100%"
+              width="100%"
+              x={525}
+              y={-100}
+            >
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#00238a",
+                    "fontFamily": undefined,
+                    "fontSize": 400,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 600,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                ₹
+              </Text>
+            </RNSVGForeignObject>
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
       <RCTScrollView
         contentContainerStyle={
           Array [

@@ -1,18 +1,15 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
-import { IconButton } from 'native-base';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import ROUTE from 'constant/route';
 import COLOR from 'constant/color';
 import useTheme from 'theme/useTheme';
 import useTranslation from 'translation/useTranslation';
+import HeaderButton from 'component/HeaderButton';
 import AssetType from 'screen/AssetType';
 import AddDeposit from 'screen/AddDeposit';
 
 const AssetStack = (Stack) => {
-  const navigation = useNavigation();
   const theme = useTheme();
   const { translate } = useTranslation();
 
@@ -29,14 +26,7 @@ const AssetStack = (Stack) => {
           headerStyle: {
             backgroundColor: theme.color.PRIMARY_100,
           },
-          headerLeft: () => (
-            <IconButton
-              variant="ghost"
-              ml={3}
-              icon={<FontAwesome color={COLOR.LIGHT_BACKGROUND_100} size={24} name="chevron-left" />}
-              onPress={navigation.goBack}
-            />
-          ),
+          headerLeft: () => <HeaderButton type="left" />,
         }}
       />
       <Stack.Screen
@@ -50,22 +40,8 @@ const AssetStack = (Stack) => {
           headerStyle: {
             backgroundColor: theme.color.PRIMARY_100,
           },
-          headerLeft: () => (
-            <IconButton
-              variant="ghost"
-              ml={3}
-              icon={<FontAwesome color={COLOR.LIGHT_BACKGROUND_100} size={24} name="chevron-left" />}
-              onPress={navigation.goBack}
-            />
-          ),
-          headerRight: () => (
-            <IconButton
-              variant="ghost"
-              mr={3}
-              icon={<FontAwesome color={COLOR.LIGHT_BACKGROUND_100} size={24} name="close" />}
-              onPress={() => navigation.navigate(ROUTE.ASSET)}
-            />
-          ),
+          headerLeft: () => <HeaderButton type="left" />,
+          headerRight: () => <HeaderButton type="right" target={ROUTE.DASHBOARD_TAB} targetParams={{ screen: ROUTE.ASSET }} />,
         }}
       />
     </>

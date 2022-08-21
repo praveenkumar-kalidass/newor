@@ -33,6 +33,6 @@ describe('HeaderButton', () => {
 
     fireEvent.press(container.getByTestId('header-button'));
 
-    expect(mockNavigation.navigate).toHaveBeenCalledWith('TEST');
+    expect(mockNavigation.navigate).toHaveBeenCalledWith('TEST', {});
   });
 });

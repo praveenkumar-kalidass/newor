@@ -3,6 +3,9 @@ import {
   ScrollView, VStack,
 } from 'native-base';
 
+import withBackground from 'helper/withBackground';
+import { Background5 } from 'component/Background';
+
 const AddDeposit = () => {
   useState({});
 
@@ -13,4 +16,4 @@ const AddDeposit = () => {
   );
 };
 
-export default AddDeposit;
+export default withBackground({ Component: AddDeposit, Background: Background5 });
