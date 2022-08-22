@@ -12,7 +12,7 @@ const AppDatePicker = ({
   onChange,
   placeholder,
 }) => {
-  const [field, setField] = useState('');
+  const [field, setField] = useState(moment(value).format('DD-MM-YYYY'));
   const [changeDate, setChangeDate] = useState(value);
   const [showPicker, setShowPicker] = useState(false);
   const inputRef = useRef();

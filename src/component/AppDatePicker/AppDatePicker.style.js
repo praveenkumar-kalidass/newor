@@ -8,6 +8,7 @@ export const InputField = styled(Input).attrs(({ theme }) => ({
   },
   mb: 3,
   fontSize: 14,
+  bg: theme.color.BACKGROUND_100,
 }))``;
 
 export const ModalOverlay = styled(Flex).attrs(({ theme }) => ({

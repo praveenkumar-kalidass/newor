@@ -9,7 +9,7 @@ const useTranslation = () => {
     setLanguage(language);
   };
 
-  const translate = (key) => {
+  const translate = (key, data) => {
     const result = key.split('.').reduce((final, value) => {
       if (final[value]) {
         return final[value];
@@ -17,7 +17,7 @@ const useTranslation = () => {
       return '';
     }, translation);
 
-    return result || key;
+    return translation.formatString(result, data) || key;
   };
 
   return {
