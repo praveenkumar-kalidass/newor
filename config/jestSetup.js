@@ -5,6 +5,10 @@ import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/asy
 
 jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);
 
+jest.mock('@react-navigation/elements', () => ({
+  useHeaderHeight: jest.fn(() => 0),
+}));
+
 jest.mock('translation/useTranslation', () => () => ({
   translate: jest.fn((key) => key),
 }));

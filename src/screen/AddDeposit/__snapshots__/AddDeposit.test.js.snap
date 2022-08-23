@@ -133,32 +133,215 @@ exports[`AddDeposit should match snapshot 1`] = `
           </RNSVGGroup>
         </RNSVGSvgView>
       </View>
-      <RCTScrollView
-        contentContainerStyle={
-          Array [
-            Object {},
-            Object {
-              "dataSet": Object {},
-            },
-          ]
+      <View
+        flex={1}
+        onLayout={[Function]}
+        style={
+          Object {
+            "paddingBottom": 0,
+          }
         }
-        dataSet={Object {}}
-        style={Object {}}
       >
-        <View>
-          <View
-            dataSet={Object {}}
-            style={
+        <RCTScrollView
+          contentContainerStyle={
+            Array [
+              Object {},
               Object {
-                "paddingBottom": 20,
-                "paddingLeft": 20,
-                "paddingRight": 20,
-                "paddingTop": 20,
+                "dataSet": Object {},
+              },
+            ]
+          }
+          dataSet={Object {}}
+          style={Object {}}
+        >
+          <View>
+            <View
+              dataSet={Object {}}
+              style={
+                Object {
+                  "paddingBottom": 20,
+                  "paddingLeft": 20,
+                  "paddingRight": 20,
+                  "paddingTop": 20,
+                }
               }
-            }
-          />
-        </View>
-      </RCTScrollView>
+            >
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#171717",
+                    "fontFamily": undefined,
+                    "fontSize": 14,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 21,
+                    "marginBottom": 8,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                SELECT_DEPOSIT_TYPE
+              </Text>
+              <View
+                dataSet={Object {}}
+                style={Object {}}
+              />
+              <View
+                accessibilityRole="button"
+                accessible={true}
+                collapsable={false}
+                dataSet={Object {}}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "marginBottom": 12,
+                  }
+                }
+              >
+                <View
+                  dataSet={Object {}}
+                  isFocused={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#d4d4d4",
+                      "borderRadius": 4,
+                      "borderWidth": 1,
+                      "flexDirection": "row",
+                      "marginBottom": 12,
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <TextInput
+                    accessible={true}
+                    aria-hidden={true}
+                    dataSet={Object {}}
+                    editable={false}
+                    focusable={false}
+                    importantForAccessibility="no"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyPress={[Function]}
+                    placeholder="DEPOSIT_TYPE"
+                    placeholderTextColor="#a3a3a3"
+                    pointerEvents="none"
+                    secureTextEntry={false}
+                    selection={
+                      Object {
+                        "start": 0,
+                      }
+                    }
+                    selectionColor="#1f2937"
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#171717",
+                          "flex": 1,
+                          "fontFamily": undefined,
+                          "fontSize": 14,
+                          "fontStyle": "normal",
+                          "fontWeight": "400",
+                          "height": "100%",
+                          "paddingBottom": 8,
+                          "paddingLeft": 12,
+                          "paddingRight": 12,
+                          "paddingTop": 8,
+                          "width": "100%",
+                        },
+                        Array [
+                          Object {},
+                        ],
+                      ]
+                    }
+                    value=""
+                  />
+                  <View
+                    dataSet={Object {}}
+                    style={Object {}}
+                  />
+                  <RNSVGSvgView
+                    accessibilityRole="image"
+                    align="xMidYMid"
+                    bbHeight={16}
+                    bbWidth={16}
+                    color={4285756275}
+                    dataSet={Object {}}
+                    focusable={false}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    stroke=""
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        Object {
+                          "color": "#737373",
+                          "height": 16,
+                          "marginRight": 12,
+                          "width": 16,
+                        },
+                        Object {
+                          "flex": 0,
+                          "height": 16,
+                          "width": 16,
+                        },
+                      ]
+                    }
+                    tintColor={4285756275}
+                    vbHeight={24}
+                    vbWidth={24}
+                  >
+                    <RNSVGGroup
+                      propList={
+                        Array [
+                          "stroke",
+                        ]
+                      }
+                      stroke={null}
+                    >
+                      <RNSVGGroup>
+                        <RNSVGPath
+                          d="M20.2286 6L11.9973 14.3785L3.76862 6.00268L2 7.80293L12 18L22 7.80293L20.2286 6Z"
+                          fill={
+                            Array [
+                              2,
+                            ]
+                          }
+                          propList={
+                            Array [
+                              "fill",
+                              "stroke",
+                            ]
+                          }
+                          stroke={null}
+                        />
+                      </RNSVGGroup>
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
+              </View>
+            </View>
+          </View>
+        </RCTScrollView>
+      </View>
       <View
         pointerEvents="none"
         style={
@@ -391,6 +574,675 @@ exports[`AddDeposit should match snapshot 1`] = `
           ]
         }
       />
+    </View>
+  </View>
+  <View
+    collapsable={false}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "display": "flex",
+          "overflow": "hidden",
+        },
+      ]
+    }
+  >
+    <View
+      collapsable={false}
+      entryDuration={200}
+      exitDuration={150}
+      pointerEvents="none"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "opacity": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "transform": Array [
+            Object {
+              "translateY": 0,
+            },
+            Object {
+              "translateX": 0,
+            },
+            Object {
+              "scale": 1,
+            },
+            Object {
+              "scaleX": 1,
+            },
+            Object {
+              "scaleY": 1,
+            },
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        }
+      }
+    >
+      <View
+        accessible={false}
+        collapsable={false}
+        dataSet={Object {}}
+        focusable={true}
+        importantForAccessibility="no"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "rgb(0, 0, 0)",
+            "bottom": 0,
+            "left": 0,
+            "opacity": 0.3,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+    <View
+      collapsable={false}
+      pointerEvents="none"
+      style={
+        Object {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "transform": Array [
+            Object {
+              "translateY": 0,
+            },
+            Object {
+              "translateX": 0,
+            },
+            Object {
+              "scale": 1,
+            },
+            Object {
+              "scaleX": 1,
+            },
+            Object {
+              "scaleY": 1,
+            },
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        }
+      }
+    >
+      <View
+        dataSet={Object {}}
+        onLayout={[Function]}
+        pointerEvents="box-none"
+        style={
+          Object {
+            "height": "100%",
+            "opacity": 0,
+          }
+        }
+      >
+        <View
+          closeOnOverlayClick={true}
+          dataSet={Object {}}
+          pointerEvents="box-none"
+          style={
+            Object {
+              "alignItems": "center",
+              "height": "100%",
+              "justifyContent": "flex-end",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            collapsable={false}
+            onLayout={[Function]}
+            pointerEvents="box-none"
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateY": 0,
+                  },
+                ],
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              dataSet={Object {}}
+              onMoveShouldSetResponder={[Function]}
+              onMoveShouldSetResponderCapture={[Function]}
+              onResponderEnd={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderReject={[Function]}
+              onResponderRelease={[Function]}
+              onResponderStart={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              onStartShouldSetResponderCapture={[Function]}
+              style={
+                Object {
+                  "paddingBottom": 8,
+                  "paddingTop": 8,
+                }
+              }
+            />
+            <View
+              accessibilityViewIsModal={true}
+              aria-modal="true"
+              dataSet={Object {}}
+              onAccessibilityEscape={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#fafafa",
+                  "borderRadius": 0,
+                  "borderTopLeftRadius": 20,
+                  "borderTopRightRadius": 20,
+                  "elevation": 2,
+                  "maxHeight": 1184,
+                  "overflow": "hidden",
+                  "paddingBottom": 8,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                  "paddingTop": 8,
+                  "shadowColor": "#000000",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.2,
+                  "shadowRadius": 1.41,
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                dataSet={Object {}}
+                onMoveShouldSetResponder={[Function]}
+                onMoveShouldSetResponderCapture={[Function]}
+                onResponderEnd={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderReject={[Function]}
+                onResponderRelease={[Function]}
+                onResponderStart={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                onStartShouldSetResponderCapture={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "marginTop": -8,
+                    "paddingBottom": 12,
+                    "paddingTop": 12,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  dataSet={Object {}}
+                  style={
+                    Object {
+                      "backgroundColor": "#737373",
+                      "borderRadius": 2,
+                      "height": 4,
+                      "width": 40,
+                    }
+                  }
+                />
+              </View>
+              <RCTScrollView
+                contentContainerStyle={
+                  Array [
+                    Object {},
+                    Object {
+                      "dataSet": Object {},
+                    },
+                  ]
+                }
+                data={
+                  Array [
+                    Object {
+                      "label": "SAVINGS",
+                      "value": "SAVINGS",
+                    },
+                    Object {
+                      "label": "CURRENT",
+                      "value": "CURRENT",
+                    },
+                    Object {
+                      "label": "FIXED_DEPOSIT",
+                      "value": "FIXED_DEPOSIT",
+                    },
+                    Object {
+                      "label": "RECURRING_DEPOSIT",
+                      "value": "RECURRING_DEPOSIT",
+                    },
+                    Object {
+                      "label": "PUBLIC_PROVIDENT_FUND",
+                      "value": "PUBLIC_PROVIDENT_FUND",
+                    },
+                  ]
+                }
+                dataSet={Object {}}
+                getItem={[Function]}
+                getItemCount={[Function]}
+                keyExtractor={[Function]}
+                onContentSizeChange={[Function]}
+                onLayout={[Function]}
+                onMomentumScrollBegin={[Function]}
+                onMomentumScrollEnd={[Function]}
+                onScroll={[Function]}
+                onScrollBeginDrag={[Function]}
+                onScrollEndDrag={[Function]}
+                removeClippedSubviews={false}
+                renderItem={[Function]}
+                scrollEventThrottle={50}
+                stickyHeaderIndices={Array []}
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+                viewabilityConfigCallbackPairs={Array []}
+              >
+                <View>
+                  <View
+                    onLayout={[Function]}
+                    style={null}
+                  >
+                    <View
+                      accessibilityState={
+                        Object {
+                          "selected": false,
+                        }
+                      }
+                      accessible={true}
+                      collapsable={false}
+                      dataSet={Object {}}
+                      focusable={true}
+                      label="SAVINGS"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "#fafafa",
+                          "justifyContent": "flex-start",
+                          "paddingBottom": 16,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "paddingTop": 16,
+                          "width": "100%",
+                        }
+                      }
+                      value="SAVINGS"
+                    >
+                      <View
+                        dataSet={Object {}}
+                        style={
+                          Object {
+                            "flexDirection": "row",
+                          }
+                        }
+                        test={true}
+                      >
+                        <View
+                          dataSet={Object {}}
+                          style={Object {}}
+                        >
+                          <Text
+                            dataSet={Object {}}
+                            style={
+                              Object {
+                                "backgroundColor": undefined,
+                                "color": "#171717",
+                                "fontFamily": undefined,
+                                "fontSize": 16,
+                                "fontStyle": "normal",
+                                "fontWeight": "400",
+                                "letterSpacing": 0,
+                                "lineHeight": 24,
+                                "textDecorationLine": undefined,
+                              }
+                            }
+                          >
+                            SAVINGS
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    style={null}
+                  >
+                    <View
+                      accessibilityState={
+                        Object {
+                          "selected": false,
+                        }
+                      }
+                      accessible={true}
+                      collapsable={false}
+                      dataSet={Object {}}
+                      focusable={true}
+                      label="CURRENT"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "#fafafa",
+                          "justifyContent": "flex-start",
+                          "paddingBottom": 16,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "paddingTop": 16,
+                          "width": "100%",
+                        }
+                      }
+                      value="CURRENT"
+                    >
+                      <View
+                        dataSet={Object {}}
+                        style={
+                          Object {
+                            "flexDirection": "row",
+                          }
+                        }
+                        test={true}
+                      >
+                        <View
+                          dataSet={Object {}}
+                          style={Object {}}
+                        >
+                          <Text
+                            dataSet={Object {}}
+                            style={
+                              Object {
+                                "backgroundColor": undefined,
+                                "color": "#171717",
+                                "fontFamily": undefined,
+                                "fontSize": 16,
+                                "fontStyle": "normal",
+                                "fontWeight": "400",
+                                "letterSpacing": 0,
+                                "lineHeight": 24,
+                                "textDecorationLine": undefined,
+                              }
+                            }
+                          >
+                            CURRENT
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    style={null}
+                  >
+                    <View
+                      accessibilityState={
+                        Object {
+                          "selected": false,
+                        }
+                      }
+                      accessible={true}
+                      collapsable={false}
+                      dataSet={Object {}}
+                      focusable={true}
+                      label="FIXED_DEPOSIT"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "#fafafa",
+                          "justifyContent": "flex-start",
+                          "paddingBottom": 16,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "paddingTop": 16,
+                          "width": "100%",
+                        }
+                      }
+                      value="FIXED_DEPOSIT"
+                    >
+                      <View
+                        dataSet={Object {}}
+                        style={
+                          Object {
+                            "flexDirection": "row",
+                          }
+                        }
+                        test={true}
+                      >
+                        <View
+                          dataSet={Object {}}
+                          style={Object {}}
+                        >
+                          <Text
+                            dataSet={Object {}}
+                            style={
+                              Object {
+                                "backgroundColor": undefined,
+                                "color": "#171717",
+                                "fontFamily": undefined,
+                                "fontSize": 16,
+                                "fontStyle": "normal",
+                                "fontWeight": "400",
+                                "letterSpacing": 0,
+                                "lineHeight": 24,
+                                "textDecorationLine": undefined,
+                              }
+                            }
+                          >
+                            FIXED_DEPOSIT
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    style={null}
+                  >
+                    <View
+                      accessibilityState={
+                        Object {
+                          "selected": false,
+                        }
+                      }
+                      accessible={true}
+                      collapsable={false}
+                      dataSet={Object {}}
+                      focusable={true}
+                      label="RECURRING_DEPOSIT"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "#fafafa",
+                          "justifyContent": "flex-start",
+                          "paddingBottom": 16,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "paddingTop": 16,
+                          "width": "100%",
+                        }
+                      }
+                      value="RECURRING_DEPOSIT"
+                    >
+                      <View
+                        dataSet={Object {}}
+                        style={
+                          Object {
+                            "flexDirection": "row",
+                          }
+                        }
+                        test={true}
+                      >
+                        <View
+                          dataSet={Object {}}
+                          style={Object {}}
+                        >
+                          <Text
+                            dataSet={Object {}}
+                            style={
+                              Object {
+                                "backgroundColor": undefined,
+                                "color": "#171717",
+                                "fontFamily": undefined,
+                                "fontSize": 16,
+                                "fontStyle": "normal",
+                                "fontWeight": "400",
+                                "letterSpacing": 0,
+                                "lineHeight": 24,
+                                "textDecorationLine": undefined,
+                              }
+                            }
+                          >
+                            RECURRING_DEPOSIT
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    style={null}
+                  >
+                    <View
+                      accessibilityState={
+                        Object {
+                          "selected": false,
+                        }
+                      }
+                      accessible={true}
+                      collapsable={false}
+                      dataSet={Object {}}
+                      focusable={true}
+                      label="PUBLIC_PROVIDENT_FUND"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "backgroundColor": "#fafafa",
+                          "justifyContent": "flex-start",
+                          "paddingBottom": 16,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "paddingTop": 16,
+                          "width": "100%",
+                        }
+                      }
+                      value="PUBLIC_PROVIDENT_FUND"
+                    >
+                      <View
+                        dataSet={Object {}}
+                        style={
+                          Object {
+                            "flexDirection": "row",
+                          }
+                        }
+                        test={true}
+                      >
+                        <View
+                          dataSet={Object {}}
+                          style={Object {}}
+                        >
+                          <Text
+                            dataSet={Object {}}
+                            style={
+                              Object {
+                                "backgroundColor": undefined,
+                                "color": "#171717",
+                                "fontFamily": undefined,
+                                "fontSize": 16,
+                                "fontStyle": "normal",
+                                "fontWeight": "400",
+                                "letterSpacing": 0,
+                                "lineHeight": 24,
+                                "textDecorationLine": undefined,
+                              }
+                            }
+                          >
+                            PUBLIC_PROVIDENT_FUND
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </RCTScrollView>
+            </View>
+          </View>
+        </View>
+      </View>
     </View>
   </View>
 </RNCSafeAreaProvider>
