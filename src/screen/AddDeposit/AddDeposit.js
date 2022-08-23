@@ -1,35 +1,49 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, {
+  useCallback, useEffect, useMemo, useState,
+} from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import { useHeaderHeight } from '@react-navigation/elements';
+import { useNavigation } from '@react-navigation/native';
 import {
-  ScrollView, VStack, Text, Checkbox, HStack, Slider,
+  ScrollView, VStack, Text, Checkbox, HStack, Slider, useToast,
 } from 'native-base';
 
 import withBackground from 'helper/withBackground';
 import { Background5 } from 'component/Background';
 import AppDatePicker from 'component/AppDatePicker';
 import AppButton from 'component/AppButton';
+import ToastAlert from 'component/ToastAlert';
 import CONSTANT from 'constant';
+import ROUTE from 'constant/route';
 import useTranslation from 'translation/useTranslation';
 import Translation from 'translation/Translation';
 import useTheme from 'theme/useTheme';
 import { unformatCurrency, formatCurrency } from 'helper/util';
+import useUser from 'provider/User/useUser';
+import useAsset from 'api/useAsset';
+import useError from 'hook/useError';
 import { InputField, SelectField } from './AddDeposit.style';
 
 const { DEPOSIT_TYPE, APP_LITERAL } = CONSTANT;
 
 const AddDeposit = () => {
   const [type, setType] = useState('');
-  const [startDate, setStartDate] = useState(new Date());
-  const [maturityDate, setMaturityDate] = useState(new Date());
+  const [startedAt, setStartedAt] = useState(new Date());
+  const [maturityAt, setMaturityAt] = useState(new Date());
   const [initial, setInitial] = useState('0.00');
   const [value, setValue] = useState('0.00');
   const [interestRate, setInterestRate] = useState(2.50);
   const [isSameAsInitial, setIsSameAsInitial] = useState(false);
   const [depositoryName, setDepositoryName] = useState('');
+  const [isSubmit, setIsSubmit] = useState(false);
+  const navigation = useNavigation();
   const { translate } = useTranslation();
   const theme = useTheme();
   const headerHeight = useHeaderHeight();
+  const { asset } = useUser();
+  const { addDeposit } = useAsset();
+  const { toast: toastError } = useError();
+  const toast = useToast();
 
   const isScheduled = useMemo(() => [
     DEPOSIT_TYPE.FIXED_DEPOSIT,
@@ -65,7 +79,7 @@ const AddDeposit = () => {
     setValue('0.00');
   }, [isSameAsInitial]);
 
-  const isSubmit = useMemo(() => {
+  const isSubmitEnabled = useMemo(() => {
     const toBeValidated = [
       unformatCurrency(value),
       interestRate,
@@ -77,6 +91,43 @@ const AddDeposit = () => {
     return toBeValidated.every((field) => Boolean(field));
   }, [isScheduled, initial, value, interestRate, depositoryName]);
 
+  const doAddDeposit = useCallback(async () => {
+    try {
+      setIsSubmit(true);
+      const request = {
+        type,
+        interestRate,
+        initial: unformatCurrency(initial),
+        value: unformatCurrency(value),
+        depositoryName,
+        startedAt,
+        assetId: asset.id,
+      };
+      if (isScheduled) {
+        request.maturityAt = maturityAt;
+      }
+      await addDeposit(request);
+      setIsSubmit(false);
+      navigation.navigate(ROUTE.ASSET);
+      toast.show({
+        render: () => (
+          <ToastAlert
+            status="success"
+            message={translate('ASSET_ADDED_SUCCESSFULLY', {
+              asset: translate(type),
+            })}
+          />
+        ),
+        placement: 'top',
+      });
+    } catch (error) {
+      setIsSubmit(false);
+      toastError(error);
+    }
+  }, [
+    type, interestRate, initial, value, depositoryName, startedAt, maturityAt, asset,
+  ]);
+
   return (
     <KeyboardAvoidingView flex={1} keyboardVerticalOffset={headerHeight + 20} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <ScrollView>
@@ -86,6 +137,7 @@ const AddDeposit = () => {
             selectedValue={type}
             onValueChange={setType}
             placeholder={translate('DEPOSIT_TYPE')}
+            testID="deposit-input-type"
           >
             <For each="deposit" index="index" of={Object.values(DEPOSIT_TYPE)}>
               <SelectField.Item key={`deposit-${index}`} label={translate(deposit)} value={deposit} />
@@ -107,15 +159,15 @@ const AddDeposit = () => {
               </Otherwise>
             </Choose>
             <AppDatePicker
-              value={startDate}
+              value={startedAt}
               placeholder={translate('START_DATE')}
-              onChange={setStartDate}
+              onChange={setStartedAt}
             />
             <If condition={isScheduled}>
               <AppDatePicker
-                value={maturityDate}
+                value={maturityAt}
                 placeholder={translate('MATURITY_DATE')}
-                onChange={setMaturityDate}
+                onChange={setMaturityAt}
               />
             </If>
             <Translation
@@ -137,8 +189,15 @@ const AddDeposit = () => {
                 onChangeText={(text) => handleFieldChange('initial', text)}
                 InputLeftElement={<Text pl={3}>{APP_LITERAL.RUPEE_SYMBOL}</Text>}
                 keyboardType="numeric"
+                testID="deposit-input-initial"
               />
-              <Checkbox mr={5} colorScheme="info" value={isSameAsInitial} onChange={() => handleFieldChange('isSameAsInitial')}>
+              <Checkbox
+                mr={5}
+                colorScheme="info"
+                value={isSameAsInitial}
+                onChange={() => handleFieldChange('isSameAsInitial')}
+                testID="deposit-input-same-as-initial"
+              >
                 {translate('SAME_INITIAL_AMOUNT')}
               </Checkbox>
             </If>
@@ -155,6 +214,7 @@ const AddDeposit = () => {
               InputLeftElement={<Text pl={3}>{APP_LITERAL.RUPEE_SYMBOL}</Text>}
               keyboardType="numeric"
               isDisabled={isSameAsInitial}
+              testID="deposit-input-value"
             />
             <HStack space={5} alignItems="center">
               <VStack flex={1}>
@@ -187,8 +247,17 @@ const AddDeposit = () => {
               placeholder={translate('DEPOSITORY_NAME')}
               value={depositoryName}
               onChangeText={setDepositoryName}
+              testID="deposit-input-depository-name"
             />
-            <Translation tkey="SUBMIT" as={AppButton} variant="primary" isDisabled={!isSubmit} />
+            <Translation
+              tkey="SUBMIT"
+              as={AppButton}
+              variant="primary"
+              isDisabled={!isSubmitEnabled}
+              testID="deposit-submit"
+              onPress={doAddDeposit}
+              isLoading={isSubmit}
+            />
           </If>
         </VStack>
       </ScrollView>
