@@ -8,31 +8,14 @@ import LoaderContainer from './AppLoader.style';
 
 const AppLoader = () => {
   const [rotation, setRotation] = useState(0);
-  const [pause, setPause] = useState(false);
   const { height, width } = useWindowDimensions();
   const { color } = useTheme();
 
   useEffect(() => {
-    if (pause) {
-      setTimeout(() => {
-        setRotation(rotation === 360 ? 0 : rotation + 10);
-        setPause(false);
-      }, 1000);
-    }
-  }, [pause]);
-
-  useEffect(() => {
     setTimeout(() => {
-      if (pause) return;
-      if (rotation === 360 || rotation === 180) {
-        setPause(true);
-        return;
-      }
-      if (!pause) {
-        setRotation(rotation + 10);
-      }
+      setRotation(rotation + 10);
     }, 1);
-  }, [rotation, pause]);
+  }, [rotation]);
 
   return (
     <LoaderContainer>
