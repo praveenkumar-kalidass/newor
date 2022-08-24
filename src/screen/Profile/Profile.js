@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { KeyboardAvoidingView, Platform, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
-  Center, Avatar, Flex, VStack, FlatList, Text, Box, Divider, Spinner,
+  Center, Avatar, Flex, VStack, FlatList, Text, Box, Divider, Spinner, useToast,
 } from 'native-base';
 import Fontawesome from 'react-native-vector-icons/FontAwesome';
 import { launchImageLibrary } from 'react-native-image-picker';
@@ -44,7 +44,8 @@ const Profile = () => {
       key: 'mobileNumber',
     },
   ], []);
-  const { toast } = useError();
+  const { toast: toastError } = useError();
+  const toast = useToast();
   const navigation = useNavigation();
 
   const changePicture = async () => {
@@ -64,7 +65,7 @@ const Profile = () => {
       });
     } catch (error) {
       setIsSubmit(false);
-      toast(error);
+      toastError(error);
     }
   };
 

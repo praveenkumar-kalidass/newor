@@ -61,6 +61,7 @@
     "NEWOR_CLIENT_NOT_FOUND": "Oops! Please try using authorized application.",
     "NEWOR_BAD_REQUEST": "Oops! Something went wrong. Please try again.",
     "NEWOR_INVALID_CREDENTIALS": "Uh Oh! Incorrect login credentials. Please try again.",
-    "NEWOR_EMAIL_NOT_VERIFIED": "Oops! You haven't verified your email yet. Please complete your email verification to continue."
+    "NEWOR_EMAIL_NOT_VERIFIED": "Oops! You haven't verified your email yet. Please complete your email verification to continue.",
+    "NEWOR_FILE_SIZE_EXCEEDED": "Oops! Kindly select an image with size less than 5MB"
   }
 }
