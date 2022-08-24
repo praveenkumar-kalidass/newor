@@ -6,8 +6,11 @@ const useAsset = () => {
 
   const addDeposit = (request) => axios.post(`${config.baseURL}/api/deposit/v1`, request);
 
+  const getAsset = (id) => axios.get(`${config.baseURL}/api/asset/v1/${id}`);
+
   return {
     addDeposit,
+    getAsset,
   };
 };
 

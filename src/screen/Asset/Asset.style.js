@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Box, Text } from 'native-base';
+import { Box, HStack, Text } from 'native-base';
 
 import COLOR from 'constant/color';
 
@@ -16,6 +16,14 @@ export const AssetCard = styled(Box).attrs(() => ({
   shadowOffset: { width: 0, height: 1 },
   shadowOpacity: 0.8,
   shadowRadius: 1,
+}))``;
+
+export const AssetListCard = styled(HStack).attrs(({ theme }) => ({
+  bg: theme.color.MODAL,
+  rounded: 10,
+  p: 4,
+  space: 5,
+  alignItems: 'center',
 }))``;
 
 export const AssetValue = styled(Text).attrs(() => ({

@@ -79,4 +79,21 @@ describe('useUser', () => {
       label: '₹12,345.12',
     });
   });
+
+  it('should load asset', async () => {
+    const { result } = await renderHook(() => useUser(), {
+      wrapper: UserProvider,
+    });
+
+    act(() => result.current.loadAsset({
+      id: 'test_asset_id',
+      value: 12345.12,
+    }));
+
+    expect(result.current.asset).toStrictEqual({
+      id: 'test_asset_id',
+      value: 12345.12,
+      label: '₹12,345.12',
+    });
+  });
 });

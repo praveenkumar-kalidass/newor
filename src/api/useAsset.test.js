@@ -4,6 +4,7 @@ import useAsset from './useAsset';
 
 const mockAxios = {
   post: jest.fn(),
+  get: jest.fn(),
 };
 jest.mock('./useAxios', () => () => mockAxios);
 
@@ -27,5 +28,13 @@ describe('useAsset', () => {
         value: 12345,
       },
     );
+  });
+
+  it('getAsset', () => {
+    const { result } = renderHook(() => useAsset());
+
+    result.current.getAsset('test_asset_id');
+
+    expect(mockAxios.get).toHaveBeenCalledWith('http://localhost:3000/api/asset/v1/test_asset_id');
   });
 });

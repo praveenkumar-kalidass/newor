@@ -15,6 +15,13 @@ const useUser = () => {
     });
   };
 
+  const loadAsset = (data) => {
+    setAsset({
+      ...data,
+      label: formatCurrency(data.value),
+    });
+  };
+
   return {
     user,
     setUser,
@@ -22,6 +29,7 @@ const useUser = () => {
     setIsAuthorized,
     asset,
     initialiseWorth,
+    loadAsset,
   };
 };
 
