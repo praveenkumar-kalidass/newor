@@ -38,10 +38,10 @@ const AssetType = () => {
             onPress={assetType.onPress}
           >
             <AssetCard>
-              <VStack flex>
+              <VStack flex={1}>
                 <Text fontSize={16} bold>{assetType.label}</Text>
                 <Divider my={3} />
-                <HStack flexWrap>
+                <HStack flexWrap="wrap">
                   <For each="item" index="itemIndex" of={assetType.list}>
                     <Badge
                       key={`asset-type-${index}-item-${itemIndex}`}

@@ -115,7 +115,7 @@ exports[`AssetType should match snapshot 1`] = `
                   dataSet={Object {}}
                   style={
                     Object {
-                      "flex": true,
+                      "flex": 1,
                     }
                   }
                 >
@@ -164,7 +164,7 @@ exports[`AssetType should match snapshot 1`] = `
                     style={
                       Object {
                         "flexDirection": "row",
-                        "flexWrap": true,
+                        "flexWrap": "wrap",
                       }
                     }
                   >

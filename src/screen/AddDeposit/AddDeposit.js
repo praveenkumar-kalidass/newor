@@ -48,7 +48,6 @@ const AddDeposit = () => {
   const isScheduled = useMemo(() => [
     DEPOSIT_TYPE.FIXED_DEPOSIT,
     DEPOSIT_TYPE.RECURRING_DEPOSIT,
-    DEPOSIT_TYPE.PUBLIC_PROVIDENT_FUND,
   ].includes(type), [type]);
 
   const handleFieldChange = (field, text) => {
@@ -79,6 +78,18 @@ const AddDeposit = () => {
     setValue('0.00');
   }, [isSameAsInitial]);
 
+  useEffect(() => {
+    if (type) {
+      setStartedAt(new Date());
+      setMaturityAt(new Date());
+      setInitial('0.00');
+      setValue('0.00');
+      setInterestRate(2.50);
+      setIsSameAsInitial(false);
+      setDepositoryName('');
+    }
+  }, [type]);
+
   const isSubmitEnabled = useMemo(() => {
     const toBeValidated = [
       unformatCurrency(value),
@@ -103,7 +114,7 @@ const AddDeposit = () => {
         startedAt,
         assetId: asset.id,
       };
-      if (isScheduled) {
+      if (isScheduled || DEPOSIT_TYPE.PUBLIC_PROVIDENT_FUND) {
         request.maturityAt = maturityAt;
       }
       await addDeposit(request);
@@ -145,7 +156,7 @@ const AddDeposit = () => {
           </SelectField>
           <If condition={type}>
             <Choose>
-              <When condition={isScheduled}>
+              <When condition={isScheduled || type === DEPOSIT_TYPE.PUBLIC_PROVIDENT_FUND}>
                 <Translation
                   tkey="SELECT_START_AND_MATURITY_DATE"
                   tdata={{ depositType: translate(type) }}
@@ -163,7 +174,7 @@ const AddDeposit = () => {
               placeholder={translate('START_DATE')}
               onChange={setStartedAt}
             />
-            <If condition={isScheduled}>
+            <If condition={isScheduled || type === DEPOSIT_TYPE.PUBLIC_PROVIDENT_FUND}>
               <AppDatePicker
                 value={maturityAt}
                 placeholder={translate('MATURITY_DATE')}
@@ -177,35 +188,39 @@ const AddDeposit = () => {
               mb={2}
               bg={theme.color.BACKGROUND_100}
             />
-            <Translation
-              tkey="INITIAL_DEPOSIT"
-              as={Text}
-              color={theme.color.BACKGROUND_50}
-            />
             <If condition={isScheduled}>
+              <Translation
+                tkey={type === DEPOSIT_TYPE.FIXED_DEPOSIT ? 'INITIAL_DEPOSIT' : 'MONTHLY_DEPOSIT'}
+                as={Text}
+                color={theme.color.BACKGROUND_50}
+                mb={2}
+              />
               <InputField
-                placeholder={translate('INITIAL_DEPOSIT')}
+                placeholder={translate(type === DEPOSIT_TYPE.FIXED_DEPOSIT ? 'INITIAL_DEPOSIT' : 'MONTHLY_DEPOSIT')}
                 value={initial}
                 onChangeText={(text) => handleFieldChange('initial', text)}
                 InputLeftElement={<Text pl={3}>{APP_LITERAL.RUPEE_SYMBOL}</Text>}
                 keyboardType="numeric"
                 testID="deposit-input-initial"
               />
-              <Checkbox
-                mr={5}
-                colorScheme="info"
-                value={isSameAsInitial}
-                onChange={() => handleFieldChange('isSameAsInitial')}
-                testID="deposit-input-same-as-initial"
-              >
-                {translate('SAME_INITIAL_AMOUNT')}
-              </Checkbox>
+              <If condition={type === DEPOSIT_TYPE.FIXED_DEPOSIT}>
+                <Checkbox
+                  mr={5}
+                  colorScheme="info"
+                  value={isSameAsInitial}
+                  onChange={() => handleFieldChange('isSameAsInitial')}
+                  testID="deposit-input-same-as-initial"
+                >
+                  {translate('SAME_INITIAL_AMOUNT')}
+                </Checkbox>
+              </If>
             </If>
             <Translation
               tkey="PRESENT_AMOUNT"
               as={Text}
               color={theme.color.BACKGROUND_50}
               mt={2}
+              mb={2}
             />
             <InputField
               placeholder={translate('PRESENT_AMOUNT')}

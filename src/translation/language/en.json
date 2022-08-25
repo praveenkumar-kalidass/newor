@@ -48,6 +48,7 @@
   "SELECT_START_AND_MATURITY_DATE": "Select Start date and Maturity date for {depositType}",
   "ENTER_DEPOSIT_DETAILS": "Kindly enter all details of {depositType}",
   "INITIAL_DEPOSIT": "Initial deposit",
+  "MONTHLY_DEPOSIT": "Monthly deposit",
   "PRESENT_AMOUNT": "Amount present in the account",
   "INTEREST_RATE": "Rate of Interest",
   "SAME_INITIAL_AMOUNT": "Amount currently present in the account is the initial deposit?",
