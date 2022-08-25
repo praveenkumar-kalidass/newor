@@ -56,6 +56,7 @@
   "ASSET_ADDED_SUCCESSFULLY": "{asset} - Asset added successfully",
   "NO_ASSET_FOUND": "We can't find any assets. Please start adding some.",
   "RELOAD": "Reload",
+  "SESSION_TIMEOUT": "Oops! Your session timed out. Please login to continue",
   "ERROR_CODE": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",

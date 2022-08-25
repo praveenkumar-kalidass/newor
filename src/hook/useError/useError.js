@@ -9,6 +9,9 @@ const useError = () => {
   const { translate } = useTranslation();
 
   const toast = (error) => {
+    if (error?.logout) {
+      return;
+    }
     let errorMessage = translate('ERROR_CODE.NEWOR_INTERNAL_SERVER_ERROR');
     const errorCode = error?.response?.data?.code;
     if (errorCode) {

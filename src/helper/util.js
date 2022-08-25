@@ -10,3 +10,7 @@ export const unformatCurrency = (value) => {
   const currency = withoutSymbol.replace(/,/g, '');
   return parseFloat(currency);
 };
+
+export const formatUrlParams = (data) => Object.keys(data).map((key) => (
+  `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+)).join('&');
