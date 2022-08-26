@@ -3,19 +3,21 @@ import PropTypes from 'prop-types';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
-  FlatList, HStack, VStack, Text,
+  FlatList, HStack, VStack, Text, Avatar,
 } from 'native-base';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import useTranslation from 'translation/useTranslation';
 import useTheme from 'theme/useTheme';
 import ROUTE from 'constant/route';
+import useUser from 'provider/User/useUser';
 import { MenuContainer, MenuItem } from './Menu.style';
 
 const Menu = ({ handleClose }) => {
   const theme = useTheme();
   const { translate } = useTranslation();
   const navigation = useNavigation();
+  const { user } = useUser();
 
   const list = useMemo(
     () => [{
@@ -32,6 +34,23 @@ const Menu = ({ handleClose }) => {
 
   return (
     <MenuContainer>
+      <MenuItem>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate(ROUTE.PROFILE);
+            handleClose();
+          }}
+        >
+          <VStack alignItems="center">
+            <Avatar size="xl" source={{ uri: user.picture }}>
+              <FontAwesome size={40} name="user-secret" />
+            </Avatar>
+            <Text fontSize={18} my={2}>
+              {`${user.firstName} ${user.lastName}`}
+            </Text>
+          </VStack>
+        </TouchableOpacity>
+      </MenuItem>
       <FlatList
         data={list}
         renderItem={({ item }) => (

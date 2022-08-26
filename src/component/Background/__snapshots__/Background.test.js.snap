@@ -159,6 +159,113 @@ exports[`Backgroun3 should match snapshot 1`] = `
           ]
         }
       >
+        <View
+          dataSet={Object {}}
+          style={
+            Array [
+              Object {
+                "borderBottomWidth": 1,
+                "borderColor": "#7f7f7f",
+                "paddingBottom": 8,
+                "paddingLeft": 16,
+                "paddingRight": 20,
+                "paddingTop": 8,
+              },
+              Array [
+                Object {},
+              ],
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              dataSet={Object {}}
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <View
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#a1a1aa",
+                    "borderColor": "#27272a",
+                    "borderRadius": 9999,
+                    "height": 96,
+                    "justifyContent": "center",
+                    "position": "relative",
+                    "width": 96,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  selectable={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": undefined,
+                        "fontSize": 40,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+              <View
+                dataSet={Object {}}
+                style={Object {}}
+              />
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#171717",
+                    "fontFamily": undefined,
+                    "fontSize": 18,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 27,
+                    "marginBottom": 8,
+                    "marginTop": 8,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                undefined undefined
+              </Text>
+            </View>
+          </View>
+        </View>
         <RCTScrollView
           contentContainerStyle={
             Array [
@@ -539,6 +646,113 @@ exports[`Backgroun4 should match snapshot 1`] = `
           ]
         }
       >
+        <View
+          dataSet={Object {}}
+          style={
+            Array [
+              Object {
+                "borderBottomWidth": 1,
+                "borderColor": "#7f7f7f",
+                "paddingBottom": 8,
+                "paddingLeft": 16,
+                "paddingRight": 20,
+                "paddingTop": 8,
+              },
+              Array [
+                Object {},
+              ],
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              dataSet={Object {}}
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <View
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#a1a1aa",
+                    "borderColor": "#27272a",
+                    "borderRadius": 9999,
+                    "height": 96,
+                    "justifyContent": "center",
+                    "position": "relative",
+                    "width": 96,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  selectable={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": undefined,
+                        "fontSize": 40,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+              <View
+                dataSet={Object {}}
+                style={Object {}}
+              />
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#171717",
+                    "fontFamily": undefined,
+                    "fontSize": 18,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 27,
+                    "marginBottom": 8,
+                    "marginTop": 8,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                undefined undefined
+              </Text>
+            </View>
+          </View>
+        </View>
         <RCTScrollView
           contentContainerStyle={
             Array [
@@ -909,6 +1123,113 @@ exports[`Backgroun5 should match snapshot 1`] = `
           ]
         }
       >
+        <View
+          dataSet={Object {}}
+          style={
+            Array [
+              Object {
+                "borderBottomWidth": 1,
+                "borderColor": "#7f7f7f",
+                "paddingBottom": 8,
+                "paddingLeft": 16,
+                "paddingRight": 20,
+                "paddingTop": 8,
+              },
+              Array [
+                Object {},
+              ],
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              dataSet={Object {}}
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <View
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#a1a1aa",
+                    "borderColor": "#27272a",
+                    "borderRadius": 9999,
+                    "height": 96,
+                    "justifyContent": "center",
+                    "position": "relative",
+                    "width": 96,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  selectable={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": undefined,
+                        "fontSize": 40,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+              <View
+                dataSet={Object {}}
+                style={Object {}}
+              />
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#171717",
+                    "fontFamily": undefined,
+                    "fontSize": 18,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 27,
+                    "marginBottom": 8,
+                    "marginTop": 8,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                undefined undefined
+              </Text>
+            </View>
+          </View>
+        </View>
         <RCTScrollView
           contentContainerStyle={
             Array [
@@ -1265,6 +1586,113 @@ exports[`Background1 should match snapshot 1`] = `
           ]
         }
       >
+        <View
+          dataSet={Object {}}
+          style={
+            Array [
+              Object {
+                "borderBottomWidth": 1,
+                "borderColor": "#7f7f7f",
+                "paddingBottom": 8,
+                "paddingLeft": 16,
+                "paddingRight": 20,
+                "paddingTop": 8,
+              },
+              Array [
+                Object {},
+              ],
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              dataSet={Object {}}
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <View
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#a1a1aa",
+                    "borderColor": "#27272a",
+                    "borderRadius": 9999,
+                    "height": 96,
+                    "justifyContent": "center",
+                    "position": "relative",
+                    "width": 96,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  selectable={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": undefined,
+                        "fontSize": 40,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+              <View
+                dataSet={Object {}}
+                style={Object {}}
+              />
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#171717",
+                    "fontFamily": undefined,
+                    "fontSize": 18,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 27,
+                    "marginBottom": 8,
+                    "marginTop": 8,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                undefined undefined
+              </Text>
+            </View>
+          </View>
+        </View>
         <RCTScrollView
           contentContainerStyle={
             Array [
@@ -1603,6 +2031,113 @@ exports[`Background2 should match snapshot 1`] = `
           ]
         }
       >
+        <View
+          dataSet={Object {}}
+          style={
+            Array [
+              Object {
+                "borderBottomWidth": 1,
+                "borderColor": "#7f7f7f",
+                "paddingBottom": 8,
+                "paddingLeft": 16,
+                "paddingRight": 20,
+                "paddingTop": 8,
+              },
+              Array [
+                Object {},
+              ],
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              dataSet={Object {}}
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <View
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#a1a1aa",
+                    "borderColor": "#27272a",
+                    "borderRadius": 9999,
+                    "height": 96,
+                    "justifyContent": "center",
+                    "position": "relative",
+                    "width": 96,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  selectable={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": undefined,
+                        "fontSize": 40,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+              <View
+                dataSet={Object {}}
+                style={Object {}}
+              />
+              <Text
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "color": "#171717",
+                    "fontFamily": undefined,
+                    "fontSize": 18,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 27,
+                    "marginBottom": 8,
+                    "marginTop": 8,
+                    "textDecorationLine": undefined,
+                  }
+                }
+              >
+                undefined undefined
+              </Text>
+            </View>
+          </View>
+        </View>
         <RCTScrollView
           contentContainerStyle={
             Array [

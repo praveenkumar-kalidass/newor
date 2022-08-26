@@ -6,13 +6,13 @@ import LoaderProvider from './Loader';
 import UserProvider from './User';
 
 const Provider = ({ children }) => (
-  <DrawerProvider>
-    <LoaderProvider>
-      <UserProvider>
+  <LoaderProvider>
+    <UserProvider>
+      <DrawerProvider>
         {children}
-      </UserProvider>
-    </LoaderProvider>
-  </DrawerProvider>
+      </DrawerProvider>
+    </UserProvider>
+  </LoaderProvider>
 );
 
 Provider.propTypes = {

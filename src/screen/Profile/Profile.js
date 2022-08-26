@@ -92,7 +92,7 @@ const Profile = () => {
                 </Avatar>
               </If>
               <If condition={!isSubmit}>
-                <Avatar bg={COLOR.LIGHT_BACKGROUND_100} size="xl" source={{ uri: user.picture }}>
+                <Avatar size="xl" source={{ uri: user.picture }}>
                   <Fontawesome size={40} name="user-secret" />
                 </Avatar>
               </If>

@@ -26,6 +26,7 @@ const mockUseAsset = {
 };
 jest.mock('api/useAsset', () => () => mockUseAsset);
 const mockUseUser = {
+  user: {},
   asset: { id: 'test_asset_id' },
 };
 jest.mock('provider/User/useUser', () => () => mockUseUser);

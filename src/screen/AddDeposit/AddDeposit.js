@@ -202,6 +202,7 @@ const AddDeposit = () => {
                 InputLeftElement={<Text pl={3}>{APP_LITERAL.RUPEE_SYMBOL}</Text>}
                 keyboardType="numeric"
                 testID="deposit-input-initial"
+                contextMenuHidden
               />
               <If condition={type === DEPOSIT_TYPE.FIXED_DEPOSIT}>
                 <Checkbox
@@ -230,6 +231,7 @@ const AddDeposit = () => {
               keyboardType="numeric"
               isDisabled={isSameAsInitial}
               testID="deposit-input-value"
+              contextMenuHidden
             />
             <HStack space={5} alignItems="center">
               <VStack flex={1}>
@@ -256,6 +258,7 @@ const AddDeposit = () => {
                 InputRightElement={<Text pr={3}>%</Text>}
                 mt={3}
                 keyboardType="numeric"
+                contextMenuHidden
               />
             </HStack>
             <InputField

@@ -5,6 +5,7 @@ import { render, fireEvent, waitFor } from 'test/util';
 import Asset from './Asset';
 
 jest.mock('provider/User/useUser', () => () => ({
+  user: {},
   asset: {
     id: 'test_asset_id',
     value: 12345.12,

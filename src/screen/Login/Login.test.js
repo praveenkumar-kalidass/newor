@@ -31,6 +31,7 @@ jest.mock('@react-native-async-storage/async-storage', () => ({
 }));
 jest.mock('hook/usePreventBack');
 jest.mock('provider/User/useUser', () => () => ({
+  user: {},
   isAuthorized: false,
   setUser: jest.fn(),
 }));
