@@ -1,8 +1,9 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Box, CircleIcon, Text } from 'native-base';
+import { Box, HStack, Text } from 'native-base';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 import CONSTANT from 'constant';
 import ROUTE from 'constant/route';
@@ -28,11 +29,17 @@ const TabBar = () => {
           <TabCenterIconBackground />
         </TabCenterIconContainer>
         <TabBackgroundContainer />
-        <Box flex={1} mb={1} ml={4} alignItems="center" opacity={0}>
-          <TouchableOpacity>
-            <CircleIcon size={10} />
+        <Box flex={1} mb={2} ml={4}>
+          <TouchableOpacity testID="tab-liability" onPress={() => navigation.navigate(ROUTE.LIABILITY)}>
+            <Box alignItems="center">
+              <HStack alignItems="center" p={1} borderRadius={5} space={1}>
+                <FontAwesome color={theme.color.BACKGROUND_0} name="rupee" size={30} />
+                <FontAwesome color={theme.color.BACKGROUND_0} name="handshake-o" size={20} />
+                <FontAwesome5 color={theme.color.BACKGROUND_0} name="file-contract" size={30} />
+              </HStack>
+              <Translation tkey="LIABILITIES" as={Text} bold fontSize={16} />
+            </Box>
           </TouchableOpacity>
-          <Text>Liabilities</Text>
         </Box>
         <Box flex={1} mb={1} alignItems="center">
           <AppButton
@@ -47,13 +54,13 @@ const TabBar = () => {
           <Text>&nbsp;</Text>
         </Box>
         <Box flex={1} mb={2} mr={4}>
-          <TouchableOpacity onPress={() => navigation.navigate(ROUTE.ASSET)}>
+          <TouchableOpacity testID="tab-asset" onPress={() => navigation.navigate(ROUTE.ASSET)}>
             <Box alignItems="center">
-              <Box flexDirection="row" alignItems="flex-end" p={1} borderRadius={5}>
+              <HStack alignItems="center" p={1} borderRadius={5} space={1}>
                 <FontAwesome color={theme.color.BACKGROUND_0} name="home" size={30} />
                 <FontAwesome color={theme.color.BACKGROUND_0} name="car" size={20} />
                 <FontAwesome color={theme.color.BACKGROUND_0} name="rupee" size={30} />
-              </Box>
+              </HStack>
               <Translation tkey="ASSETS" as={Text} bold fontSize={16} />
             </Box>
           </TouchableOpacity>
