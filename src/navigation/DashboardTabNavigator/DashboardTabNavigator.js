@@ -11,6 +11,7 @@ import useDrawer from 'provider/Drawer/useDrawer';
 import TabBar from 'component/TabBar';
 import Dashboard from 'screen/Dashboard';
 import Asset from 'screen/Asset';
+import Liability from 'screen/Liability';
 
 const Tab = createBottomTabNavigator();
 
@@ -57,6 +58,30 @@ const DashboardTabNavigator = () => {
             shadowColor: theme.color.SECONDARY_100,
           },
           headerTitle: translate('ASSETS'),
+          // eslint-disable-next-line react/no-unstable-nested-components
+          headerLeft: () => (
+            <IconButton
+              variant="ghost"
+              ml={3}
+              icon={<FontAwesome color={COLOR.LIGHT_BACKGROUND_100} size={24} name="align-justify" />}
+              onPress={drawer.open}
+            />
+          ),
+          headerTitleStyle: {
+            color: COLOR.LIGHT_BACKGROUND_100,
+            fontSize: 20,
+          },
+        }}
+      />
+      <Tab.Screen
+        name={ROUTE.LIABILITY}
+        component={Liability}
+        options={{
+          headerStyle: {
+            backgroundColor: theme.color.SECONDARY_100,
+            shadowColor: theme.color.SECONDARY_100,
+          },
+          headerTitle: translate('LIABILITIES'),
           // eslint-disable-next-line react/no-unstable-nested-components
           headerLeft: () => (
             <IconButton
