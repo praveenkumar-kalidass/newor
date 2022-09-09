@@ -5,7 +5,7 @@ import UserContext from './UserContext';
 
 const useUser = () => {
   const {
-    user, setUser, isAuthorized, setIsAuthorized, asset, setAsset,
+    user, setUser, isAuthorized, setIsAuthorized, asset, setAsset, liability,
   } = useContext(UserContext);
 
   const initialiseWorth = (data) => {
@@ -28,6 +28,7 @@ const useUser = () => {
     isAuthorized,
     setIsAuthorized,
     asset,
+    liability,
     initialiseWorth,
     loadAsset,
   };

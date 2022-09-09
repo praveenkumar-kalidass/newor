@@ -17,6 +17,11 @@ const UserProvider = ({ children }) => {
     label: formatCurrency(0),
     value: 0,
   });
+  const [liability, setLiability] = useState({
+    id: '',
+    label: formatCurrency(0),
+    value: 0,
+  });
   const navigation = useNavigation();
   const { authorize } = useUser();
 
@@ -58,6 +63,8 @@ const UserProvider = ({ children }) => {
         setIsAuthorized,
         asset,
         setAsset,
+        liability,
+        setLiability,
       }}
     >
       {children}

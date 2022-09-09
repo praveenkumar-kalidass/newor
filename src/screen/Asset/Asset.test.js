@@ -1,7 +1,8 @@
 import React from 'react';
-import { act } from 'react-test-renderer';
 
-import { render, fireEvent, waitFor } from 'test/util';
+import {
+  render, fireEvent, waitFor, act,
+} from 'test/util';
 import Asset from './Asset';
 
 jest.mock('provider/User/useUser', () => () => ({

@@ -58,6 +58,9 @@
   "RELOAD": "Reload",
   "SESSION_TIMEOUT": "Oops! Your session timed out. Please login to continue",
   "LIABILITIES": "Liabilities",
+  "TOTAL_LIABILITY_VALUE": "Total Liability value",
+  "ADD_LIABILITY": "Add Liability",
+  "NO_LIABILITY_FOUND": "We can't find any liabilities. Please start adding some.",
   "ERROR_CODE": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",
