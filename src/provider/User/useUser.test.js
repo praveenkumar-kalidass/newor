@@ -71,10 +71,19 @@ describe('useUser', () => {
         id: 'test_asset_id',
         value: 12345.12,
       },
+      liability: {
+        id: 'test_liability_id',
+        value: 12345.12,
+      },
     }));
 
     expect(result.current.asset).toStrictEqual({
       id: 'test_asset_id',
+      value: 12345.12,
+      label: '₹12,345.12',
+    });
+    expect(result.current.liability).toStrictEqual({
+      id: 'test_liability_id',
       value: 12345.12,
       label: '₹12,345.12',
     });
@@ -92,6 +101,23 @@ describe('useUser', () => {
 
     expect(result.current.asset).toStrictEqual({
       id: 'test_asset_id',
+      value: 12345.12,
+      label: '₹12,345.12',
+    });
+  });
+
+  it('should load liability', async () => {
+    const { result } = await renderHook(() => useUser(), {
+      wrapper: UserProvider,
+    });
+
+    act(() => result.current.loadLiability({
+      id: 'test_liability_id',
+      value: 12345.12,
+    }));
+
+    expect(result.current.liability).toStrictEqual({
+      id: 'test_liability_id',
       value: 12345.12,
       label: '₹12,345.12',
     });

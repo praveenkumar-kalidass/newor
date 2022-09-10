@@ -37,6 +37,7 @@ const Asset = () => {
 
   const doGetAsset = useCallback(async () => {
     try {
+      setErrorCode('');
       setIsLoading(true);
       const { data } = await getAsset(asset.id);
       setAssets(data.list);
@@ -57,7 +58,7 @@ const Asset = () => {
       return;
     }
     setAssets([]);
-    setErrorCode();
+    setErrorCode('');
   }, [isFocused]);
 
   return (

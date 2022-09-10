@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { TouchableOpacity } from 'react-native';
+import { useIsFocused } from '@react-navigation/native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {
   ScrollView, Divider, HStack, VStack, Avatar, Text, Box, Skeleton, Image,
@@ -16,19 +17,47 @@ import useTheme from 'theme/useTheme';
 import { Background3 } from 'component/Background';
 import AppButton from 'component/AppButton';
 import useUser from 'provider/User/useUser';
+import useLiability from 'api/useLiability';
 import { formatCurrency } from 'helper/util';
-
 import {
   Container, LiabilityCard, LiabilityValue, LiabilityListCard,
 } from './Liability.style';
 
 const Liability = () => {
-  const [isLoading] = useState(false);
-  const [errorCode] = useState('');
-  const [liabilities] = useState([]);
-  const { liability } = useUser();
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorCode, setErrorCode] = useState('');
+  const [liabilities, setLiabilities] = useState([]);
+  const isFocused = useIsFocused();
+  const { liability, loadLiability } = useUser();
   const { translate } = useTranslation();
   const theme = useTheme();
+  const { getLiability } = useLiability();
+
+  const doGetLiability = useCallback(async () => {
+    try {
+      setErrorCode('');
+      setIsLoading(true);
+      const { data } = await getLiability(liability.id);
+      setLiabilities(data.list);
+      loadLiability({
+        id: data.id,
+        value: data.value,
+      });
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
+      setErrorCode(error?.response?.data?.code || 'NEWOR_INTERNAL_SERVER_ERROR');
+    }
+  }, [liability]);
+
+  useEffect(() => {
+    if (isFocused) {
+      doGetLiability(liability.id);
+      return;
+    }
+    setLiabilities([]);
+    setErrorCode('');
+  }, [isFocused]);
 
   return (
     <Container>
@@ -53,8 +82,8 @@ const Liability = () => {
             </VStack>
             <TouchableOpacity testID="liability-add">
               <VStack space={1} alignItems="center">
-                <Box borderWidth={1} p={1} rounded="full" borderColoROr={COLOR.PURPLE}>
-                  <Avatar bg={COLOR.PURPLE}>
+                <Box borderWidth={1} p={1} rounded="full" borderColor={COLOR.GREEN_BLUE}>
+                  <Avatar bg={COLOR.GREEN_BLUE}>
                     <FontAwesome5 color={COLOR.LIGHT_BACKGROUND_100} size={20} name="file-invoice-dollar" />
                   </Avatar>
                 </Box>
@@ -97,7 +126,7 @@ const Liability = () => {
             <LiabilityListCard justifyContent="center">
               <VStack alignItems="center">
                 <Image
-                  testID="liabiity-failed-image"
+                  testID="liability-failed-image"
                   alt={translate('ERROR_CODE.NEWOR_INTERNAL_SERVER_ERROR')}
                   source={NEWOR_FAILURE}
                   size="2xl"
@@ -109,6 +138,7 @@ const Liability = () => {
                   tkey="RELOAD"
                   as={AppButton}
                   endIcon={<FontAwesome size={20} color={COLOR.LIGHT_BACKGROUND_100} name="undo" />}
+                  onPress={doGetLiability}
                   testID="liability-reload"
                 />
               </VStack>

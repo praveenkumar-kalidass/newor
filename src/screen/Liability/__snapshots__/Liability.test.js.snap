@@ -343,10 +343,10 @@ exports[`Liability should match snapshot 1`] = `
                   }
                 >
                   <View
-                    borderColoROr="#8E44AD"
                     dataSet={Object {}}
                     style={
                       Object {
+                        "borderColor": "#17A589",
                         "borderRadius": 9999,
                         "borderWidth": 1,
                         "paddingBottom": 4,
@@ -361,7 +361,7 @@ exports[`Liability should match snapshot 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "#8E44AD",
+                          "backgroundColor": "#17A589",
                           "borderColor": "#27272a",
                           "borderRadius": 9999,
                           "height": 48,
@@ -445,7 +445,7 @@ exports[`Liability should match snapshot 1`] = `
               style={
                 Object {
                   "marginBottom": 200,
-                  "marginTop": 16,
+                  "marginTop": 64,
                 }
               }
             >
@@ -458,7 +458,6 @@ exports[`Liability should match snapshot 1`] = `
                       "backgroundColor": "#eeeeee",
                       "borderRadius": 10,
                       "flexDirection": "row",
-                      "justifyContent": "center",
                       "paddingBottom": 16,
                       "paddingLeft": 16,
                       "paddingRight": 16,
@@ -470,24 +469,592 @@ exports[`Liability should match snapshot 1`] = `
                   ]
                 }
               >
-                <Text
+                <View
                   dataSet={Object {}}
+                  fadeDuration={0.1}
+                  speed={1}
                   style={
                     Object {
-                      "backgroundColor": undefined,
-                      "color": "#171717",
-                      "fontFamily": undefined,
-                      "fontSize": 14,
-                      "fontStyle": "normal",
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                      "lineHeight": 21,
-                      "textDecorationLine": undefined,
+                      "backgroundColor": "transparent",
+                      "borderRadius": 9999,
+                      "height": 48,
+                      "overflow": "hidden",
+                      "width": 48,
                     }
                   }
                 >
-                  NO_LIABILITY_FOUND
-                </Text>
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "backgroundColor": "#7f7f7f",
+                        "height": "100%",
+                        "opacity": 0,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  dataSet={Object {}}
+                  style={
+                    Object {
+                      "width": 20,
+                    }
+                  }
+                />
+                <View
+                  dataSet={Object {}}
+                  fadeDuration={0.1}
+                  speed={1}
+                  style={
+                    Object {
+                      "flex": 1.5,
+                      "flexDirection": "column",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    dataSet={Object {}}
+                    fadeDuration={0.1}
+                    speed={1}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderRadius": 9999,
+                        "height": 12,
+                        "overflow": "hidden",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "backgroundColor": "#7f7f7f",
+                          "height": "100%",
+                          "opacity": 0,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    dataSet={Object {}}
+                    style={
+                      Object {
+                        "height": 12,
+                      }
+                    }
+                  />
+                  <View
+                    dataSet={Object {}}
+                    fadeDuration={0.1}
+                    speed={1}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderRadius": 9999,
+                        "height": 12,
+                        "overflow": "hidden",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "backgroundColor": "#7f7f7f",
+                          "height": "100%",
+                          "opacity": 0,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    dataSet={Object {}}
+                    style={
+                      Object {
+                        "height": 12,
+                      }
+                    }
+                  />
+                  <View
+                    dataSet={Object {}}
+                    fadeDuration={0.1}
+                    speed={1}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderRadius": 9999,
+                        "height": 12,
+                        "overflow": "hidden",
+                        "width": "75%",
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "backgroundColor": "#7f7f7f",
+                          "height": "100%",
+                          "opacity": 0,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  dataSet={Object {}}
+                  style={
+                    Object {
+                      "width": 20,
+                    }
+                  }
+                />
+                <View
+                  dataSet={Object {}}
+                  fadeDuration={0.1}
+                  speed={1}
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 9999,
+                      "flex": 1,
+                      "height": 12,
+                      "overflow": "hidden",
+                      "width": 12,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "backgroundColor": "#7f7f7f",
+                        "height": "100%",
+                        "opacity": 0,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "height": 16,
+                  }
+                }
+              />
+              <View
+                dataSet={Object {}}
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#eeeeee",
+                      "borderRadius": 10,
+                      "flexDirection": "row",
+                      "paddingBottom": 16,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 16,
+                    },
+                    Array [
+                      Object {},
+                    ],
+                  ]
+                }
+              >
+                <View
+                  dataSet={Object {}}
+                  fadeDuration={0.1}
+                  speed={1}
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 9999,
+                      "height": 48,
+                      "overflow": "hidden",
+                      "width": 48,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "backgroundColor": "#7f7f7f",
+                        "height": "100%",
+                        "opacity": 0,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  dataSet={Object {}}
+                  style={
+                    Object {
+                      "width": 20,
+                    }
+                  }
+                />
+                <View
+                  dataSet={Object {}}
+                  fadeDuration={0.1}
+                  speed={1}
+                  style={
+                    Object {
+                      "flex": 1.5,
+                      "flexDirection": "column",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    dataSet={Object {}}
+                    fadeDuration={0.1}
+                    speed={1}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderRadius": 9999,
+                        "height": 12,
+                        "overflow": "hidden",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "backgroundColor": "#7f7f7f",
+                          "height": "100%",
+                          "opacity": 0,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    dataSet={Object {}}
+                    style={
+                      Object {
+                        "height": 12,
+                      }
+                    }
+                  />
+                  <View
+                    dataSet={Object {}}
+                    fadeDuration={0.1}
+                    speed={1}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderRadius": 9999,
+                        "height": 12,
+                        "overflow": "hidden",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "backgroundColor": "#7f7f7f",
+                          "height": "100%",
+                          "opacity": 0,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    dataSet={Object {}}
+                    style={
+                      Object {
+                        "height": 12,
+                      }
+                    }
+                  />
+                  <View
+                    dataSet={Object {}}
+                    fadeDuration={0.1}
+                    speed={1}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderRadius": 9999,
+                        "height": 12,
+                        "overflow": "hidden",
+                        "width": "75%",
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "backgroundColor": "#7f7f7f",
+                          "height": "100%",
+                          "opacity": 0,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  dataSet={Object {}}
+                  style={
+                    Object {
+                      "width": 20,
+                    }
+                  }
+                />
+                <View
+                  dataSet={Object {}}
+                  fadeDuration={0.1}
+                  speed={1}
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 9999,
+                      "flex": 1,
+                      "height": 12,
+                      "overflow": "hidden",
+                      "width": 12,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "backgroundColor": "#7f7f7f",
+                        "height": "100%",
+                        "opacity": 0,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                dataSet={Object {}}
+                style={
+                  Object {
+                    "height": 16,
+                  }
+                }
+              />
+              <View
+                dataSet={Object {}}
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#eeeeee",
+                      "borderRadius": 10,
+                      "flexDirection": "row",
+                      "paddingBottom": 16,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 16,
+                    },
+                    Array [
+                      Object {},
+                    ],
+                  ]
+                }
+              >
+                <View
+                  dataSet={Object {}}
+                  fadeDuration={0.1}
+                  speed={1}
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 9999,
+                      "height": 48,
+                      "overflow": "hidden",
+                      "width": 48,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "backgroundColor": "#7f7f7f",
+                        "height": "100%",
+                        "opacity": 0,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  dataSet={Object {}}
+                  style={
+                    Object {
+                      "width": 20,
+                    }
+                  }
+                />
+                <View
+                  dataSet={Object {}}
+                  fadeDuration={0.1}
+                  speed={1}
+                  style={
+                    Object {
+                      "flex": 1.5,
+                      "flexDirection": "column",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    dataSet={Object {}}
+                    fadeDuration={0.1}
+                    speed={1}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderRadius": 9999,
+                        "height": 12,
+                        "overflow": "hidden",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "backgroundColor": "#7f7f7f",
+                          "height": "100%",
+                          "opacity": 0,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    dataSet={Object {}}
+                    style={
+                      Object {
+                        "height": 12,
+                      }
+                    }
+                  />
+                  <View
+                    dataSet={Object {}}
+                    fadeDuration={0.1}
+                    speed={1}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderRadius": 9999,
+                        "height": 12,
+                        "overflow": "hidden",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "backgroundColor": "#7f7f7f",
+                          "height": "100%",
+                          "opacity": 0,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    dataSet={Object {}}
+                    style={
+                      Object {
+                        "height": 12,
+                      }
+                    }
+                  />
+                  <View
+                    dataSet={Object {}}
+                    fadeDuration={0.1}
+                    speed={1}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderRadius": 9999,
+                        "height": 12,
+                        "overflow": "hidden",
+                        "width": "75%",
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "backgroundColor": "#7f7f7f",
+                          "height": "100%",
+                          "opacity": 0,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  dataSet={Object {}}
+                  style={
+                    Object {
+                      "width": 20,
+                    }
+                  }
+                />
+                <View
+                  dataSet={Object {}}
+                  fadeDuration={0.1}
+                  speed={1}
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 9999,
+                      "flex": 1,
+                      "height": 12,
+                      "overflow": "hidden",
+                      "width": 12,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "backgroundColor": "#7f7f7f",
+                        "height": "100%",
+                        "opacity": 0,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
               </View>
             </View>
           </View>
