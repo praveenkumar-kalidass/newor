@@ -12,6 +12,7 @@ const route = {
   ASSET_TYPE: 'ASSET_TYPE',
   ADD_DEPOSIT: 'ADD_DEPOSIT',
   LIABILITY: 'LIABILITY',
+  LIABILITY_TYPE: 'LIABILITY_TYPE',
 };
 
 export default route;

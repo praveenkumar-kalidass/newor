@@ -12,6 +12,7 @@ import Logout from 'screen/Logout';
 import Profile from 'screen/Profile';
 import DashboardTabNavigator from 'navigation/DashboardTabNavigator';
 import AssetStack from './AssetStack';
+import LiabilityStack from './LiabilityStack';
 
 const Stack = createStackNavigator();
 
@@ -69,6 +70,7 @@ export default () => {
         options={{ headerShown: false }}
       />
       {AssetStack(Stack)}
+      {LiabilityStack(Stack)}
     </Stack.Navigator>
   );
 };

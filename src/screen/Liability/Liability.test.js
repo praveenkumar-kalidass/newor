@@ -17,6 +17,17 @@ const mockUseLiability = {
   getLiability: jest.fn(),
 };
 jest.mock('api/useLiability', () => () => mockUseLiability);
+const mockNavigation = {
+  navigate: jest.fn(),
+};
+jest.mock('@react-navigation/native', () => {
+  const reactNavigation = jest.requireActual('@react-navigation/native');
+  return {
+    ...reactNavigation,
+    useNavigation: () => mockNavigation,
+    useIsFocused: () => true,
+  };
+});
 
 describe('Liability', () => {
   afterEach(() => {
@@ -53,5 +64,13 @@ describe('Liability', () => {
     });
 
     expect(mockUseLiability.getLiability).toHaveBeenCalledTimes(2);
+  });
+
+  it('should navigate to Liability Type screen', () => {
+    const { getByTestId } = render(<Liability />);
+
+    fireEvent.press(getByTestId('liability-add'));
+
+    expect(mockNavigation.navigate).toHaveBeenCalledWith('LIABILITY_TYPE');
   });
 });

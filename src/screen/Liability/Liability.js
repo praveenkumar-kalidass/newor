@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { useIsFocused } from '@react-navigation/native';
+import { useIsFocused, useNavigation } from '@react-navigation/native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {
   ScrollView, Divider, HStack, VStack, Avatar, Text, Box, Skeleton, Image,
@@ -9,6 +9,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import COLOR from 'constant/color';
 import CONSTANT from 'constant';
+import ROUTE from 'constant/route';
 import NEWOR_FAILURE from 'asset/image/newor-failure.png';
 import withBackground from 'helper/withBackground';
 import useTranslation from 'translation/useTranslation';
@@ -27,6 +28,7 @@ const Liability = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorCode, setErrorCode] = useState('');
   const [liabilities, setLiabilities] = useState([]);
+  const navigation = useNavigation();
   const isFocused = useIsFocused();
   const { liability, loadLiability } = useUser();
   const { translate } = useTranslation();
@@ -80,7 +82,7 @@ const Liability = () => {
               <Text mt={1} fontSize={36} color={COLOR.LIGHT_SUCCESS_100}>2.50%</Text>
               <Text color={COLOR.LIGHT_BACKGROUND_0}>Secured Growth Rate</Text>
             </VStack>
-            <TouchableOpacity testID="liability-add">
+            <TouchableOpacity testID="liability-add" onPress={() => navigation.navigate(ROUTE.LIABILITY_TYPE)}>
               <VStack space={1} alignItems="center">
                 <Box borderWidth={1} p={1} rounded="full" borderColor={COLOR.GREEN_BLUE}>
                   <Avatar bg={COLOR.GREEN_BLUE}>
