@@ -10,6 +10,7 @@ import useTranslation from 'translation/useTranslation';
 import useTheme from 'theme/useTheme';
 import CONSTANT from 'constant';
 import COLOR from 'constant/color';
+import ROUTE from 'constant/route';
 import { LiabilityCard } from './LiabilityType.style';
 
 const LiabilityType = () => {
@@ -23,7 +24,7 @@ const LiabilityType = () => {
         label: translate(`CONSTANT.LOAN_TYPE.${value}`),
         color: COLOR.RANDOM[index],
       })),
-      onPress: () => navigation.goBack(),
+      onPress: () => navigation.navigate(ROUTE.ADD_LOAN),
     },
   ], []);
 

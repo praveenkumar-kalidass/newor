@@ -59,6 +59,14 @@
   "SELECT_LIABILITY": "Select your Liability",
   "LOAN": "Loan",
   "ADD_LOAN": "Add a new Loan",
+  "SELECT_LOAN_TYPE": "Select Loan type",
+  "LOAN_TYPE": "Loan type",
+  "ENTER_LOAN_DETAILS": "Kindly enter all details of ${loanType}",
+  "LOAN_AMOUNT": "Loan Amount",
+  "TENURE_MONTHS": "Tenure (in Months)",
+  "PAYABLE_AMOUNT": "Total Amount payable",
+  "YOUR_INTEREST_AMOUNT": "Your interest amount for the loan is {amount}",
+  "LENDER_NAME": "Lender name",
   "CONSTANT": {
     "DEPOSIT_TYPE": {
       "SAVINGS": "Savings Account",
