@@ -34,11 +34,6 @@
   "ADD_ASSET": "Add an Asset",
   "SELECT_ASSET": "Select your Asset",
   "DEPOSIT": "Deposit",
-  "SAVINGS": "Savings Account",
-  "CURRENT": "Current Account",
-  "FIXED_DEPOSIT": "Fixed Deposit",
-  "RECURRING_DEPOSIT": "Recurring Deposit",
-  "PUBLIC_PROVIDENT_FUND": "Public Provident Fund",
   "ADD_DEPOSIT": "Add a new Deposit",
   "DEPOSIT_TYPE": "Deposit type",
   "SELECT_DEPOSIT_TYPE": "Select Deposit type",
@@ -61,6 +56,24 @@
   "TOTAL_LIABILITY_VALUE": "Total Liability value",
   "ADD_LIABILITY": "Add Liability",
   "NO_LIABILITY_FOUND": "We can't find any liabilities. Please start adding some.",
+  "SELECT_LIABILITY": "Select your Liability",
+  "LOAN": "Loan",
+  "CONSTANT": {
+    "DEPOSIT_TYPE": {
+      "SAVINGS": "Savings Account",
+      "CURRENT": "Current Account",
+      "FIXED_DEPOSIT": "Fixed Deposit",
+      "RECURRING_DEPOSIT": "Recurring Deposit",
+      "PUBLIC_PROVIDENT_FUND": "Public Provident Fund"
+    },
+    "LOAN_TYPE": {
+      "HOME": "Home Loan",
+      "PERSONAL": "Personal Loan",
+      "EDUCATION": "Education Loan",
+      "VEHICLE": "Vehicle Loan",
+      "BUSINESS": "Business Loan"
+    }
+  },
   "ERROR_CODE": {
     "NEWOR_INTERNAL_SERVER_ERROR": "Oops! Something went wrong. Please try again.",
     "NEWOR_USER_NOT_FOUND": "Oops! We can't find your credentials. Please try signing up first.",

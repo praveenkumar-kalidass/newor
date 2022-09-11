@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AssetType should match snapshot 1`] = `
+exports[`LiabilityType should match snapshot 1`] = `
 <RNCSafeAreaProvider
   onInsetsChange={[Function]}
   style={
@@ -90,7 +90,7 @@ exports[`AssetType should match snapshot 1`] = `
                   "opacity": 1,
                 }
               }
-              testID="asset-type-DEPOSIT"
+              testID="liability-type-LOAN"
             >
               <View
                 dataSet={Object {}}
@@ -135,7 +135,7 @@ exports[`AssetType should match snapshot 1`] = `
                       }
                     }
                   >
-                    DEPOSIT
+                    LOAN
                   </Text>
                   <View
                     dataSet={Object {}}
@@ -211,7 +211,7 @@ exports[`AssetType should match snapshot 1`] = `
                             }
                           }
                         >
-                          CONSTANT.DEPOSIT_TYPE.SAVINGS
+                          CONSTANT.LOAN_TYPE.HOME
                         </Text>
                       </View>
                     </View>
@@ -262,7 +262,7 @@ exports[`AssetType should match snapshot 1`] = `
                             }
                           }
                         >
-                          CONSTANT.DEPOSIT_TYPE.CURRENT
+                          CONSTANT.LOAN_TYPE.PERSONAL
                         </Text>
                       </View>
                     </View>
@@ -313,7 +313,7 @@ exports[`AssetType should match snapshot 1`] = `
                             }
                           }
                         >
-                          CONSTANT.DEPOSIT_TYPE.FIXED_DEPOSIT
+                          CONSTANT.LOAN_TYPE.EDUCATION
                         </Text>
                       </View>
                     </View>
@@ -364,7 +364,7 @@ exports[`AssetType should match snapshot 1`] = `
                             }
                           }
                         >
-                          CONSTANT.DEPOSIT_TYPE.RECURRING_DEPOSIT
+                          CONSTANT.LOAN_TYPE.VEHICLE
                         </Text>
                       </View>
                     </View>
@@ -415,7 +415,7 @@ exports[`AssetType should match snapshot 1`] = `
                             }
                           }
                         >
-                          CONSTANT.DEPOSIT_TYPE.PUBLIC_PROVIDENT_FUND
+                          CONSTANT.LOAN_TYPE.BUSINESS
                         </Text>
                       </View>
                     </View>

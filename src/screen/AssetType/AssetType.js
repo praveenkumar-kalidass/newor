@@ -21,7 +21,7 @@ const AssetType = () => {
     {
       label: translate('DEPOSIT'),
       list: Object.values(CONSTANT.DEPOSIT_TYPE).map((value, index) => ({
-        label: translate(value),
+        label: translate(`CONSTANT.DEPOSIT_TYPE.${value}`),
         color: COLOR.RANDOM[index],
       })),
       onPress: () => navigation.navigate(ROUTE.ADD_DEPOSIT),

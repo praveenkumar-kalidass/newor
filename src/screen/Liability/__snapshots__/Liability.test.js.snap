@@ -346,7 +346,7 @@ exports[`Liability should match snapshot 1`] = `
                     dataSet={Object {}}
                     style={
                       Object {
-                        "borderColor": "#17A589",
+                        "borderColor": "#BA4A00",
                         "borderRadius": 9999,
                         "borderWidth": 1,
                         "paddingBottom": 4,
@@ -361,7 +361,7 @@ exports[`Liability should match snapshot 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "#17A589",
+                          "backgroundColor": "#BA4A00",
                           "borderColor": "#27272a",
                           "borderRadius": 9999,
                           "height": 48,

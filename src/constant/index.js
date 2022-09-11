@@ -33,6 +33,14 @@ const DEPOSIT_TYPE = {
   PUBLIC_PROVIDENT_FUND: 'PUBLIC_PROVIDENT_FUND',
 };
 
+const LOAN_TYPE = {
+  HOME: 'HOME',
+  PERSONAL: 'PERSONAL',
+  EDUCATION: 'EDUCATION',
+  VEHICLE: 'VEHICLE',
+  BUSINESS: 'BUSINESS',
+};
+
 const constant = {
   APP_NAME: 'newor',
   AUTH_LITERAL,
@@ -41,6 +49,7 @@ const constant = {
   STORAGE_KEY,
   APP_LITERAL,
   DEPOSIT_TYPE,
+  LOAN_TYPE,
 };
 
 export default constant;

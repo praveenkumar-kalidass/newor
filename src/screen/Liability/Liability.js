@@ -84,8 +84,8 @@ const Liability = () => {
             </VStack>
             <TouchableOpacity testID="liability-add" onPress={() => navigation.navigate(ROUTE.LIABILITY_TYPE)}>
               <VStack space={1} alignItems="center">
-                <Box borderWidth={1} p={1} rounded="full" borderColor={COLOR.GREEN_BLUE}>
-                  <Avatar bg={COLOR.GREEN_BLUE}>
+                <Box borderWidth={1} p={1} rounded="full" borderColor={COLOR.BROWN}>
+                  <Avatar bg={COLOR.BROWN}>
                     <FontAwesome5 color={COLOR.LIGHT_BACKGROUND_100} size={20} name="file-invoice-dollar" />
                   </Avatar>
                 </Box>
