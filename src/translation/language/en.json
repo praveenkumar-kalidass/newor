@@ -58,6 +58,7 @@
   "NO_LIABILITY_FOUND": "We can't find any liabilities. Please start adding some.",
   "SELECT_LIABILITY": "Select your Liability",
   "LOAN": "Loan",
+  "ADD_LOAN": "Add a new Loan",
   "CONSTANT": {
     "DEPOSIT_TYPE": {
       "SAVINGS": "Savings Account",
