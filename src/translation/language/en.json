@@ -67,6 +67,7 @@
   "PAYABLE_AMOUNT": "Total Amount payable",
   "YOUR_INTEREST_AMOUNT": "Your interest amount for the loan is {amount}",
   "LENDER_NAME": "Lender name",
+  "LIABILITY_ADDED_SUCCESSFULLY": "{liability} - Liability added successfully",
   "CONSTANT": {
     "DEPOSIT_TYPE": {
       "SAVINGS": "Savings Account",

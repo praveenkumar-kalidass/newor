@@ -1,9 +1,13 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, {
+  useEffect, useState, useMemo, useCallback,
+} from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import { useHeaderHeight } from '@react-navigation/elements';
+import { useNavigation } from '@react-navigation/native';
 import {
-  ScrollView, VStack, Text, HStack, Slider,
+  ScrollView, VStack, Text, HStack, Slider, useToast,
 } from 'native-base';
+import moment from 'moment';
 
 import CONSTANT from 'constant';
 import withBackground from 'helper/withBackground';
@@ -14,6 +18,11 @@ import useTheme from 'theme/useTheme';
 import { unformatCurrency, formatCurrency } from 'helper/util';
 import AppDatePicker from 'component/AppDatePicker';
 import AppButton from 'component/AppButton';
+import ToastAlert from 'component/ToastAlert';
+import ROUTE from 'constant/route';
+import useUser from 'provider/User/useUser';
+import useLiability from 'api/useLiability';
+import useError from 'hook/useError';
 import { InputField, SelectField } from './AddLoan.style';
 
 const { LOAN_TYPE, APP_LITERAL } = CONSTANT;
@@ -27,9 +36,15 @@ const AddLoan = () => {
   const [tenure, setTenure] = useState(12);
   const [interestAmount, setInterestAmount] = useState('0.00');
   const [lenderName, setLenderName] = useState('');
+  const [isSubmit, setIsSubmit] = useState(false);
+  const navigation = useNavigation();
   const headerHeight = useHeaderHeight();
   const { translate } = useTranslation();
   const theme = useTheme();
+  const { liability } = useUser();
+  const { addLoan } = useLiability();
+  const { toast: toastError } = useError();
+  const toast = useToast();
 
   const handleFieldChange = (field, text) => {
     if (['principal', 'value'].includes(field)) {
@@ -63,6 +78,41 @@ const AddLoan = () => {
     ];
     return toBeValidated.every((field) => Boolean(field));
   }, [principal, value, interestRate, lenderName]);
+
+  const doAddLoan = useCallback(async () => {
+    try {
+      setIsSubmit(true);
+      const request = {
+        type,
+        interestRate,
+        principal: unformatCurrency(principal),
+        value: unformatCurrency(value),
+        lenderName,
+        startedAt,
+        closingAt: moment(startedAt).add(tenure, 'months'),
+        liabilityId: liability.id,
+      };
+      await addLoan(request);
+      setIsSubmit(false);
+      navigation.navigate(ROUTE.LIABILITY);
+      toast.show({
+        render: () => (
+          <ToastAlert
+            status="success"
+            message={translate('LIABILITY_ADDED_SUCCESSFULLY', {
+              liability: translate(`CONSTANT.LOAN_TYPE.${type}`),
+            })}
+          />
+        ),
+        placement: 'top',
+      });
+    } catch (error) {
+      setIsSubmit(false);
+      toastError(error);
+    }
+  }, [
+    type, interestRate, principal, value, lenderName, startedAt, liability,
+  ]);
 
   return (
     <KeyboardAvoidingView flex={1} keyboardVerticalOffset={headerHeight + 20} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
@@ -196,7 +246,9 @@ const AddLoan = () => {
                 as={AppButton}
                 variant="primary"
                 isDisabled={!isSubmitEnabled}
-                testID="deposit-submit"
+                testID="loan-submit"
+                onPress={doAddLoan}
+                isLoading={isSubmit}
               />
             </If>
           </If>
