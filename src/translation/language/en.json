@@ -69,6 +69,7 @@
   "LENDER_NAME": "Lender name",
   "LIABILITY_ADDED_SUCCESSFULLY": "{liability} - Liability added successfully",
   "TOTAL_NET_WORTH": "Your total Net Worth is",
+  "LOGOUT": "Logout",
   "CONSTANT": {
     "DEPOSIT_TYPE": {
       "SAVINGS": "Savings Account",

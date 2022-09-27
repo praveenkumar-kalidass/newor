@@ -14,5 +14,5 @@ export const MenuItem = styled(Box).attrs(({ theme }) => ({
   borderColor: theme.color.BACKGROUND_50,
   pl: 4,
   pr: 5,
-  py: 2,
+  py: 3,
 }))``;

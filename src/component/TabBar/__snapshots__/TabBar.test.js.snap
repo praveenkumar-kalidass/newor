@@ -641,10 +641,10 @@ exports[`AppModal should match snapshot 1`] = `
               Object {
                 "borderBottomWidth": 1,
                 "borderColor": "#7f7f7f",
-                "paddingBottom": 8,
+                "paddingBottom": 12,
                 "paddingLeft": 16,
                 "paddingRight": 20,
-                "paddingTop": 8,
+                "paddingTop": 12,
               },
               Array [
                 Object {},
@@ -812,10 +812,10 @@ exports[`AppModal should match snapshot 1`] = `
                       Object {
                         "borderBottomWidth": 1,
                         "borderColor": "#7f7f7f",
-                        "paddingBottom": 8,
+                        "paddingBottom": 12,
                         "paddingLeft": 16,
                         "paddingRight": 20,
-                        "paddingTop": 8,
+                        "paddingTop": 12,
                       },
                       Array [
                         Object {},

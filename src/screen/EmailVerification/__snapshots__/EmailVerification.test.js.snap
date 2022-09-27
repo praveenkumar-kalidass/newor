@@ -357,10 +357,10 @@ exports[`EmailVerification should match error snapshot 1`] = `
               Object {
                 "borderBottomWidth": 1,
                 "borderColor": "#7f7f7f",
-                "paddingBottom": 8,
+                "paddingBottom": 12,
                 "paddingLeft": 16,
                 "paddingRight": 20,
-                "paddingTop": 8,
+                "paddingTop": 12,
               },
               Array [
                 Object {},
@@ -528,10 +528,10 @@ exports[`EmailVerification should match error snapshot 1`] = `
                       Object {
                         "borderBottomWidth": 1,
                         "borderColor": "#7f7f7f",
-                        "paddingBottom": 8,
+                        "paddingBottom": 12,
                         "paddingLeft": 16,
                         "paddingRight": 20,
-                        "paddingTop": 8,
+                        "paddingTop": 12,
                       },
                       Array [
                         Object {},
@@ -1055,10 +1055,10 @@ exports[`EmailVerification should match success snapshot 1`] = `
               Object {
                 "borderBottomWidth": 1,
                 "borderColor": "#7f7f7f",
-                "paddingBottom": 8,
+                "paddingBottom": 12,
                 "paddingLeft": 16,
                 "paddingRight": 20,
-                "paddingTop": 8,
+                "paddingTop": 12,
               },
               Array [
                 Object {},
@@ -1226,10 +1226,10 @@ exports[`EmailVerification should match success snapshot 1`] = `
                       Object {
                         "borderBottomWidth": 1,
                         "borderColor": "#7f7f7f",
-                        "paddingBottom": 8,
+                        "paddingBottom": 12,
                         "paddingLeft": 16,
                         "paddingRight": 20,
-                        "paddingTop": 8,
+                        "paddingTop": 12,
                       },
                       Array [
                         Object {},
