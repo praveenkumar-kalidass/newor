@@ -9,6 +9,9 @@ jest.mock('provider/User/useUser', () => () => ({
     lastName: 'World',
     email: 'hello_world@test.com',
   },
+  worth: {
+    label: '12,345.12',
+  },
 }));
 
 describe('Dashboard', () => {

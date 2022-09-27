@@ -67,6 +67,7 @@ describe('useUser', () => {
     });
 
     act(() => result.current.initialiseWorth({
+      value: 1234512345.12,
       asset: {
         id: 'test_asset_id',
         value: 12345.12,
@@ -77,6 +78,10 @@ describe('useUser', () => {
       },
     }));
 
+    expect(result.current.worth).toStrictEqual({
+      label: '₹1,23,45,12,345.12',
+      value: 1234512345.12,
+    });
     expect(result.current.asset).toStrictEqual({
       id: 'test_asset_id',
       value: 12345.12,

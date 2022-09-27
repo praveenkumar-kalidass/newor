@@ -12,6 +12,10 @@ import UserContext from './UserContext';
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState({});
   const [isAuthorized, setIsAuthorized] = useState(null);
+  const [worth, setWorth] = useState({
+    label: formatCurrency(0),
+    value: 0,
+  });
   const [asset, setAsset] = useState({
     id: '',
     label: formatCurrency(0),
@@ -61,6 +65,8 @@ const UserProvider = ({ children }) => {
         setUser,
         isAuthorized,
         setIsAuthorized,
+        worth,
+        setWorth,
         asset,
         setAsset,
         liability,

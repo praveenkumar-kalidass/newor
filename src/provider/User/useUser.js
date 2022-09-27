@@ -5,10 +5,23 @@ import UserContext from './UserContext';
 
 const useUser = () => {
   const {
-    user, setUser, isAuthorized, setIsAuthorized, asset, setAsset, liability, setLiability,
+    user,
+    setUser,
+    isAuthorized,
+    setIsAuthorized,
+    worth,
+    setWorth,
+    asset,
+    setAsset,
+    liability,
+    setLiability,
   } = useContext(UserContext);
 
   const initialiseWorth = (data) => {
+    setWorth({
+      value: data.value,
+      label: formatCurrency(data.value),
+    });
     setAsset({
       ...data.asset,
       label: formatCurrency(data.asset.value),
@@ -38,6 +51,7 @@ const useUser = () => {
     setUser,
     isAuthorized,
     setIsAuthorized,
+    worth,
     asset,
     liability,
     initialiseWorth,

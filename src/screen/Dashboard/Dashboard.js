@@ -11,16 +11,20 @@ import ROUTE from 'constant/route';
 import usePreventBack from 'hook/usePreventBack';
 import withBackground from 'helper/withBackground';
 import { Background3 } from 'component/Background';
+import Card from 'component/Card';
 import useUser from 'provider/User/useUser';
 import useUserApi from 'api/useUser';
 import useError from 'hook/useError';
+import useTranslation from 'translation/useTranslation';
+import { WorthValue } from './Dashboard.style';
 
 const Dashboard = () => {
-  const { user, initialiseWorth } = useUser();
+  const { user, worth, initialiseWorth } = useUser();
   const navigation = useNavigation();
   const { getWorth } = useUserApi();
   const isFocused = useIsFocused();
   const { toast } = useError();
+  const { translate } = useTranslation();
   usePreventBack();
 
   const doGetWorth = useCallback(async () => {
@@ -55,6 +59,17 @@ const Dashboard = () => {
           </VStack>
         </HStack>
       </TouchableOpacity>
+      <VStack px={5}>
+        <Card>
+          <VStack my={5} px={5}>
+            <Text fontSize={18} color={COLOR.LIGHT_BACKGROUND_0}>
+              {translate('TOTAL_NET_WORTH')}
+              ,
+            </Text>
+            <WorthValue>{worth.label}</WorthValue>
+          </VStack>
+        </Card>
+      </VStack>
     </Box>
   );
 };
