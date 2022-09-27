@@ -150,96 +150,59 @@ exports[`Asset should match snapshot 1`] = `
               dataSet={Object {}}
               style={
                 Object {
-                  "marginBottom": 12,
-                  "marginTop": 12,
-                  "paddingLeft": 12,
-                  "paddingRight": 12,
+                  "marginTop": 20,
+                  "paddingLeft": 20,
+                  "paddingRight": 20,
                 }
               }
             >
-              <View
+              <Text
                 dataSet={Object {}}
                 style={
                   Object {
-                    "flexDirection": "row",
-                    "justifyContent": "flex-start",
+                    "backgroundColor": undefined,
+                    "color": "#000000",
+                    "fontFamily": undefined,
+                    "fontSize": 18,
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 27,
+                    "textDecorationLine": undefined,
                   }
                 }
               >
-                <Text
-                  dataSet={Object {}}
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": "#000000",
-                      "fontFamily": undefined,
-                      "fontSize": 14,
-                      "fontStyle": "normal",
-                      "fontWeight": "400",
-                      "letterSpacing": 0,
-                      "lineHeight": 21,
-                      "textDecorationLine": undefined,
-                    }
-                  }
-                >
-                  TOTAL_ASSET_VALUE
-                  ,
-                </Text>
-              </View>
+                TOTAL_ASSET_VALUE
+                ,
+              </Text>
               <View
                 dataSet={Object {}}
                 style={Object {}}
               />
-              <View
+              <Text
                 dataSet={Object {}}
                 style={
-                  Object {
-                    "flexDirection": "row",
-                    "justifyContent": "center",
-                  }
+                  Array [
+                    Object {
+                      "backgroundColor": undefined,
+                      "color": "#000000",
+                      "fontFamily": undefined,
+                      "fontSize": 32,
+                      "fontStyle": "normal",
+                      "fontWeight": "700",
+                      "letterSpacing": 0,
+                      "lineHeight": 48,
+                      "textDecorationLine": undefined,
+                    },
+                    Array [
+                      Object {},
+                    ],
+                  ]
                 }
               >
-                <Text
-                  dataSet={Object {}}
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": undefined,
-                        "color": "#000000",
-                        "fontFamily": undefined,
-                        "fontSize": 24,
-                        "fontStyle": "normal",
-                        "fontWeight": "700",
-                        "letterSpacing": 0,
-                        "lineHeight": 36,
-                        "textDecorationLine": undefined,
-                      },
-                      Array [
-                        Object {},
-                      ],
-                    ]
-                  }
-                >
-                  ₹12,345.12
-                </Text>
-              </View>
+                ₹12,345.12
+              </Text>
             </View>
-            <View
-              dataSet={Object {}}
-              style={Object {}}
-            />
-            <View
-              aria-orientation="horizontal"
-              dataSet={Object {}}
-              style={
-                Object {
-                  "backgroundColor": "#d4d4d4",
-                  "height": 1,
-                  "width": "100%",
-                }
-              }
-              thickness="1"
-            />
             <View
               dataSet={Object {}}
               style={Object {}}
@@ -426,6 +389,34 @@ exports[`Asset should match snapshot 1`] = `
               </View>
             </View>
           </View>
+          <Text
+            dataSet={Object {}}
+            pointerEvents="none"
+            style={
+              Array [
+                Object {
+                  "backgroundColor": undefined,
+                  "color": "#7f7f7f",
+                  "fontFamily": undefined,
+                  "fontSize": 250,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 250,
+                  "opacity": 0.25,
+                  "position": "absolute",
+                  "right": 0,
+                  "textDecorationLine": undefined,
+                  "top": 0,
+                },
+                Array [
+                  Object {},
+                ],
+              ]
+            }
+          >
+            ₹
+          </Text>
         </View>
         <RCTScrollView
           contentContainerStyle={

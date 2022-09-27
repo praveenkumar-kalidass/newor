@@ -1,5 +1,3 @@
-import CONSTANT from '.';
-
 const color = {};
 
 export const light = {
@@ -24,7 +22,7 @@ export const light = {
   MODAL: '#eeeeee',
 };
 Object.keys(light).forEach((code) => {
-  color[`${CONSTANT.THEME.LIGHT.toUpperCase()}_${code}`] = light[code];
+  color[`LIGHT_${code}`] = light[code];
 });
 
 export const dark = {
@@ -49,7 +47,7 @@ export const dark = {
   MODAL: '#111111',
 };
 Object.keys(dark).forEach((code) => {
-  color[`${CONSTANT.THEME.DARK.toUpperCase()}_${code}`] = dark[code];
+  color[`DARK_${code}`] = dark[code];
 });
 
 color.PURPLE = '#8E44AD';

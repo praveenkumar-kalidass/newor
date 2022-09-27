@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native';
 import { useIsFocused, useNavigation } from '@react-navigation/native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {
-  ScrollView, Divider, HStack, VStack, Avatar, Text, Box, Skeleton, Image,
+  ScrollView, HStack, VStack, Avatar, Text, Box, Skeleton, Image,
 } from 'native-base';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
@@ -17,11 +17,12 @@ import Translation from 'translation/Translation';
 import useTheme from 'theme/useTheme';
 import { Background3 } from 'component/Background';
 import AppButton from 'component/AppButton';
+import Card from 'component/Card';
 import useUser from 'provider/User/useUser';
 import useLiability from 'api/useLiability';
 import { formatCurrency } from 'helper/util';
 import {
-  Container, LiabilityCard, LiabilityValue, LiabilityListCard,
+  Container, LiabilityValue, LiabilityListCard,
 } from './Liability.style';
 
 const Liability = () => {
@@ -63,20 +64,15 @@ const Liability = () => {
 
   return (
     <Container>
-      <LiabilityCard>
+      <Card>
         <VStack justifyContent="space-around" flex={1}>
-          <VStack my={3} px={3}>
-            <HStack justifyContent="flex-start">
-              <Text color={COLOR.LIGHT_BACKGROUND_0}>
-                {translate('TOTAL_LIABILITY_VALUE')}
-                ,
-              </Text>
-            </HStack>
-            <HStack justifyContent="center">
-              <LiabilityValue>{liability.label}</LiabilityValue>
-            </HStack>
+          <VStack mt={5} px={5}>
+            <Text fontSize={18} color={COLOR.LIGHT_BACKGROUND_0}>
+              {translate('TOTAL_LIABILITY_VALUE')}
+              ,
+            </Text>
+            <LiabilityValue>{liability.label}</LiabilityValue>
           </VStack>
-          <Divider />
           <HStack flex={1} px={5} alignItems="center" justifyContent="space-around">
             <VStack space={1} alignItems="center" opacity={0}>
               <Text mt={1} fontSize={36} color={COLOR.LIGHT_SUCCESS_100}>2.50%</Text>
@@ -94,7 +90,7 @@ const Liability = () => {
             </TouchableOpacity>
           </HStack>
         </VStack>
-      </LiabilityCard>
+      </Card>
       <ScrollView>
         <VStack mt={isLoading ? 16 : 4} mb={200} space={4}>
           <If condition={isLoading}>
@@ -112,10 +108,10 @@ const Liability = () => {
                 <Avatar
                   bg={COLOR.RANDOM[index % COLOR.RANDOM.length]}
                 >
-                  {CONSTANT.APP_LITERAL.RUPEE_SYMBOL}
+                  {CONSTANT.LIABILITY_ICON[liability.liabilityType]}
                 </Avatar>
                 <VStack flex={1}>
-                  <Translation tkey={liability.type} as={Text} bold />
+                  <Translation tkey={`CONSTANT.${liability.liabilityType}_TYPE.${liability.type}`} as={Text} bold />
                   <Translation tkey={liability.lenderName} as={Text} />
                 </VStack>
                 <HStack flex={1} justifyContent="flex-end">

@@ -1,3 +1,8 @@
+import React from 'react';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
+import COLOR from './color';
+
 const AUTH_LITERAL = {
   PASSWORD: 'password',
   CODE: 'code',
@@ -41,6 +46,14 @@ const LOAN_TYPE = {
   BUSINESS: 'BUSINESS',
 };
 
+const ASSET_ICON = {
+  DEPOSIT: <FontAwesome5 color={COLOR.LIGHT_BACKGROUND_100} size={20} name="piggy-bank" />,
+};
+
+const LIABILITY_ICON = {
+  LOAN: <FontAwesome5 color={COLOR.LIGHT_BACKGROUND_100} size={20} name="hand-holding-usd" />,
+};
+
 const constant = {
   APP_NAME: 'newor',
   AUTH_LITERAL,
@@ -50,6 +63,8 @@ const constant = {
   APP_LITERAL,
   DEPOSIT_TYPE,
   LOAN_TYPE,
+  ASSET_ICON,
+  LIABILITY_ICON,
 };
 
 export default constant;

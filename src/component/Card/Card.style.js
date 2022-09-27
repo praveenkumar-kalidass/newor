@@ -22,4 +22,5 @@ export const CardBackground = styled(Text).attrs(() => ({
   right: 0,
   lineHeight: 250,
   opacity: 0.25,
+  pointerEvents: 'none',
 }))``;

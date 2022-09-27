@@ -95,6 +95,7 @@ exports[`Card should match snapshot 1`] = `
         </Text>
         <Text
           dataSet={Object {}}
+          pointerEvents="none"
           style={
             Array [
               Object {
