@@ -3,10 +3,11 @@ import React, {
 } from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import {
-  Flex, FormControl, Center, Image, Divider,
+  Flex, FormControl, Center, Image, Divider, HStack,
 } from 'native-base';
 import { useIsFocused, useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { GoogleSigninButton } from '@react-native-google-signin/google-signin';
 
 import TitleBar from 'component/TitleBar/TitleBar';
 import AppButton from 'component/AppButton';
@@ -151,6 +152,18 @@ const Login = () => {
               onPress={() => navigation.navigate(ROUTE.FORGOT_PASSWORD)}
             />
           </Flex>
+          <Divider mt={5} mb={4} />
+          <HStack justifyContent="center">
+            <GoogleSigninButton
+              style={{ width: 192, height: 48 }}
+              size={GoogleSigninButton.Size.Wide}
+              color={
+                theme.theme === CONSTANT.THEME.DARK
+                  ? GoogleSigninButton.Color.Dark
+                  : GoogleSigninButton.Color.Light
+              }
+            />
+          </HStack>
           <Divider mt={5} mb={4} />
           <Flex direction="row" justifyContent="center">
             <Translation tkey="NEW_TO_NEWOR" as={SignupLink} />

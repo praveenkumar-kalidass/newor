@@ -3,6 +3,7 @@ import 'text-encoding-polyfill';
 import 'intl';
 import 'intl/locale-data/jsonp/hi-IN';
 import 'intl/locale-data/jsonp/en';
+import 'react-native-url-polyfill/auto';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { NativeBaseProvider } from 'native-base';
